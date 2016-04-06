@@ -1,23 +1,21 @@
 <footer class="site-footer">
 
-  <ul class="contact-list">
-    <li>{{ site.title }}</li>
-    <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-  </ul>
+  <div class="contact-info">
+    <span>
+      &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>.
+      {{ site.author.name }}
+    </span>
+  </div>
 
-  <ul class="social-media-list">
-    {% if site.github_username %}
-      <li>{% include icon-github.html username=site.github_username %}</li>
+  <div class="social-links">
+    {% if site.author.github_url %}
+      <span>{% include icon-github.html url=site.author.github_url %}</span>
     {% endif %}
-    {% if site.twitter_username %}
-      <li>{% include icon-twitter.html username=site.twitter_username %}</li>
-    {% endif %}
-  </ul>
 
-  <!--       <footer class="footer">
-        <small>
-          &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. Masatoshi Nishiguchi
-        </small>
-      </footer> -->
+    {% if site.author.twitter_url %}
+      <span>{% include icon-twitter.html url=site.author.twitter_url %}</span>
+    {% endif %}
+    <div class="clearfix"></div>
+  </div>
 
 </footer>

@@ -2,6 +2,8 @@
 //
 // Styles for managing the structural hierarchy of the site.
 
+// * { border: 1px dotted red; }
+
 .container {
   max-width: 38rem;
   padding-left:  1.5rem;
@@ -10,6 +12,25 @@
   margin-right: auto;
 }
 
-footer {
+.site-footer {
   margin-bottom: 2rem;
+  height: 80px;
+  padding: 20px 0;
+  .contact-info {
+    display: inline-block;
+    float: left;
+    span {
+      padding: 0 5px;
+    }
+  }
+  .social-links {
+    display: inline-block;
+    float: right;
+    span {
+      padding: 0 5px;
+    }
+  }
+}
+.clearfix {
+  clear: both;
 }

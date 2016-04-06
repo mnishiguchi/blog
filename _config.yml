@@ -6,8 +6,9 @@ title:               Masatoshi Nishiguchi
 tagline:             Web developer
 description:         Masatoshi Nishiguchi's blog
 url:                 "http://mnishiguchi.github.io" # the base hostname & protocol for your site
-paginate:            1
 baseurl:             "/blog"
+
+paginate:            1
 
 # Assets
 #
@@ -19,8 +20,10 @@ sass:
 # About/contact
 author:
   name:              Masatoshi Nishiguchi
-  url:               https://twitter.com/mnishiguchiDC
+  url:               http://mnishiguchi.github.io
   email:             nishiguchi.masa@gmail.com
+  github_url:        https://github.com/mnishiguchi
+  twitter_url:       https://twitter.com/mnishiguchiDC
 
 # Custom vars
 version:             0.0.1
@@ -31,8 +34,10 @@ github:
 gems:
   - jekyll-paginate
   - jekyll-gist
+  - jekyll-redirect-from
+# Allow URL Redirects: https://help.github.com/articles/redirects-on-github-pages
 
-# Navigation links
+# Navigation links in the header of the website
 pages_list:
   About:   '/about'
   Archive: '/archive'
