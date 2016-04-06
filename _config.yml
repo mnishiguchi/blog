@@ -1,0 +1,41 @@
+# Permalinks
+permalink:           pretty
+
+# Setup
+title:               Masatoshi Nishiguchi
+tagline:             Web developer
+description:         Masatoshi Nishiguchi's blog
+url:                 "http://mnishiguchi.github.io" # the base hostname & protocol for your site
+paginate:            1
+baseurl:             "/blog"
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Masatoshi Nishiguchi
+  url:               https://twitter.com/mnishiguchiDC
+  email:             nishiguchi.masa@gmail.com
+
+# Custom vars
+version:             0.0.1
+github:
+  repo:              https://github.com/mnishiguchi/blog
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+
+# Navigation links
+pages_list:
+  About:   '/about'
+  Archive: '/archive'
+  Feed:    '/atom.xml'
+
+
