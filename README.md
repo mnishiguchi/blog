@@ -22,6 +22,16 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
 ```
 
+### Adding separator between list items
+```CSS
+.nav-link:not(:last-child):after {
+  content: "\002f";
+  display: inline-block;
+  opacity: 0.7;
+  padding: 0 0.6em;
+}
+```
+
 -----
 
 ## Reference
@@ -46,6 +56,7 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 - Save as svg
 - IMPORTANT: Do not manipulate positions or margins because they are expensive. Instead, use [CSS transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform).
 - [How to apply multiple transforms in CSS](http://stackoverflow.com/questions/10765755/how-to-apply-multiple-transforms-in-css)
+- [CSS EASING ANIMATION TOOL](https://matthewlein.com/ceaser/)
 
 ```html
 <!DOCTYPE html>
@@ -100,13 +111,7 @@ html, body {
 
 ```js
 $(document).ready( function() {
-
     $(".swish").addClass("in");
-
 });
 
 ```
-
-### CSS easing
-- [CSS EASING ANIMATION TOOL](https://matthewlein.com/ceaser/)
-

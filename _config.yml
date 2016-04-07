@@ -39,8 +39,8 @@ gems:
 
 # Navigation links in the header of the website
 pages_list:
-  About:   '/about'
-  Archive: '/archive'
-  Feed:    '/atom.xml'
-
-
+  About:      '/about'
+  Background: '/background'
+  Projects:   '/projects'
+  Archive:    '/archive'
+  Feed:       '/atom.xml'

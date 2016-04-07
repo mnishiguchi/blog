@@ -1,0 +1,41 @@
+<aside class="masthead" id="masthead">
+  <h3 class="masthead-title">
+    <a href="{{ site.baseurl }}/" title="Home" id="logo--link">{{ site.title }}</a>
+    <small id="logo--tagline">{{ site.tagline }}</small>
+  </h3>
+
+  <nav>
+    {% for page in site.pages_list %}
+      <a class="nav-link" href="{{ page[1] | prepend: site.baseurl }}">{{ page[0] }}</a>
+    {% endfor %}
+  </nav>
+</aside>
+
+<header class="header-canvas">
+  <h1>
+    Under construction...
+  </h1>
+</header>
+
+<script>
+  // Get HTML elements.
+  var masthead    = document.getElementById( "masthead" );
+  var logo        = document.getElementById( "logo--link" );
+  var tagline     = document.getElementById( "logo--tagline" );
+
+  // Remember the original texts.
+  var logoText    = logo.innerHTML;
+  var taglineText = tagline.innerHTML;
+
+  // Add event handlers to the masthead.
+  masthead.addEventListener( 'mouseenter', setHoverText, false );
+  masthead.addEventListener( 'mouseleave', setOriginalText, false );
+  function setHoverText() {
+    logo.innerHTML    = "にしぐちまさとし";
+    tagline.innerHTML = "ウェブデベロッパー";
+  }
+  function setOriginalText() {
+    logo.innerHTML    = logoText;
+    tagline.innerHTML = taglineText;
+  }
+</script>
