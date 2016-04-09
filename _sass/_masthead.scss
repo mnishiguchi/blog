@@ -2,26 +2,126 @@
 //
 // Super small header above the content for site name and short description.
 
-.masthead {
-  padding-top:    1rem;
-  padding-bottom: 1rem;
-  margin-bottom: .5rem;
+$navigation-bg:$orange;
+$navigation-height: 70px;
+$nav-item-height: 40px;
+$header-canvas-bg:  #1D1425;
+$hamburger-side: 44px;
+
+/* Hamburger outer */
+#hamburger {
+  background: $gray-2;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: inline-block;
+  width: $hamburger-side;
+  height: $hamburger-side;
+  line-height: $hamburger-side;
+  text-align: center;
+  float: right;
+  cursor: pointer;
+  &:hover {
+    background: $link-hover-color;
+  }
 }
 
 .masthead-title {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 1rem 0;
   color: $gray-4;
-
   a {
     color: inherit;
   }
-
   small {
     font-size: 75%;
     font-weight: 400;
     opacity: .5;
   }
+}
+#masthead {
+  // padding-bottom: 1rem;
+  display: block;
+  background: white;
+  overflow: hidden;  /* This is to prevent the margin collapsing? */
+}
+
+#masthead nav {
+  /* ensure visibility during the transition */
+  display: block !important; /* yes, important */
+  height: 0;
+  &.cssSlideUp {
+    transition: .1s linear all;
+    height: 215px;
+  }
+}
+#masthead ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  li {
+    display: block;
+    height: $nav-item-height;
+    a {
+      display: block;
+      vertical-align: middle;
+      width: 100%;
+      line-height: $nav-item-height;
+      height: $nav-item-height;
+      transition: color 0.6s, background 0.6s;
+      &.active {
+        background: none;
+        font-weight: bold;
+        cursor: default;  /* Default cursor instead of the finger pointing */
+      }
+      &:hover {
+        color: $link-hover-color;
+      }
+      &.active:hover {
+      }
+    }
+  }
+}
+@media only screen and (min-width : 768px) {
+  /* Hide the hamburger. */
+  #hamburger {
+    display: none;
+  }
+  .masthead-title {
+    display: inline-block;
+  }
+  /* Let the navigation float right. */
+  #masthead nav {
+    display: inline-block;
+    float: right;
+    ul {
+      padding-top: 0;
+    }
+    /* Remove the nav-item styles */
+    li {
+      display: inline-block;
+      width: auto;      /* Deactivate width 100% */
+      border-top: none; /* Remove separators */
+      line-height: $navigation-height;
+      height: $navigation-height;
+    }
+    /* Adjust the nav-item's height to align them to the navbar. */
+    li a {
+      line-height: $navigation-height;
+      height: $navigation-height;
+      // padding: 0 12px;
+    }
+  }
+
+}
+
+/* Remove the default underline associated with links. */
+#masthead nav li a,
+#masthead nav li a.active,
+#masthead nav li a:hover,
+#masthead nav li a.active:hover {
+  text-decoration: none;
 }
 
 .header-canvas {
@@ -35,9 +135,6 @@
   align-items: center;
 }
 
-.nav-link:not(:last-child):after {
-  content: "\002f";
-  display: inline-block;
-  opacity: 0.7;
-  padding: 0 0.6em;
+.nav-item:not(:last-child){
+  margin-right: 0.3em;
 }

@@ -3,11 +3,26 @@
     <a href="{{ site.baseurl }}/" title="Home" id="logo--link">{{ site.title }}</a>
     <small id="logo--tagline">{{ site.tagline }}</small>
   </h3>
-
+  <!-- Hamburger button -->
+  <div id="hamburger">
+    &#8801
+    <!--
+    <div class="inner">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+     -->
+  </div>
   <nav>
+    <ul>
     {% for page in site.pages_list %}
-      <a class="nav-link" href="{{ page[1] | prepend: site.baseurl }}">{{ page[0] }}</a>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ page[1] | prepend: site.baseurl }}">{{ page[0] }}</a>
+      </li>
     {% endfor %}
+    </ul>
   </nav>
 </aside>
 
@@ -18,24 +33,69 @@
 </header>
 
 <script>
-  // Get HTML elements.
-  var masthead    = document.getElementById( "masthead" );
-  var logo        = document.getElementById( "logo--link" );
-  var tagline     = document.getElementById( "logo--tagline" );
+"use strict";
+( function() {
+  document.addEventListener( "DOMContentLoaded", function() {
+    // Get HTML elements.
+    var masthead    = document.getElementById( "masthead" );
+    var logo        = document.getElementById( "logo--link" );
+    var tagline     = document.getElementById( "logo--tagline" );
 
-  // Remember the original texts.
-  var logoText    = logo.innerHTML;
-  var taglineText = tagline.innerHTML;
+    // Remember the original texts.
+    var logoText    = logo.innerHTML;
+    var taglineText = tagline.innerHTML;
 
-  // Add event handlers to the masthead.
-  masthead.addEventListener( 'mouseenter', setHoverText, false );
-  masthead.addEventListener( 'mouseleave', setOriginalText, false );
-  function setHoverText() {
-    logo.innerHTML    = "にしぐちまさとし";
-    tagline.innerHTML = "ウェブデベロッパー";
+    // Add event handlers to the masthead.
+    masthead.addEventListener( 'mouseenter', setHoverText, false );
+    masthead.addEventListener( 'mouseleave', setOriginalText, false );
+
+    function setHoverText() {
+      logo.innerHTML    = "にしぐちまさとし";
+      tagline.innerHTML = "ウェブデベロッパー";
+    }
+    function setOriginalText() {
+      logo.innerHTML    = logoText;
+      tagline.innerHTML = taglineText;
+    }
+  });
+})();
+
+( function() {
+
+  // Store elements.
+  var hamburger;
+  var logo;
+  var nav;
+
+  // Wait until DOM is loaded and then execute.
+  document.addEventListener( "DOMContentLoaded", function( event ) {
+
+    // Find elements.
+    hamburger = document.getElementById( "hamburger" );
+    logo      = document.getElementById( "logo" );
+    nav       = document.querySelector( ".masthead nav" );
+
+    // Apply the slide up animation defined in CSS to the navigation when:
+    // - the hamburger is clicked.
+    hamburger.addEventListener( 'click', toggleNavbarAnimations );
+
+    // Remove the animation when:
+    // - the mouse leaves the naviagation
+    // - the navigation is clicked
+    // - the logo is clicked
+    // - the window size is resized
+    nav.addEventListener( 'mouseleave', removeNavbarAnimations );
+    nav.addEventListener( 'click',      removeNavbarAnimations );
+    logo.addEventListener( 'click',    function() { nav.click(); });
+    window.addEventListener( 'resize', function() { nav.click(); });
+  });
+  function toggleNavbarAnimations() {
+    nav.classList.toggle( "cssSlideUp" );
+    hamburger.classList.toggle( "active" );
   }
-  function setOriginalText() {
-    logo.innerHTML    = logoText;
-    tagline.innerHTML = taglineText;
+  function removeNavbarAnimations() {
+    nav.classList.remove( "cssSlideUp" );
+    hamburger.classList.remove( "active" );
   }
+})();
 </script>

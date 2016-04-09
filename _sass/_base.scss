@@ -53,7 +53,10 @@ a {
     color: inherit;
   }
 }
-
+a:hover {
+	color: $link-hover-color;
+	text-decoration: underline;
+}
 img {
   display: block;
   max-width: 100%;
