@@ -7,15 +7,14 @@
 
     {% include masthead.html %}
     <div class="container content">
-      
+
       <main>
         {{ content }}
       </main>
 
       {% include comments.html %}
-
-      {% include footer.html %}
     </div>
+    {% include footer.html %}
 
     <!--
      {% if site.analytics_id %}

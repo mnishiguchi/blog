@@ -4,17 +4,7 @@
     <small id="logo--tagline">{{ site.tagline }}</small>
   </h3>
   <!-- Hamburger button -->
-  <div id="hamburger">
-    &#8801
-    <!--
-    <div class="inner">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-     -->
-  </div>
+  <div id="hamburger">&#8801</div>
   <nav>
     <ul>
     {% for page in site.pages_list %}
@@ -34,32 +24,6 @@
 
 <script>
 "use strict";
-( function() {
-  document.addEventListener( "DOMContentLoaded", function() {
-    // Get HTML elements.
-    var masthead    = document.getElementById( "masthead" );
-    var logo        = document.getElementById( "logo--link" );
-    var tagline     = document.getElementById( "logo--tagline" );
-
-    // Remember the original texts.
-    var logoText    = logo.innerHTML;
-    var taglineText = tagline.innerHTML;
-
-    // Add event handlers to the masthead.
-    masthead.addEventListener( 'mouseenter', setHoverText, false );
-    masthead.addEventListener( 'mouseleave', setOriginalText, false );
-
-    function setHoverText() {
-      logo.innerHTML    = "にしぐちまさとし";
-      tagline.innerHTML = "ウェブデベロッパー";
-    }
-    function setOriginalText() {
-      logo.innerHTML    = logoText;
-      tagline.innerHTML = taglineText;
-    }
-  });
-})();
-
 ( function() {
 
   // Store elements.
@@ -98,4 +62,30 @@
     hamburger.classList.remove( "active" );
   }
 })();
+
+// ( function() {
+//   document.addEventListener( "DOMContentLoaded", function() {
+//     // Get HTML elements.
+//     var masthead    = document.getElementById( "masthead" );
+//     var logo        = document.getElementById( "logo--link" );
+//     var tagline     = document.getElementById( "logo--tagline" );
+//
+//     // Remember the original texts.
+//     var logoText    = logo.innerHTML;
+//     var taglineText = tagline.innerHTML;
+//
+//     // Add event handlers to the masthead.
+//     masthead.addEventListener( 'mouseenter', setHoverText, false );
+//     masthead.addEventListener( 'mouseleave', setOriginalText, false );
+//
+//     function setHoverText() {
+//       logo.innerHTML    = "にしぐちまさとし";
+//       tagline.innerHTML = "ウェブデベロッパー";
+//     }
+//     function setOriginalText() {
+//       logo.innerHTML    = logoText;
+//       tagline.innerHTML = taglineText;
+//     }
+//   });
+// })();
 </script>

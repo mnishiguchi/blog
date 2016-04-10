@@ -1,21 +1,21 @@
 <footer class="site-footer">
+  <div class="container">
+    <div class="contact-info">
+      <span>
+        &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>.
+        {{ site.author.name }}
+      </span>
+    </div>
 
-  <div class="contact-info">
-    <span>
-      &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>.
-      {{ site.author.name }}
-    </span>
+    <div class="social-links">
+      {% if site.author.github_url %}
+        <span>{% include icon-github.html url=site.author.github_url %}</span>
+      {% endif %}
+
+      {% if site.author.twitter_url %}
+        <span>{% include icon-twitter.html url=site.author.twitter_url %}</span>
+      {% endif %}
+      <div class="clearfix"></div>
+    </div>
   </div>
-
-  <div class="social-links">
-    {% if site.author.github_url %}
-      <span>{% include icon-github.html url=site.author.github_url %}</span>
-    {% endif %}
-
-    {% if site.author.twitter_url %}
-      <span>{% include icon-twitter.html url=site.author.twitter_url %}</span>
-    {% endif %}
-    <div class="clearfix"></div>
-  </div>
-
 </footer>

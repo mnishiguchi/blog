@@ -13,12 +13,13 @@
 }
 
 .site-footer {
-  margin-bottom: 2rem;
-  height: 80px;
-  padding: 20px 0;
+  vertical-align: middle;
+  margin-top: 60px;
+  padding: 60px 0;
+  color: $gray-2;
+  background: $black;
   .contact-info {
     display: inline-block;
-    float: left;
     span {
       padding: 0 5px;
     }
@@ -26,8 +27,12 @@
   .social-links {
     display: inline-block;
     float: right;
+    margin-top: -7px;
     span {
       padding: 0 5px;
+      a:hover {
+        text-decoration: none;
+      }
     }
   }
 }
