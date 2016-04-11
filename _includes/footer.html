@@ -9,11 +9,24 @@
 
     <div class="social-links">
       {% if site.author.github_url %}
-        <span>{% include icon-github.html url=site.author.github_url %}</span>
+        <a class="cbutton cbutton--effect-radomir" href="{{ site.author.github_url }}">
+          <i class="cbutton__icon fa fa-github"></i>
+          <!-- <span class="cbutton__text"></span> -->
+        </a>
       {% endif %}
 
       {% if site.author.twitter_url %}
-        <span>{% include icon-twitter.html url=site.author.twitter_url %}</span>
+        <a class="cbutton cbutton--effect-radomir" href="{{ site.author.twitter_url }}">
+          <i class="cbutton__icon fa fa-twitter"></i>
+          <!-- <span class="cbutton__text"></span> -->
+        </a>
+      {% endif %}
+
+      {% if site.author.stackoverflow_url %}
+        <a class="cbutton cbutton--effect-radomir" href="{{ site.author.stackoverflow_url }}">
+          <i class="cbutton__icon fa fa-stack-overflow"></i>
+          <!-- <span class="cbutton__text"></span> -->
+        </a>
       {% endif %}
       <div class="clearfix"></div>
     </div>

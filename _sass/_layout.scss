@@ -14,7 +14,7 @@
 
 .site-footer {
   vertical-align: middle;
-  margin-top: 60px;
+  margin-top: 20px;
   padding: 60px 0;
   color: $gray-2;
   background: $black;
@@ -27,15 +27,21 @@
   .social-links {
     display: inline-block;
     float: right;
-    margin-top: -7px;
-    span {
-      padding: 0 5px;
-      a:hover {
-        text-decoration: none;
-      }
+    font-size: 1.3em;
+    a {
+      margin: 0 5px;
+    }
+    a:hover {
+      text-decoration: none;
     }
   }
 }
 .clearfix {
   clear: both;
+}
+// https://www.w3.org/Style/Examples/007/center.en.html
+.img-centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
 }

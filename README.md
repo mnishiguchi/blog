@@ -22,15 +22,15 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
 ```
 
-### Adding separator between list items
-```CSS
-.nav-link:not(:last-child):after {
-  content: "\002f";
-  display: inline-block;
-  opacity: 0.7;
-  padding: 0 0.6em;
-}
+### Links to Assets
+- Make sure that you specify the full url instead of relative path.
+
+```html
+<link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
 ```
+
+### [Subtle Click Feedback Effects](https://github.com/codrops/ClickEffects)
+- Adopted from Codrops.
 
 -----
 
@@ -74,7 +74,6 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 
 ```
 
-
 ```scss
 /* Make the dimensions 100% of the display size.*/
 html, body {
@@ -113,5 +112,4 @@ html, body {
 $(document).ready( function() {
     $(".swish").addClass("in");
 });
-
 ```

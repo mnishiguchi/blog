@@ -8,9 +8,7 @@
     {% include masthead.html %}
     <div class="container content">
 
-      <main>
-        {{ content }}
-      </main>
+      <main>{{ content }}</main>
 
       {% include comments.html %}
     </div>
@@ -28,5 +26,8 @@
      </script>
     {% endif %}
     -->
+    <script src="{{ site.baseurl }}/js/masthead.js"></script>
+    <script src="{{ site.baseurl }}/js/classie.js"></script>
+    <script src="{{ site.baseurl }}/js/cbutton.js"></script>
   </body>
 </html>

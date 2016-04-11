@@ -30,9 +30,9 @@ body {
       -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
 }
-h1,
-h2,
-h3 {
+h1, .h1,
+h2, .h2,
+h3, .h3 {
   font-weight: 600;
   color: $heading-font-color;
   font-family: $heading-font-family;

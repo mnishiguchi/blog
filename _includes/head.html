@@ -2,6 +2,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta name="description" content="An aspiring web developer who specializes in HTML5, CSS3 and Ruby on Rails." />
+  <meta name="keywords" content="html, css, javascript, ruby, rails, angularjs, reactjs, web development" />
+  <meta name="author" content="Masatoshi Nishiguchi" />
+
   <title>
     {% if page.title == "Home" %}
       {{ site.title }} &middot; {{ site.tagline }}
@@ -27,4 +31,7 @@
 
   <!-- Link to an alternate version of the document -->
   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/atom.xml">
+
+  <!-- Load modernizr -->
+  <script src="{{ site.baseurl }}/js/modernizr.custom.js"></script>
 </head>
