@@ -1,10 +1,9 @@
 <aside class="masthead" id="masthead">
   <h3 class="masthead-title">
-    <a href="{{ site.baseurl }}/" title="Home" id="logo--link">{{ site.title }}</a>
+    <a href="{{ site.baseurl }}/" title="Home" id="logo">{{ site.title }}</a>
     <small id="logo--tagline">{{ site.tagline }}</small>
   </h3>
-  <!-- Hamburger button -->
-  <div id="hamburger">&#8801</div>
+
   <nav>
     <ul>
     {% for page in site.pages_list %}
@@ -14,6 +13,8 @@
     {% endfor %}
     </ul>
   </nav>
+
+  <div id="hamburger">&#8801</div>
 </aside>
 
 <header class="header-canvas">
@@ -25,19 +26,16 @@
 <script>
 "use strict";
 ( function() {
-
-  // Store elements.
-  var hamburger;
-  var logo;
-  var nav;
+  // Store references to elements so that we can add/remove classes to those elements anytime.
+  var hamburger, logo, nav;
 
   // Wait until DOM is loaded and then execute.
   document.addEventListener( "DOMContentLoaded", function( event ) {
 
-    // Find elements.
+    // Find elements and store eferences to them.
     hamburger = document.getElementById( "hamburger" );
     logo      = document.getElementById( "logo" );
-    nav       = document.querySelector( ".masthead nav" );
+    nav       = document.querySelector( "#masthead nav" );
 
     // Apply the slide up animation defined in CSS to the navigation when:
     // - the hamburger is clicked.
@@ -49,16 +47,16 @@
     // - the logo is clicked
     // - the window size is resized
     nav.addEventListener( 'mouseleave', removeNavbarAnimations );
-    nav.addEventListener( 'click',      removeNavbarAnimations );
-    logo.addEventListener( 'click',    function() { nav.click(); });
-    window.addEventListener( 'resize', function() { nav.click(); });
+    nav.addEventListener( 'click', removeNavbarAnimations );
+    logo.addEventListener( 'click', removeNavbarAnimations );
+    window.addEventListener( 'resize', removeNavbarAnimations );
   });
   function toggleNavbarAnimations() {
-    nav.classList.toggle( "cssSlideUp" );
+    nav.classList.toggle( "slide-down" );
     hamburger.classList.toggle( "active" );
   }
   function removeNavbarAnimations() {
-    nav.classList.remove( "cssSlideUp" );
+    nav.classList.remove( "slide-down" );
     hamburger.classList.remove( "active" );
   }
 })();
@@ -67,7 +65,7 @@
 //   document.addEventListener( "DOMContentLoaded", function() {
 //     // Get HTML elements.
 //     var masthead    = document.getElementById( "masthead" );
-//     var logo        = document.getElementById( "logo--link" );
+//     var logo        = document.getElementById( "logo" );
 //     var tagline     = document.getElementById( "logo--tagline" );
 //
 //     // Remember the original texts.

@@ -6,7 +6,6 @@ $masthead-height: 70px;
 $hanburger-menu-item-height: 40px;
 $hamburger-side: 44px;
 
-/* Hamburger outer */
 #hamburger {
   background: $gray-1;
   position: absolute;
@@ -23,9 +22,7 @@ $hamburger-side: 44px;
   &:hover {
     background: lighten($link-hover-color, 30%);
   }
-  @media only screen and (min-width : 768px) {
-    display: none;
-  }
+  @media only screen and (min-width : 768px) { display: none; }
 }
 
 .masthead-title {
@@ -35,46 +32,38 @@ $hamburger-side: 44px;
   height: $masthead-height;
   vertical-align: middle;
   color: $gray-4;
-  a {
-    color: inherit;
-  }
+  @media only screen and (min-width : 768px) { display: inline-block; }
+  a { color: inherit; }
   small {
     display: none;
     font-size: 75%;
     font-weight: 400;
     opacity: .5;
-    @media only screen and (min-width : 900px) {
-      display: inline-block;
-    }
+    @media only screen and (min-width : 900px) { display: inline-block; }
   }
 }
 .masthead {
-  // padding-bottom: 1rem;
   display: block;
   background: white;
   padding: 0 .5rem;
-  overflow: hidden;  /* This is to prevent the margin collapsing? */
+  overflow: hidden;
 }
 .masthead nav {
-  /* ensure visibility during the transition */
-  display: block !important; /* yes, important */
+  display: block !important; // Ensure visibility during the transition.
   height: 0;
-  &.cssSlideUp {
-    transition: .1s linear all;
-    height: 200px;
-  }
+  &.slide-down{ transition: .1s linear all; height: 220px; }
 }
 .masthead ul {
   list-style: none;
-  text-align: center;
+  padding: 0;
   li {
     display: block;
     height: $hanburger-menu-item-height;
+    line-height: $hanburger-menu-item-height;
     a {
       color: $gray-3;
       display: block;
-      vertical-align: middle;
-      font-size: 75%;
+      font-size: 80%;
       padding: 0 .5rem;
       width: 100%;
       line-height: inherit;
@@ -83,7 +72,7 @@ $hamburger-side: 44px;
       &.active {
         background: none;
         font-weight: bold;
-        cursor: default;  /* Default cursor instead of the finger pointing */
+        cursor: default;  // Use default cursor instead of the finger pointer.
       }
       &:hover {
         color: $link-hover-color;
@@ -95,18 +84,16 @@ $hamburger-side: 44px;
   .masthead-title {
     display: inline-block;
   }
-  /* Let the navigation float right. */
   .masthead nav {
     display: inline-block;
     float: right;
     ul {
       padding-top: 0;
     }
-    /* Remove the nav-item styles */
     li {
       display: inline-block;
-      width: auto;      /* Deactivate width 100% */
-      border-top: none; /* Remove separators */
+      width: auto;      // Deactivate width 100%.
+      border-top: none; // Remove separators.
       line-height: $masthead-height;
       height: $masthead-height;
       a {
@@ -117,7 +104,7 @@ $hamburger-side: 44px;
   }
 }
 
-/* Remove the default underline associated with links. */
+// Remove the default underline associated with links.
 .masthead nav li a,
 .masthead nav li a.active,
 .masthead nav li a:hover,
