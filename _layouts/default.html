@@ -4,8 +4,8 @@
   {% include head.html %}
 
   <body>
-
     {% include masthead.html %}
+
     <div class="container content">
 
       <main>{{ content }}</main>
@@ -26,8 +26,12 @@
      </script>
     {% endif %}
     -->
-    <script src="{{ site.baseurl }}/js/masthead.js"></script>
+
+    <!-- Load classie library -->
     <script src="{{ site.baseurl }}/js/classie.js"></script>
+    <!-- Load svg drawing animations -->
+    <script src="{{ site.baseurl }}/js/svganimations2.js"></script>
+    <script src="{{ site.baseurl }}/js/masthead.js"></script>
     <script src="{{ site.baseurl }}/js/cbutton.js"></script>
   </body>
 </html>

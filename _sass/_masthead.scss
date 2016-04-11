@@ -113,12 +113,25 @@ $hamburger-side: 44px;
 }
 
 .header-canvas {
+  position: relative;
   background-color: $black;
   padding: 0px 15px;
   text-align: center;
   margin: 0 0 30px 0;
+  width: 100vw;
   height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.intro-content {
+  display: table-row;
+}
+.scroll-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
 }
