@@ -2,16 +2,24 @@
 //
 // Super small header above the content for site name and short description.
 
-$masthead-height: 70px;
+$masthead-height: 80px;
 $hanburger-menu-item-height: 40px;
 $hamburger-side: 44px;
 
+.logo-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0.3rem;
+  z-index: 9999;
+  padding: 0 .3em;
+}
 #hamburger {
-  background: $gray-1;
   position: absolute;
   top: 13px;
   right: 10px;
+  z-index: 9999;
   display: inline-block;
+  background: $gray-1;
   border: 1px solid $gray-3;
   width: $hamburger-side;
   height: $hamburger-side;
@@ -43,19 +51,23 @@ $hamburger-side: 44px;
   }
 }
 .masthead {
-  display: block;
-  background: white;
-  padding: 0 .5rem;
-  overflow: hidden;
-}
-.masthead nav {
-  display: block !important; // Ensure visibility during the transition.
+  display: block; // Ensure visibility during the transition.
   height: 0;
-  &.slide-down{ transition: .1s linear all; height: 220px; }
+  background: white;
+  overflow: hidden;
+
+  @media only screen and (min-width : 768px) {
+    height: $masthead-height;
+  }
+  &.slide-down {
+    transition: .1s linear all;
+    height: 300px;
+  }
 }
 .masthead ul {
   list-style: none;
   padding: 0;
+  margin-top: 90px;
   li {
     display: block;
     height: $hanburger-menu-item-height;
@@ -84,31 +96,32 @@ $hamburger-side: 44px;
   .masthead-title {
     display: inline-block;
   }
-  .masthead nav {
-    display: inline-block;
-    float: right;
+  .masthead {
     ul {
-      padding-top: 0;
-    }
-    li {
-      display: inline-block;
-      width: auto;      // Deactivate width 100%.
-      border-top: none; // Remove separators.
-      line-height: $masthead-height;
-      height: $masthead-height;
-      a {
+      display: block;
+      margin-top: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        width: auto;      // Deactivate width 100%.
+        border-top: none; // Remove separators.
         line-height: $masthead-height;
         height: $masthead-height;
+        float: right;
+        a {
+          line-height: $masthead-height;
+          height: $masthead-height;
+        }
       }
     }
   }
 }
 
 // Remove the default underline associated with links.
-.masthead nav li a,
-.masthead nav li a.active,
-.masthead nav li a:hover,
-.masthead nav li a.active:hover {
+.masthead li a,
+.masthead li a.active,
+.masthead li a:hover,
+.masthead li a.active:hover {
   text-decoration: none;
 }
 
@@ -128,10 +141,9 @@ $hamburger-side: 44px;
 .intro-content {
   display: table-row;
 }
-.scroll-wrapper {
+.scroll-control {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-
 }
