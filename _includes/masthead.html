@@ -9,7 +9,7 @@
 
 <nav class="masthead" id="masthead">
   <ul>
-  {% for page in site.pages_list %}
+  {% for page in site.pages_list reversed %}
     <li class="nav-item">
       <a class="nav-link" href="{{ page[1] | prepend: site.baseurl }}">{{ page[0] }}</a>
     </li>
@@ -17,11 +17,10 @@
   </ul>
 </nav>
 
-<header class="header-canvas" style="background: url(http://i.imgur.com/kVJs7Pb.jpg);">
+<header class="header-canvas">
   <h1 class="intro-content">
     <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
     <small id="logo--tagline">{{ site.tagline }}</small>
-    <!-- <img src="http://placehold.it/600x200?text=Awesome Website" class=" img-centered" alt=""> -->
   </h1>
   <div class="scroll-control">
     <button class="cbutton cbutton--effect-radomir btn-scroll-down">
@@ -33,7 +32,11 @@
 
 <div id="hamburger">&#8801</div>
 
+<!-- Load images -->
 <style>
+  .header-canvas {
+    background: url(http://i.imgur.com/kVJs7Pb.jpg);
+  }
   .logo {
     background: url({{ site.baseurl }}/img/mn_logo_80.png);
   }
