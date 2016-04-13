@@ -2,20 +2,108 @@
 //
 // Super small header above the content for site name and short description.
 
-$masthead-height: 40px;
+// * { border: 1px dotted red; }
+
+// Local variables
+$masthead-height: 82px;
 $hanburger-menu-item-height: 40px;
 $hamburger-side: 44px;
 
-.logo-wrapper {
+#masthead {
+  display: block; // Ensure visibility during the transition.
+  height: 0;
+  overflow: hidden;
+  @media only screen and (min-width : 768px) {
+    height: $masthead-height;
+    margin-top: 0;
+  }
+  &.slide-down {
+    transition: .1s linear all;
+    height: 280px;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 80px;
+    text-align: center;
+    li {
+      display: block;
+      height: $hanburger-menu-item-height;
+      line-height: $hanburger-menu-item-height;
+      &:hover>a {
+        border-bottom: 1px solid $blue;
+      }
+      a {
+        color: $gray-3;
+        display: block;
+        font-size: 80%;
+        padding: 0 .5rem;
+        width: 100%;
+        line-height: inherit;
+        height: inherit;
+        transition: color 0.6s, background 0.6s;
+        &.active {
+          background: none;
+          font-weight: bold;
+          cursor: default;  // Use default cursor instead of the finger pointer.
+        }
+        &:hover {
+          color: $link-hover-color;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width : 768px) {
+  #masthead {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1111;
+    width: 100%;
+    background: rgba(0,0,0,.3);
+    ul {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      float: right;
+      li {
+        display: inline-block;
+        width: auto;      // Deactivate width 100%.
+        border-top: none; // Remove separators.
+        line-height: $masthead-height;
+        height: $masthead-height;
+        a {
+          line-height: $masthead-height;
+          height: $masthead-height;
+        }
+      }
+    }
+  }
+}
+// Remove the default underline associated with links.
+#masthead li a,
+#masthead li a.active,
+#masthead li a:hover,
+#masthead li a.active:hover {
+  text-decoration: none;
+}
+
+#logo-wrapper {
   position: absolute;
   top: 0;
   left: 0.3rem;
   z-index: 9999;
-  padding: 0 .3em;
+  padding: 0 3px; // Allow room for drawing animation.
+  @media only screen and (min-width : 768px) {
+    top: 0;
+    left: 0;
+  }
 }
+
 #hamburger {
   position: absolute;
-  top: 13px;
+  top: 10px;
   right: 10px;
   z-index: 9999;
   display: inline-block;
@@ -30,120 +118,76 @@ $hamburger-side: 44px;
   &:hover {
     background: lighten($link-hover-color, 30%);
   }
+  // Hide it when larger than iPad.
   @media only screen and (min-width : 768px) { display: none; }
 }
 
-.masthead-title {
-  display: inline-block;
-  margin: 0;
-  line-height: $masthead-height;
-  height: $masthead-height;
-  vertical-align: middle;
-  color: $gray-4;
-  @media only screen and (min-width : 768px) { display: inline-block; }
-  a { color: inherit; }
-  small {
-    display: none;
-    font-size: 75%;
-    font-weight: 400;
-    opacity: .5;
-    @media only screen and (min-width : 900px) { display: inline-block; }
-  }
-}
-.masthead {
-  display: block; // Ensure visibility during the transition.
-  height: 0;
-  background: white;
-  overflow: hidden;
-
-  @media only screen and (min-width : 768px) {
-    height: $masthead-height;
-  }
-  &.slide-down {
-    transition: .1s linear all;
-    height: 300px;
-  }
-}
-.masthead ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 90px;
-  li {
-    display: block;
-    height: $hanburger-menu-item-height;
-    line-height: $hanburger-menu-item-height;
-    a {
-      color: $gray-3;
-      display: block;
-      font-size: 80%;
-      padding: 0 .5rem;
-      width: 100%;
-      line-height: inherit;
-      height: inherit;
-      transition: color 0.6s, background 0.6s;
-      &.active {
-        background: none;
-        font-weight: bold;
-        cursor: default;  // Use default cursor instead of the finger pointer.
-      }
-      &:hover {
-        color: $link-hover-color;
-      }
-    }
-  }
-}
-@media only screen and (min-width : 768px) {
-  .masthead-title {
-    display: inline-block;
-  }
-  .masthead {
-    ul {
-      display: block;
-      margin-top: 0;
-      padding: 0;
-      li {
-        display: inline-block;
-        width: auto;      // Deactivate width 100%.
-        border-top: none; // Remove separators.
-        line-height: $masthead-height;
-        height: $masthead-height;
-        float: right;
-        a {
-          line-height: $masthead-height;
-          height: $masthead-height;
-        }
-      }
-    }
-  }
-}
-
-// Remove the default underline associated with links.
-.masthead li a,
-.masthead li a.active,
-.masthead li a:hover,
-.masthead li a.active:hover {
-  text-decoration: none;
-}
+// // UNUSED: Replaced with logo.
+// .masthead-title {
+//   display: inline-block;
+//   margin: 0;
+//   line-height: $masthead-height;
+//   height: $masthead-height;
+//   vertical-align: middle;
+//   color: $gray-4;
+//   @media only screen and (min-width : 768px) { display: inline-block; }
+//   a { color: inherit; }
+//   small {
+//     display: none;
+//     font-size: 75%;
+//     font-weight: 400;
+//     opacity: .5;
+//     @media only screen and (min-width : 900px) { display: inline-block; }
+//   }
+// }
 
 .header-canvas {
   position: relative;
   background-color: $black;
-  padding: 0px 15px;
-  text-align: center;
-  margin: 0 0 30px 0;
   width: 100vw;
   height: 50vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-
-.intro-content {
-  display: table-row;
-}
-.scroll-control {
+#header-canvas-text {
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   left: 0;
   right: 0;
+  img {
+    display: block;
+    margin: 0 auto;
+    padding: 5px 0;
+  }
+  h1 {
+    display: block;
+    color: $gray-2;
+    a {
+      color: inherit;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    small {
+      display: block;
+      font-size: 60%;
+      font-weight: 400;
+      opacity: .8;
+    }
+  }
+}
+.scroll-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 40px;
+  background: $black;
+  .btn-scroll-down {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 5px;
+  }
 }

@@ -1,34 +1,36 @@
-<section class="logo-wrapper">
-  <a href="{{ site.baseurl }}/" title="Home" id="logo">
-    <svg id="logo-svg" class="line-drawing" width="84" height="84" xmlns="http://www.w3.org/2000/svg">
-      <path class="darker" d="M 80.889194,41.80541 C 80.889194,63.45198 63.341174,81 41.694594,81 20.048024,81 2.5,63.45198 2.5,41.80541 2.5,20.158827 20.048024,2.61081 41.694594,2.61081 c 21.64658,0 39.1946,17.548017 39.1946,39.1946 z"/>
-    </svg>
-    <div data-svg="logo-svg" class="logo hide"></div>
-  </a>
-</section>
+<nav id="masthead">
+  <div id="logo-wrapper">
+    <a href="{{ site.baseurl }}/" title="Home" id="logo">
+      <svg id="logo-svg" class="line-drawing" width="84" height="84" xmlns="http://www.w3.org/2000/svg">
+        <path class="darker" d="M 80.889194,41.80541 C 80.889194,63.45198 63.341174,81 41.694594,81 20.048024,81 2.5,63.45198 2.5,41.80541 2.5,20.158827 20.048024,2.61081 41.694594,2.61081 c 21.64658,0 39.1946,17.548017 39.1946,39.1946 z"/>
+      </svg>
+      <div data-svg="logo-svg" class="logo hide"></div>
+    </a>
+  </div><!-- .logo-wrapper -->
 
-<nav class="masthead" id="masthead">
   <ul>
-  {% for page in site.pages_list reversed %}
-    <li class="nav-item">
-      <a class="nav-link" href="{{ page[1] | prepend: site.baseurl }}">{{ page[0] }}</a>
-    </li>
-  {% endfor %}
+    {% for page in site.pages_list reversed %}
+      <li class="nav-item">
+        <a class="nav-link" href="{{ page[1] | prepend: site.baseurl }}">{{ page[0] }}</a>
+      </li>
+    {% endfor %}
   </ul>
-</nav>
+</nav><!-- .masthead -->
 
 <header class="header-canvas">
-  <h1 class="intro-content">
-    <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-    <small id="logo--tagline">{{ site.tagline }}</small>
-  </h1>
-  <div class="scroll-control">
-    <button class="cbutton cbutton--effect-radomir btn-scroll-down">
-      <i class="cbutton__icon fa fa-angle-down fa-fw"></i>
-      <!-- <span class="cbutton__text">Play</span> -->
-    </button>
+  <div class="container" id="header-canvas-text">
+    <img src="https://s.gravatar.com/avatar/60515b6735ed4eeddbd1668f5fe9b5a0?s=120" alt="">
+    <h1 class="intro-title">
+      <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+      <small class="tagline">{{ site.tagline }}</small>
+    </h1>
   </div>
 </header>
+<div class="scroll-control">
+  <button class="cbutton cbutton--effect-radomir btn-scroll-down">
+    <i class="cbutton__icon fa fa-angle-down fa-fw"></i>
+  </button>
+</div>
 
 <div id="hamburger">&#8801</div>
 
