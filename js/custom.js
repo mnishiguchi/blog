@@ -1,6 +1,8 @@
 "use strict";
 
-// Navigation toggle
+/**
+ * Navigation toggle.
+ */
 ( function() {
   // Store references to elements so that we can add/remove classes to those elements anytime.
   var hamburger, logo, nav;
@@ -37,28 +39,25 @@
   }
 })();
 
-// ( function() {
-//   document.addEventListener( "DOMContentLoaded", function() {
-//     // Get HTML elements.
-//     var masthead    = document.getElementById( "masthead" );
-//     var logo        = document.getElementById( "logo" );
-//     var tagline     = document.getElementById( "logo--tagline" );
-//
-//     // Remember the original texts.
-//     var logoText    = logo.innerHTML;
-//     var taglineText = tagline.innerHTML;
-//
-//     // Add event handlers to the masthead.
-//     masthead.addEventListener( 'mouseenter', setHoverText, false );
-//     masthead.addEventListener( 'mouseleave', setOriginalText, false );
-//
-//     function setHoverText() {
-//       logo.innerHTML    = "にしぐちまさとし";
-//       tagline.innerHTML = "ウェブデベロッパー";
-//     }
-//     function setOriginalText() {
-//       logo.innerHTML    = logoText;
-//       tagline.innerHTML = taglineText;
-//     }
-//   });
-// })();
+
+/**
+ * Sticky element.
+ */
+( function() {
+  // http://blog.yjl.im/2010/01/stick-div-at-top-after-scrolling.html
+  function initializeStickyDiv() {
+    var window_top = $(window).scrollTop();
+    var div_top = $('#sticky-anchor').offset().top;
+    if (window_top > div_top) {
+      $('#sticky').addClass('stick');
+      $('#sticky-anchor').height($('#sticky').outerHeight());
+    } else {
+      $('#sticky').removeClass('stick');
+      $('#sticky-anchor').height(0);
+    }
+  }
+  $(document).ready( function() {
+    $( window ).scroll( initializeStickyDiv );
+    initializeStickyDiv();
+  });
+})();

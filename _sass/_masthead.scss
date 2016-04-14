@@ -57,12 +57,12 @@ $hamburger-side: 44px;
 }
 @media only screen and (min-width : 768px) {
   #masthead {
-    position: fixed;
+    // position: fixed;
     top: 0;
     left: 0;
     z-index: 1111;
     width: 100%;
-    background: rgba(29, 20, 37, .9);
+    background: $black-transparent;
     ul {
       display: flex;
       justify-content: center;
@@ -92,11 +92,11 @@ $hamburger-side: 44px;
 }
 
 #logo-wrapper {
+  padding: 2px;  // Determine based on dimensions of svg.line-drawing and .logo.
   position: absolute;
   top: 0;
   left: 0;
   z-index: 9999;
-  padding: 5px; // Allow room for drawing animation.
   @media only screen and (min-width : 768px) {
     top: 0;
     left: 0;
@@ -105,11 +105,12 @@ $hamburger-side: 44px;
 
 #hamburger {
   position: absolute;
-  top: 10px;
+  top: 16px;
   right: 10px;
   z-index: 9999;
   display: inline-block;
-  background: $gray-1;
+  background: rbga(255,255,255, 0);
+  color: $gray-3;
   border: 1px solid $gray-3;
   width: $hamburger-side;
   height: $hamburger-side;
@@ -119,6 +120,7 @@ $hamburger-side: 44px;
   cursor: pointer;
   &:hover {
     background: lighten($link-hover-color, 30%);
+    color: $gray-3;
   }
   // Hide it when larger than iPad.
   @media only screen and (min-width : 768px) {
@@ -149,27 +151,29 @@ $hamburger-side: 44px;
   position: relative;
   background-color: $black;
   width: 100vw;
-  height: 90vh;
+  height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  img {
-    width: auto;
-    height: auto;
-    max-height: 300px;
-    border: 4px solid white;
+  @media only screen and (min-width : 768px) {
+    height: 70vh;
   }
 }
 #header-canvas-text {
-  position: absolute;
-  bottom: 20%;
-  left: 0;
-  right: 0;
+  display: block;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // text-align: center;
   img {
     display: block;
     margin: 0 auto;
     padding: 5px 0;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+    border: 4px solid white;
   }
   h1 {
     display: block;
@@ -188,6 +192,16 @@ $hamburger-side: 44px;
       opacity: .8;
     }
   }
+  @media only screen and (min-width : 768px) {
+    display: block;
+    padding-top: 40px;
+    img {
+      max-height: 200px;
+    }
+    h1 {
+      font-size: 30px;
+    }
+  }
 }
 .scroll-control {
   display: flex;
@@ -195,21 +209,11 @@ $hamburger-side: 44px;
   justify-content: center;
   text-align: center;
   height: $masthead-height;
-  background: $black;
+  background: $black-transparent;
+  width: 100%;
   .btn-scroll-down {
     display: inline-block;
     margin: 0 auto;
     padding: 5px;
-  }
-}
-@media only screen and (min-width : 768px) {
-  .header-canvas {
-    height: 70vh;
-  }
-  #header-canvas-text {
-    bottom: 10%;
-    h1 {
-      font-size: 30px;
-    }
   }
 }

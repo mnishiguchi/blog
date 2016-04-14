@@ -1,79 +1,58 @@
-.logo-wrapper {
-	display: inline-block;
-	position: relative;
-	padding: 0;
-	text-align: center;
-}
 @media screen and (max-width: 46.0625em) {
-	.logo-wrapper {
-		margin-bottom: 0;
-		// padding-bottom: 1em;
-	}
+  .logo-wrapper {
+    margin-bottom: 0;
+    // padding-bottom: 1em;
+  }
 }
-
 svg {
-	pointer-events: none;
+  pointer-events: none;
 }
-
 .drawings {
-	position: relative;
-	max-height: 600px;
+  position: relative;
+  max-height: 600px;
 }
-
 .show {
-	opacity: 1;
+  opacity: 1;
 }
-
 .hide {
-	opacity: 0;
+  opacity: 0;
 }
-
 .line-drawing {
-	-webkit-transition: opacity 0.5s;
-	transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
-
 .line-drawing path {
-	fill: none;
-	stroke: white;
-	stroke-width: 3;
+  fill: none;
+  stroke: white;
+  stroke-width: 3;
 }
-
-.show,
-.hide {
-	-webkit-transition: opacity 0.5s;
-	transition: opacity 0.5s;
+.hide,
+.show {
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
-
 .logo {
-	position: relative;
-	// margin: 0 auto 30px;
-	width: 80px;
-	height: 80px;
-	background: $black no-repeat 50% 50%;
+  position: relative; // margin: 0 auto 30px;
+  width: 80px;
+  height: 80px;
+  background: $black no-repeat 50% 50%;
 }
-
 svg.line-drawing {
-	position: absolute;
-	max-width: 100%;
-	z-index: 10;
-	top: 0;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
+  position: absolute;
+  max-width: 100%;
+	width: 84px;
+	height: 84px;
+  z-index: 10;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-
 svg.line-drawing path {
-	fill: none;
-	stroke-width: 2;
-	stroke: #ddd;
+  fill: none;
+  stroke-width: 2;
+  stroke: #ddd;
 }
-
 svg.line-drawing path.darker {
-	stroke: #aaa;
-}
-
-/* Positions */
-#theLogo {
-	// top: 39px;
+  stroke: #aaa;
 }

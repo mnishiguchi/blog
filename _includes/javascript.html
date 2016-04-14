@@ -1,0 +1,25 @@
+<!--
+ {% if site.analytics_id %}
+ <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+   ga('create', '{{ site.analytics_id }}', 'auto');
+   ga('send', 'pageview');
+ </script>
+{% endif %}
+-->
+
+<!-- Load jQuery -->
+<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+<!-- Load classie library -->
+<script src="{{ site.baseurl }}/js/classie.js"></script>
+<!-- Load svg drawing animations -->
+<script src="{{ site.baseurl }}/js/svganimations2.js"></script>
+<!-- Load js for masthead -->
+<script src="{{ site.baseurl }}/js/custom.js"></script>
+<!-- Load js for animated button -->
+<script src="{{ site.baseurl }}/js/cbutton.js"></script>
+
+<noscript>Your browser does not support JavaScript!</noscript>
