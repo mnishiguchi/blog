@@ -3,23 +3,6 @@ layout: page
 title: Projects
 ---
 
-## Hexagonal grid
-
-Web design. This is an imitation of Mr. Mrad's beautiful portfolio.
-I did so in order to learn new techniques to design beautiful websites.
-
-<a href="http://mrad-mnishiguchi.bitballoon.com/">
-Details
-</a>
-
-## JavaScript-Demos
-
-A list of my experiments on web development techniques, mainly AngularJS
-
-<a href="http://mnishiguchi.github.io/JavaScript-Demos/">
-Details
-</a>
-
 ## Moving estimator (Android)
 
 Once upon a time I was working for an international transportation company.

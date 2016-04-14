@@ -5,8 +5,9 @@
 // * { border: 1px dotted red; }
 
 // Local variables
-$masthead-height: 82px;
-$hanburger-menu-item-height: 40px;
+$masthead-height: 44px;
+$toggle-menu-item-height: 40px;
+$toggle-menu-height: $toggle-menu-item-height * 5;
 $hamburger-side: 44px;
 
 #masthead {
@@ -19,17 +20,17 @@ $hamburger-side: 44px;
   }
   &.slide-down {
     transition: .1s linear all;
-    height: 280px;
+    height: $toggle-menu-height;
   }
   ul {
     list-style: none;
     padding: 0;
-    margin-top: 80px;
+    // margin-top: 80px;
     text-align: center;
     li {
       display: block;
-      height: $hanburger-menu-item-height;
-      line-height: $hanburger-menu-item-height;
+      height: $toggle-menu-item-height;
+      line-height: $toggle-menu-item-height;
       &:hover>a {
         border-bottom: 1px solid $blue;
       }
@@ -56,17 +57,18 @@ $hamburger-side: 44px;
 }
 @media only screen and (min-width : 768px) {
   #masthead {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1111;
     width: 100%;
-    background: rgba(0,0,0,.3);
+    background: rgba(29, 20, 37, .9);
     ul {
-      display: inline-block;
+      display: flex;
+      justify-content: center;
+      height: $masthead-height;
       margin: 0;
       padding: 0;
-      float: right;
       li {
         display: inline-block;
         width: auto;      // Deactivate width 100%.
@@ -92,9 +94,9 @@ $hamburger-side: 44px;
 #logo-wrapper {
   position: absolute;
   top: 0;
-  left: 0.3rem;
+  left: 0;
   z-index: 9999;
-  padding: 0 3px; // Allow room for drawing animation.
+  padding: 5px; // Allow room for drawing animation.
   @media only screen and (min-width : 768px) {
     top: 0;
     left: 0;
@@ -119,7 +121,9 @@ $hamburger-side: 44px;
     background: lighten($link-hover-color, 30%);
   }
   // Hide it when larger than iPad.
-  @media only screen and (min-width : 768px) { display: none; }
+  @media only screen and (min-width : 768px) {
+    display: none;
+  }
 }
 
 // // UNUSED: Replaced with logo.
@@ -145,15 +149,21 @@ $hamburger-side: 44px;
   position: relative;
   background-color: $black;
   width: 100vw;
-  height: 50vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  img {
+    width: auto;
+    height: auto;
+    max-height: 300px;
+    border: 4px solid white;
+  }
 }
 #header-canvas-text {
   position: absolute;
-  bottom: 20px;
+  bottom: 20%;
   left: 0;
   right: 0;
   img {
@@ -164,6 +174,7 @@ $hamburger-side: 44px;
   h1 {
     display: block;
     color: $gray-2;
+    font-size: 24px;
     a {
       color: inherit;
       &:hover {
@@ -183,11 +194,22 @@ $hamburger-side: 44px;
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 40px;
+  height: $masthead-height;
   background: $black;
   .btn-scroll-down {
     display: inline-block;
     margin: 0 auto;
     padding: 5px;
+  }
+}
+@media only screen and (min-width : 768px) {
+  .header-canvas {
+    height: 70vh;
+  }
+  #header-canvas-text {
+    bottom: 10%;
+    h1 {
+      font-size: 30px;
+    }
   }
 }

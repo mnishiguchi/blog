@@ -3,10 +3,6 @@ layout: page
 title: About
 ---
 
-Hi, I am Masatoshi Nishiguchi, an aspiring programmer who loves coding
-and is passionate about building web and mobile applications.
-I am originally from Japan, but currently live in the United States in Washington, DC.
-
 ## Tools and Languages
 
 These are some of the development tools that I currently use and
@@ -21,6 +17,8 @@ OS X, Linux
 iTerm, Sublime Text, Atom, Android Studio, NetBeans, Xcode, Vim
 
 Git, Heroku, SQLite, PostgreSQL
+
+Adobe Photoshop, Adobe Illustrator, Adobe InDesign
 
 Japanese, English, Spanish
 

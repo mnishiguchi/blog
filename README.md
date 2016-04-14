@@ -53,6 +53,30 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 
 -----
 
+## Some ideas
+https://jsfiddle.net/livibetter/HV9HM/
+https://ihatetomatoes.net/simple-parallax-scrolling-tutorial/
+https://davidwalsh.name/demo/background-animation-css.php
+
+### Moving stars animation
+- TODO: research
+- Possibly change background position by CSS
+
+### Scrolling Effects 1
+- When scrolling up and reaching the top, an object stays at the top of the page.
+
+### Scrolling Effects 2
+- When the page is scrolling, objects will move at different speeds.
+
+### Profile picture
+- Black and white
+- Crop the face
+
+### Responsive design
+- Read Luke W's articles.
+
+-----
+
 ## Fancy animation example
 - Adobe Illustrator
 - Create multple images that are slightly different
@@ -116,3 +140,5 @@ $(document).ready( function() {
     $(".swish").addClass("in");
 });
 ```
+
+---
