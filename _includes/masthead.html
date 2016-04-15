@@ -1,21 +1,33 @@
+<!-- Load background images -->
+<style>
+  /* .header-canvas { background: url(http://i.imgur.com/kVJs7Pb.jpg); }*/
+  .logo {
+    background: url({{ site.baseurl }}/img/mn_logo_80_no_border_clear.png);
+  }
+</style>
+
+<div id="hamburger">&#8801</div>
+
 <nav id="masthead">
   <div id="logo-wrapper">
     <a href="{{ site.baseurl }}/" title="Home" id="logo">
       <svg id="logo-svg" class="line-drawing" xmlns="http://www.w3.org/2000/svg">
-        <path class="darker" d="M 80.889194,41.80541 C 80.889194,63.45198 63.341174,81 41.694594,81 20.048024,81 2.5,63.45198 2.5,41.80541 2.5,20.158827 20.048024,2.61081 41.694594,2.61081 c 21.64658,0 39.1946,17.548017 39.1946,39.1946 z"/>
+        <path class="darker" d="M 80.889194,41.80541 C 80.889194,63.45198 63.341174,81 41.694594,81 20.048024,81 2.5,63.45198 2.5,41.80541 2.5,20.158827 20.048024,2.61081 41.694594,2.61081 c 21.64658,0 39.1946,17.548017 39.1946,39.1946 z" />
       </svg>
       <div data-svg="logo-svg" class="logo hide"></div>
     </a>
-  </div><!-- .logo-wrapper -->
+  </div>
+  <!-- .logo-wrapper -->
 
   <ul>
     {% for page in site.pages_list %}
-      <li class="nav-item">
-        <a class="nav-link" href="{{ page[1] | prepend: site.baseurl }}">{{ page[0] }}</a>
-      </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{{ page[1] | prepend: site.baseurl }}">{{ page[0] }}</a>
+    </li>
     {% endfor %}
   </ul>
-</nav><!-- .masthead -->
+</nav>
+<!-- .masthead -->
 
 <header class="header-canvas">
   <div class="container" id="header-canvas-text">
@@ -32,29 +44,11 @@
 <div id="sticky-anchor"></div>
 
 <div id="sticky" class="scroll-control">
-  <button class="cbutton cbutton--effect-radomir btn-scroll-down">
-    <i class="cbutton__icon fa fa-angle-down fa-fw"></i>
-  </button>
+  <a class="btn page-scroll" href="#scrollTo">
+    <div class="cbutton cbutton--effect-radomir btn-scroll-down">
+      <i class="cbutton__icon fa fa-angle-down fa-fw"></i>
+    </div>
+  </a>
 </div>
 
-<div id="hamburger">&#8801</div>
-
-<!-- Load background images -->
-<style>
-  /*.header-canvas {
-    background: url(http://i.imgur.com/kVJs7Pb.jpg);
-  }*/
-  .logo {
-    background: url({{ site.baseurl }}/img/mn_logo_80_no_border_clear.png);
-  }
-</style>
-
-<!-- Styles for sticky element -->
-<style>
-  #sticky.stick {
-    margin-top: 0 !important;
-    position: fixed;
-    top: 0;
-    z-index: 10000;
-  }
-</style>
+<div id="scrollTo"></div>

@@ -6,8 +6,8 @@
 
 // Local variables
 $masthead-height: 44px;
-$toggle-menu-item-height: 40px;
-$toggle-menu-height: $toggle-menu-item-height * 5;
+$toggle-menu-item-height: 50px;
+$toggle-menu-height: $toggle-menu-item-height * 6;
 $hamburger-side: 44px;
 
 #masthead {
@@ -25,7 +25,7 @@ $hamburger-side: 44px;
   ul {
     list-style: none;
     padding: 0;
-    // margin-top: 80px;
+    margin-top: $toggle-menu-item-height;
     text-align: center;
     li {
       display: block;
@@ -216,4 +216,13 @@ $hamburger-side: 44px;
     margin: 0 auto;
     padding: 5px;
   }
+}
+#sticky.stick {
+  margin-top: 0 !important;
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+}
+.page-scroll {
+  width: 100%;
 }

@@ -61,3 +61,33 @@
     initializeStickyDiv();
   });
 })();
+
+
+/**
+ * Smooth page scroll on click.
+ * - Dependency: jQuery and jQuery easing
+ */
+( function() {
+  function distanceFromDisplayTop( $element ) {
+    return $element.offset().top - $(window).scrollTop();
+  }
+  function scrollDownTo( $anchor ) {
+    $( 'html, body' ).stop().animate({
+        scrollTop: ( $( $anchor.attr( 'href' ) ).offset().top - 50 )
+    }, 500, 'easeInOutExpo');
+    event.preventDefault();
+  }
+  function scrollUpToTop() {
+    $( 'html, body' ).stop().animate({
+        scrollTop: 0
+    }, 500, 'easeInOutExpo');
+    event.preventDefault();
+  }
+
+  // Setup a click listener to trigger automatic scroll animation.
+  $( 'a.page-scroll' ).bind( 'click', function( event ) {
+    var $anchor  = $( this );
+    // console.debug( distanceFromDisplayTop( $anchor ) );
+    distanceFromDisplayTop( $anchor ) > 10 ? scrollDownTo( $anchor ) : scrollUpToTop() ;
+  });
+})();
