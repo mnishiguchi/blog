@@ -19,11 +19,11 @@
   </div>
   <!-- .logo-wrapper -->
 
-  <ul>
+  <ul class="nav-menu">
     {% for page in site.pages_list %}
-    <li class="nav-item">
-      <a class="nav-link" href="{{ page[1] | prepend: site.baseurl }}">{{ page[0] }}</a>
-    </li>
+      <li>
+        <a href="{{ page[1] | prepend: site.baseurl }}">{{ page[0] }}</a>
+      </li>
     {% endfor %}
   </ul>
 </nav>
@@ -31,21 +31,24 @@
 
 <header class="header-canvas">
   <div class="container" id="header-canvas-text">
-    <img src="{{ site.baseurl }}/img/masatoshi_face_transparent.png" alt="Masatoshi Nishiguchi">
-    <!-- <img src="{{ site.baseurl }}/img/masatoshi_face_300.jpg" alt="Masatoshi Nishiguchi"> -->
-    <!-- <img src="https://s.gravatar.com/avatar/60515b6735ed4eeddbd1668f5fe9b5a0?s=120" alt=""> -->
-    <h1 class="intro-title">
-      <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-      <small class="tagline">{{ site.tagline }}</small>
-    </h1>
+    {% if page.title == "Home" %}
+      <img src="{{ site.baseurl }}/img/masatoshi_face_transparent.png" alt="Masatoshi Nishiguchi">
+      <h1 class="intro-title">
+        <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+        <small class="tagline">{{ site.tagline }}</small>
+      </h1>
+    {% else %}
+      <h1 class="page-title">{{ page.title }}</h1>
+    {% endif %}
   </div>
 </header>
 
 <div id="sticky-anchor"></div>
 
 <div id="sticky" class="scroll-control">
-  <a class="btn page-scroll" href="#scrollTo">
-    <div class="cbutton cbutton--effect-radomir btn-scroll-down">
+  <a id="page-scroll" href="#scrollTo">
+    <div id="rotate-icon" class="cbutton cbutton--effect-radomir btn-scroll">
+      <!-- &bigtriangledown; -->
       <i class="cbutton__icon fa fa-angle-down fa-fw"></i>
     </div>
   </a>

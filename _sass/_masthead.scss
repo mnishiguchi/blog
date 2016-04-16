@@ -175,12 +175,13 @@ $hamburger-side: 44px;
     height: auto;
     border: 4px solid white;
   }
-  h1 {
+  .intro-title {
     display: block;
     color: $gray-2;
     font-size: 24px;
     a {
       color: inherit;
+      padding: 2em 0;
       &:hover {
         text-decoration: none;
       }
@@ -192,13 +193,17 @@ $hamburger-side: 44px;
       opacity: .8;
     }
   }
+  .page-title {
+    color: $gray-3;
+    font-size: 40px;
+  }
   @media only screen and (min-width : 768px) {
     display: block;
     padding-top: 40px;
     img {
       max-height: 200px;
     }
-    h1 {
+    .intro-title {
       font-size: 30px;
     }
   }
@@ -211,10 +216,13 @@ $hamburger-side: 44px;
   height: $masthead-height;
   background: $black-transparent;
   width: 100%;
-  .btn-scroll-down {
-    display: inline-block;
-    margin: 0 auto;
-    padding: 5px;
+  a {
+    width: 100%;
+    .btn-scroll {
+      display: inline-block;
+      margin: 0 auto;
+      padding: 5px;
+    }
   }
 }
 #sticky.stick {
@@ -223,6 +231,17 @@ $hamburger-side: 44px;
   top: 0;
   z-index: 10000;
 }
-.page-scroll {
-  width: 100%;
+
+// Rotate the page-scroll icon. By default, it points down.
+// When .up class is added by JS.
+#rotate-icon {
+  -moz-transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+  &.up {
+    -ms-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+  }
 }

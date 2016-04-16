@@ -46,14 +46,14 @@
 ( function() {
   // http://blog.yjl.im/2010/01/stick-div-at-top-after-scrolling.html
   function initializeStickyDiv() {
-    var window_top = $(window).scrollTop();
-    var div_top = $('#sticky-anchor').offset().top;
+    var window_top = $( window ).scrollTop();
+    var div_top = $( '#sticky-anchor' ).offset().top;
     if (window_top > div_top) {
-      $('#sticky').addClass('stick');
-      $('#sticky-anchor').height($('#sticky').outerHeight());
+      $( '#sticky' ).addClass( 'stick' );
+      $( '#sticky-anchor' ).height($( '#sticky' ).outerHeight());
     } else {
-      $('#sticky').removeClass('stick');
-      $('#sticky-anchor').height(0);
+      $( '#sticky' ).removeClass( 'stick' );
+      $( '#sticky-anchor' ).height( 0 );
     }
   }
   $(document).ready( function() {
@@ -69,23 +69,25 @@
  */
 ( function() {
   function distanceFromDisplayTop( $element ) {
-    return $element.offset().top - $(window).scrollTop();
+    return $element.offset().top - $( window ).scrollTop();
   }
   function scrollDownTo( $anchor ) {
     $( 'html, body' ).stop().animate({
         scrollTop: ( $( $anchor.attr( 'href' ) ).offset().top - 50 )
     }, 500, 'easeInOutExpo');
     event.preventDefault();
+    $( "#rotate-icon" ).addClass( "up" );
   }
   function scrollUpToTop() {
     $( 'html, body' ).stop().animate({
         scrollTop: 0
     }, 500, 'easeInOutExpo');
     event.preventDefault();
+    $( "#rotate-icon" ).removeClass( "up" );
   }
 
   // Setup a click listener to trigger automatic scroll animation.
-  $( 'a.page-scroll' ).bind( 'click', function( event ) {
+  $( '#page-scroll' ).bind( 'click', function( event ) {
     var $anchor  = $( this );
     // console.debug( distanceFromDisplayTop( $anchor ) );
     distanceFromDisplayTop( $anchor ) > 10 ? scrollDownTo( $anchor ) : scrollUpToTop() ;
