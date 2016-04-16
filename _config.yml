@@ -8,8 +8,10 @@ description:         Masatoshi Nishiguchi's blog
 url:                 "http://mnishiguchi.github.io"  # the base hostname & protocol for your site
 baseurl:             "/blog"
 
+
 # Pagination
 # paginate:            1
+# paginate_path:       /blog/now/page:num
 
 # Assets
 #
@@ -21,9 +23,10 @@ sass:
 # About/contact
 author:
   name:              Masatoshi Nishiguchi
-  url:               http://mnishiguchi.github.io
+  url:               http://mnishiguchi.com
   email:             nishiguchi.masa@gmail.com
   github_url:        https://github.com/mnishiguchi
+  linkedin_url:      https://linkedin.com/in/mnishiguchi
   twitter_url:       https://twitter.com/mnishiguchiDC
   stackoverflow_url: http://stackoverflow.com/users/3837223/mnishiguchi
 

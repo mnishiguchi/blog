@@ -4,9 +4,9 @@ title: About
 permalink: /about  # Specify the permalink because this file is not in the root.
 ---
 
-I plan to leverage my diverse skills and experiences in the areas of
+I am striving to leverage my diverse skills and experiences in the areas of
 linguistics, counseling, customer service, engineering sales, etc
-to become a resourceful and unique developer.
+so that I will become a resourceful and unique developer.
 
 ## Linguistics
 
@@ -52,3 +52,9 @@ that I was interested in pursuing, but also realized that my past education
 and job experiences were, in a sense, bread crumbs leading to a career in programming.
 
 Without hesitation, I enrolled in a Computer Science program at [University of the District of Columbia](http://www.udc.edu/).
+
+## Web design
+
+I am currently striving to improve my web design skills with assistance of this [awesome designer](http://rachidmrad.com/#/portfolio) in Washington DC. To be honest, I was underestimating the importance of visual design for a long time. Now I realized that even if you are a back-end developer, being able to create something beautiful is a valuable ability.
+
+My goal is to gain insight into web design and to be aware of good design so that I will be able to avoid making unattractive or hard-to-use user interfaces as I develop applications.

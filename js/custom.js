@@ -71,12 +71,14 @@
  * - Dependency: jQuery and jQuery easing
  */
 ( function() {
+  var anchorHeight = 40; // Adjust this according to the anchor div's height.
+
   function distanceFromDisplayTop( $element ) {
     return $element.offset().top - $( window ).scrollTop();
   }
   function scrollDownTo( $anchor ) {
     $( 'html, body' ).stop().animate({
-        scrollTop: ( $( $anchor.attr( 'href' ) ).offset().top - 50 )
+        scrollTop: ( $( $anchor.attr( 'href' ) ).offset().top - anchorHeight )
     }, 500, 'easeInOutExpo');
     event.preventDefault();
 

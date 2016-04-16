@@ -8,32 +8,31 @@
     </div>
 
     <div class="social-links">
+      <a class="cbutton cbutton--effect-radomir" href="{{ 'mailto:' | append:  site.author.email }}">
+        <i class="cbutton__icon fa fa-envelope-o"></i>
+      </a>
+
       {% if site.author.github_url %}
         <a class="cbutton cbutton--effect-radomir" href="{{ site.author.github_url }}">
           <i class="cbutton__icon fa fa-github"></i>
-          <!-- <span class="cbutton__text"></span> -->
         </a>
       {% endif %}
 
       {% if site.author.twitter_url %}
-        <a class="cbutton cbutton--effect-radomir" href="{{ site.author.twitter_url }}">
-          <i class="cbutton__icon fa fa-twitter"></i>
-          <!-- <span class="cbutton__text"></span> -->
+        <a class="cbutton cbutton--effect-radomir" href="{{ site.author.linkedin_url }}">
+          <i class="cbutton__icon fa fa-linkedin"></i>
         </a>
       {% endif %}
 
       {% if site.author.stackoverflow_url %}
         <a class="cbutton cbutton--effect-radomir" href="{{ site.author.stackoverflow_url }}">
           <i class="cbutton__icon fa fa-stack-overflow"></i>
-          <!-- <span class="cbutton__text"></span> -->
         </a>
       {% endif %}
 
       <a class="cbutton cbutton--effect-radomir" href="{{ site.baseurl }}/atom.xml">
         <i class="cbutton__icon fa fa-feed"></i>
-        <!-- <span class="cbutton__text"></span> -->
       </a>
-      <div class="clearfix"></div>
     </div>
   </div>
 </footer>
