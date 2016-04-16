@@ -44,21 +44,24 @@
  * Sticky element.
  */
 ( function() {
+
   // http://blog.yjl.im/2010/01/stick-div-at-top-after-scrolling.html
-  function initializeStickyDiv() {
+  function initStickyDiv() {
     var window_top = $( window ).scrollTop();
     var div_top = $( '#sticky-anchor' ).offset().top;
     if (window_top > div_top) {
       $( '#sticky' ).addClass( 'stick' );
       $( '#sticky-anchor' ).height($( '#sticky' ).outerHeight());
+      $( "#rotate-icon" ).addClass( "up" );
     } else {
       $( '#sticky' ).removeClass( 'stick' );
       $( '#sticky-anchor' ).height( 0 );
+      $( "#rotate-icon" ).removeClass( "up" );
     }
   }
   $(document).ready( function() {
-    $( window ).scroll( initializeStickyDiv );
-    initializeStickyDiv();
+    $( window ).scroll( initStickyDiv );
+    initStickyDiv();
   });
 })();
 
@@ -76,6 +79,7 @@
         scrollTop: ( $( $anchor.attr( 'href' ) ).offset().top - 50 )
     }, 500, 'easeInOutExpo');
     event.preventDefault();
+
     $( "#rotate-icon" ).addClass( "up" );
   }
   function scrollUpToTop() {
@@ -83,6 +87,7 @@
         scrollTop: 0
     }, 500, 'easeInOutExpo');
     event.preventDefault();
+
     $( "#rotate-icon" ).removeClass( "up" );
   }
 

@@ -4,6 +4,10 @@ title: About
 permalink: /about  # Specify the permalink because this file is not in the root.
 ---
 
+I plan to leverage my diverse skills and experiences in the areas of
+linguistics, counseling, customer service, engineering sales, etc
+to become a resourceful and unique developer.
+
 ## Linguistics
 
 At [Aichi Shukutoku University](http://www.aasa.ac.jp/) in Japan, I majored in Linguistics, with a specialization in Syntax.
