@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Projects
+permalink: /projects  # Specify the permalink because this file is not in the root.
 ---
 
 ## Moving estimator (Android)

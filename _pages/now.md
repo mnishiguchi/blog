@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Now
+permalink: /now  # Specify the permalink because this file is not in the root.
 ---
 
 TODO

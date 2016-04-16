@@ -45,3 +45,6 @@ pages_list:
   - ['Now',      '/now']
   - ['Projects', '/projects']
   - ['Archive',  '/archive']
+
+# Include custom directories
+include: ['_pages']
