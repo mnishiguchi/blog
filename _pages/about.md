@@ -69,9 +69,6 @@ This is the one who taught me all the basics of Computer Science early on. I gai
 ### Code adademy
 This is where I practiced coding when I did not even know how to use a text editor.
 
-### [Ruby on Rails Tutorial by Michael Hartl](https://www.railstutorial.org/)
-When I was itching to create something useful using my coding skills, I came across this web developing tutorial. It taught me how to build web applications as well as Unix command-line and other development tools.
-
 ### Other courses / tutorials I did
 
 - Web Application Architectures - University of New Mexico
@@ -89,6 +86,12 @@ Without hesitation, I enrolled in a Computer Science program at [University of t
 - Data Structures Using C++ (Professor: Joel Belcher)
 - Web Design (Professor: Rachid Mrad)
 - Digital Applications / Desktop Publishing
+
+<h2 class="h1">
+  Web development
+</h2>
+
+When I was itching to create something useful using my coding skills, I came across this web developing tutorial, [Ruby on Rails Tutorial by Michael Hartl](https://www.railstutorial.org/). It taught me how to build web applications as well as Unix command-line and other development tools. Ever since I am passionate about improving web application development skills. By following Rails philosophy and conventions, I was able to absorb key elements of web development rapidly. Now I want to expand my field of expertise towards web components using AngularJS and ReactJS.
 
 <h2 class="h1">
   Web design
