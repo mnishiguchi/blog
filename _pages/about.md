@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-permalink: /about  # Specify the permalink because this file is not in the root.
+permalink: /about # Specify the permalink because this file is not in the root.
 ---
 
 <section class="introduction">

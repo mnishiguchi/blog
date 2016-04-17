@@ -6,8 +6,8 @@ title:               Masatoshi Nishiguchi
 tagline:             Web developer
 description:         Masatoshi Nishiguchi's blog
 url:                 "http://mnishiguchi.github.io"  # the base hostname & protocol for your site
-baseurl:             "/blog"
-
+# baseurl:             ""
+# url:                 "http://mnishiguchi.com"
 
 # Pagination
 paginate:            1
