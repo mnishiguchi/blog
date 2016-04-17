@@ -12,6 +12,9 @@ url:                 "http://mnishiguchi.github.io"  # the base hostname & proto
 # Pagination
 paginate:            1
 paginate_path:       /blog/page:num
+url:                 https://mnishiguchi.github.io/blog
+paginate:            1
+baseurl:             ""
 
 # Assets
 #
