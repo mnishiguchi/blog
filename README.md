@@ -79,3 +79,10 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 
 ### Parallax-scrolling
 - https://ihatetomatoes.net/simple-parallax-scrolling-tutorial/
+
+---
+
+## Adding an A record on DNS manager
+1. Open DNS manager
+2. Select the domain name you want to use
+3. Click "Edit Zone"
