@@ -4,11 +4,15 @@ title: About
 permalink: /about  # Specify the permalink because this file is not in the root.
 ---
 
+<section class="introduction">
 I am striving to leverage my diverse skills and experiences in the areas of
 linguistics, counseling, customer service, engineering sales, etc
 so that I will become a resourceful and unique developer.
+</section>
 
-## Linguistics
+<h2 class="h1">
+  Linguistics
+</h2>
 
 At [Aichi Shukutoku University](http://www.aasa.ac.jp/) in Japan, I majored in Linguistics, with a specialization in Syntax.
 
@@ -20,7 +24,9 @@ Because both syntactical analysis and lexical analysis are similar,
 understanding how natural languages work is useful in understanding
 computer languages.
 
-## Counseling
+<h2 class="h1">
+  Counseling
+</h2>
 
 At [Waikato Institute of Technology](http://www.wintec.ac.nz/) in New Zealand, I obtained a certificate in Counseling.
 As part of my Counseling major, I assisted young people experiencing
@@ -31,7 +37,9 @@ Counseling skills can be useful in programming when working with clients
 to assist them in identifying their programming needs and collaboratively
 working with the clients to deliver a quality and meaningful product.
 
-## Sales and engineering
+<h2 class="h1">
+  Sales and engineering
+</h2>
 
 Because of my desire to use my counseling skills to work in sales and
 my burgeoning interest in technology, I sought and landed a job as a
@@ -41,7 +49,9 @@ I acquired not only sales and customer service skills,
 but also some insight into mechanical and software engineering through
 working with clients and in-house engineers.
 
-## Computer programming
+<h2 class="h1">
+  Self-directed coding
+</h2>
 
 Shortly after moving to the United States, I met a professional programmer
 at a rock climbing gym. His passion for coding inspired me to research the
@@ -51,9 +61,38 @@ I not only realized that programming was the career field
 that I was interested in pursuing, but also realized that my past education
 and job experiences were, in a sense, bread crumbs leading to a career in programming.
 
-Without hesitation, I enrolled in a Computer Science program at [University of the District of Columbia](http://www.udc.edu/).
+My IT-pro friends recommended me a few online courses such as Harvard's CS50. Since I started programming, I completed several online courses. I really appreciate the generosity of the industry. I feel like now is time to contribute back to the community in return.
 
-## Web design
+### CS50
+This is the one who taught me all the basics of Computer Science early on. I gained understanding of how computer software works and insight into data structures through a broad range of assignment projects (C, Linux, JavaScript, SQL, PHP, Cryptography, etc)
+
+### Code adademy
+This is where I practiced coding when I did not even know how to use a text editor.
+
+### [Ruby on Rails Tutorial by Michael Hartl](https://www.railstutorial.org/)
+When I was itching to create something useful using my coding skills, I came across this web developing tutorial. It taught me how to build web applications as well as Unix command-line and other development tools.
+
+### Other courses / tutorials I did
+
+- Web Application Architectures - University of New Mexico
+- 6.00.1x: Introduction to Computer Science and Programming Using Python - MIT
+- COMP102x: Introduction to Computing with Java - HKUST
+- Introduction to Linux - Linux Foundation
+- Programming Mobile Applications for Android Handheld Systems - University of Maryland
+
+<h2 class="h1">
+  University of the District of Columbia
+</h2>
+
+Without hesitation, I enrolled in a Computer Science program at [University of the District of Columbia](http://www.udc.edu/) to complement my self-directed learning. Among others, I enjoyed the following excellent courses:
+
+- Data Structures Using C++ (Professor: Joel Belcher)
+- Web Design (Professor: Rachid Mrad)
+- Digital Applications / Desktop Publishing
+
+<h2 class="h1">
+  Web design
+</h2>
 
 I am currently striving to improve my web design skills with assistance of this [awesome designer](http://rachidmrad.com/#/portfolio) in Washington DC. To be honest, I was underestimating the importance of visual design for a long time. Now I realized that even if you are a back-end developer, being able to create something beautiful is a valuable ability.
 

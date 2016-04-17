@@ -10,8 +10,8 @@ baseurl:             "/blog"
 
 
 # Pagination
-# paginate:            1
-# paginate_path:       /blog/now/page:num
+paginate:            1
+paginate_path:       /blog/page:num
 
 # Assets
 #
@@ -46,7 +46,7 @@ gems:
 pages_list:
   - ['Home',     '/']
   - ['About',    '/about']
-  - ['Now',      '/now']
+  - ['Blog',     '/blog']
   - ['Projects', '/projects']
   - ['Archive',  '/archive']
 
