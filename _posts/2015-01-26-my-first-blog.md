@@ -1,6 +1,7 @@
 ---
 layout: post
 title: My first blog
+comments: true
 ---
 
 Hi, this is Masatoshi Nishiguchi. I am writing a blog post for the first time.

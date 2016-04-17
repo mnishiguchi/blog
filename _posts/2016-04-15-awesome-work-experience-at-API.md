@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Awesome work experience at API
+comments: true
 ---
 
 I was very fortunate to have an opportunity to work for [American Petroleum Institute (API)](http://www.api.org/) for a few weeks, where I had an invaluable experience as a web programmer.

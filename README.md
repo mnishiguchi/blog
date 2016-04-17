@@ -82,7 +82,26 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 
 ---
 
-## Adding an A record on DNS manager
+## GitHub Pages and GoDaddy Setup
+- https://medium.com/@LovettLovett/github-pages-godaddy-f0318c2f25a#.ard50ejan
+- http://andrewsturges.com/blog/jekyll/tutorial/2014/11/06/github-and-godaddy.html
+
+### The objective
+- Use the following URLs for my website instead of the `github.io` urls:
+  - mnishiguchi.com
+  - www.mnishiguchi.com
+
+### Adding an A record on DNS manager
 1. Open DNS manager
 2. Select the domain name you want to use
 3. Click "Edit Zone"
+
+### Check if the change has been propagated
+```bash
+$ dig mnishiguchi.com +nostats +nocomments +nocmd
+
+; <<>> DiG 9.8.3-P1 <<>> mnishiguchi.com +nostats +nocomments +nocmd
+;; global options: +cmd
+;mnishiguchi.com.		IN	A
+mnishiguchi.com.	600	IN	A	192.30.252.153
+```

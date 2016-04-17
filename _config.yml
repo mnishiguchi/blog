@@ -5,9 +5,8 @@ permalink:           pretty
 title:               Masatoshi Nishiguchi
 tagline:             Web developer
 description:         Masatoshi Nishiguchi's blog
-url:                 "http://mnishiguchi.github.io"  # the base hostname & protocol for your site
-# baseurl:             ""
-# url:                 "http://mnishiguchi.com"
+url:                 "http://mnishiguchi.com"  # the base hostname & protocol for your site
+baseurl:             ""
 
 # Pagination
 paginate:            1
@@ -42,7 +41,7 @@ github:
 gems:
   - jekyll-paginate
   - jekyll-gist
-  - jekyll-redirect-from
+  # - jekyll-redirect-from
 # The jekyll-redirect-from gem allows URL Redirects: https://help.github.com/articles/redirects-on-github-pages
 
 # Navigation links in the header of the website

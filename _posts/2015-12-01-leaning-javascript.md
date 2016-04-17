@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Learning JavaScipt
+comments: true
 ---
 
 So far I have been using JavaScript and CoffeeScript when I build Rails applications, but most of the time I can solve problems on the server side and tend to seek solutions by writing Ruby code.
