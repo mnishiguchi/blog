@@ -76,6 +76,7 @@ $hamburger-side: 44px;
         line-height: $masthead-height;
         height: $masthead-height;
         a {
+          color: $gray-2;  // Make it brighter due to masthead's dark background.
           line-height: $masthead-height;
           height: $masthead-height;
         }

@@ -7,13 +7,11 @@ tagline:             Web developer
 description:         Masatoshi Nishiguchi's blog
 url:                 "http://mnishiguchi.com"  # the base hostname & protocol for your site
 baseurl:             ""
+analytics_id:        UA-76603801-1
 
 # Pagination
 paginate:            1
 paginate_path:       /blog/page:num
-url:                 https://mnishiguchi.github.io/blog
-paginate:            1
-baseurl:             ""
 
 # Assets
 #
@@ -33,7 +31,7 @@ author:
   stackoverflow_url: http://stackoverflow.com/users/3837223/mnishiguchi
 
 # Custom vars
-version:             0.0.1
+version:             1.0.0
 github:
   repo:              https://github.com/mnishiguchi/blog
 
@@ -46,11 +44,11 @@ gems:
 
 # Navigation links in the header of the website
 pages_list:
-  - ['Home',     '/']
-  - ['About',    '/about']
-  - ['Blog',     '/blog']
-  - ['Projects', '/projects']
-  - ['Archive',  '/archive']
+  Home:     '/'
+  About:    '/about'
+  Blog:     '/blog'
+  Projects: '/projects'
+  Archive:  '/archive'
 
 # Include custom directories
 include: ['_pages']
