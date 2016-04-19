@@ -237,9 +237,9 @@ $hamburger-side: 44px;
 // Rotate the page-scroll icon. By default, it points down.
 // When .up class is added by JS.
 #rotate-icon {
-  -moz-transition: all .5s linear;
-  -webkit-transition: all .5s linear;
-  transition: all .5s linear;
+     -moz-transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+          transition: all .3s ease-out;
   &.up {
     -ms-transform:rotate(180deg);
     -moz-transform:rotate(180deg);

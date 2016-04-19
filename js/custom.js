@@ -20,11 +20,9 @@
     hamburger.addEventListener( 'click', toggleNavbarAnimations );
 
     // Remove the animation when:
-    // - the mouse leaves the naviagation
     // - the navigation is clicked
     // - the logo is clicked
     // - the window size is resized
-    nav.addEventListener( 'mouseleave', removeNavbarAnimations );
     nav.addEventListener( 'click', removeNavbarAnimations );
     logo.addEventListener( 'click', removeNavbarAnimations );
     window.addEventListener( 'resize', removeNavbarAnimations );
@@ -77,20 +75,20 @@
     return $element.offset().top - $( window ).scrollTop();
   }
   function scrollDownTo( $anchor ) {
+    $( "#rotate-icon" ).addClass( "up" );
+
     $( 'html, body' ).stop().animate({
         scrollTop: ( $( $anchor.attr( 'href' ) ).offset().top - anchorHeight )
     }, 500, 'easeInOutExpo');
     event.preventDefault();
-
-    $( "#rotate-icon" ).addClass( "up" );
   }
   function scrollUpToTop() {
+    $( "#rotate-icon" ).removeClass( "up" );
+
     $( 'html, body' ).stop().animate({
         scrollTop: 0
     }, 500, 'easeInOutExpo');
     event.preventDefault();
-
-    $( "#rotate-icon" ).removeClass( "up" );
   }
 
   // Setup a click listener to trigger automatic scroll animation.

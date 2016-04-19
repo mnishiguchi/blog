@@ -35,6 +35,14 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 ### [Pagination only works within HTML files](http://jekyllrb.com/docs/pagination/)
 - Pagination does not work from within Markdown or Textile files from your Jekyll site. Pagination works when called from within the HTML file, named index.html, which optionally may reside in and produce pagination from within a subdirectory, via the paginate_path configuration value.
 
+### [Is git not case sensitive?](http://stackoverflow.com/a/8482021/3837223)
+- Depends on the `core.ignorecase` configuration value.
+
+```
+sudo git config --unset-all core.ignorecase
+sudo git config --system core.ignorecase false
+```
+
 ---
 
 ## Reference

@@ -71,10 +71,10 @@ This is where I practiced coding when I did not even know how to use a text edit
 
 ### Other courses / tutorials I did
 
-- Web Application Architectures - University of New Mexico
-- 6.00.1x: Introduction to Computer Science and Programming Using Python - MIT
-- COMP102x: Introduction to Computing with Java - HKUST
-- Introduction to Linux - Linux Foundation
+- [Web Application Architectures - University of New Mexico]({{ site.data.pdfs.certificates.web_apps }})
+- [6.00.1x: Introduction to Computer Science and Programming Using Python - MIT]({{ site.data.pdfs.certificates.python }})
+- [COMP102x: Introduction to Computing with Java - HKUST]({{ site.data.pdfs.certificates.java }})
+- [Introduction to Linux - Linux Foundation]({{ site.data.pdfs.certificates.linux }})
 - Programming Mobile Applications for Android Handheld Systems - University of Maryland
 
 <h2 class="h1">
