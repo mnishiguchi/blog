@@ -9,8 +9,16 @@ url:                 "http://mnishiguchi.com"  # the base hostname & protocol fo
 baseurl:             ""
 analytics_id:        UA-76603801-1
 
+# Navigation links in the header of the website
+pages_list:
+  Home:     '/'
+  About:    '/about'
+  Blog:     '/blog'
+  Projects: '/projects'
+  Archive:  '/archive'
+
 # Pagination
-paginate:            1
+paginate:            5
 paginate_path:       /blog/page:num
 
 # Assets
@@ -19,6 +27,12 @@ paginate_path:       /blog/page:num
 sass:
   sass_dir:          _sass
   style:            :compressed
+
+# Include custom directories
+include: ['_pages']
+
+# Post excerpts
+excerpt_separator: <!--more-->
 
 # About/contact
 author:
@@ -33,7 +47,7 @@ author:
 # Custom vars
 version:             1.0.0
 github:
-  repo:              https://github.com/mnishiguchi/blog
+  repo:              https://github.com/mnishiguchi/mnishiguchi.github.io
 
 # Gems
 gems:
@@ -41,14 +55,3 @@ gems:
   - jekyll-gist
   # - jekyll-redirect-from
 # The jekyll-redirect-from gem allows URL Redirects: https://help.github.com/articles/redirects-on-github-pages
-
-# Navigation links in the header of the website
-pages_list:
-  Home:     '/'
-  About:    '/about'
-  Blog:     '/blog'
-  Projects: '/projects'
-  Archive:  '/archive'
-
-# Include custom directories
-include: ['_pages']

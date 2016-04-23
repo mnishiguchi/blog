@@ -23,7 +23,6 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 ```
 
 ### Links to Assets
-- Make sure that you specify the full url instead of relative path.
 
 ```html
 <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
@@ -43,6 +42,10 @@ sudo git config --unset-all core.ignorecase
 sudo git config --system core.ignorecase false
 ```
 
+### [Post excerpts](https://jekyllrb.com/docs/posts/#post-excerpts)
+- `{{ post.excerpt }}` in a template
+- `excerpt_separator: <!--more-->` in `_config`
+
 ---
 
 ## Reference
@@ -59,7 +62,6 @@ sudo git config --system core.ignorecase false
 - [Codrops](http://tympanus.net/codrops/) - Ideas for UI
  design](https://www.google.com/design/spec/material-design/introduction.html#)
 - [Animation - Authentic motion](https://www.google.com/design/spec/animation/authentic-motion.html#)
-    + Do's and dont's
 - [Sticky div](https://jsfiddle.net/livibetter/HV9HM/)
 
 ---

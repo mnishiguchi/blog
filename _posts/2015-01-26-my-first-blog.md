@@ -8,6 +8,8 @@ Hi, this is Masatoshi Nishiguchi. I am writing a blog post for the first time.
 
 The primary purpose of this is for me to learn how blog works at the moment. That's it. But I might eventually find out some other purposes that are more fun and more useful for the Internet communities.
 
+<!--more-->
+
 [![](https://media.licdn.com/mpr/mpr/shrink_200_200/p/4/005/0a8/34f/1fa145d.jpg)](https://github.com/mnishiguchi)
 
 I am currently a student studying towards a Computer Science degree at University of District of Columbia in Washington, DC, United States. I am originally from Japan, moved to US in 2011, am happily married to this awesome, beautiful and smart woman that I met here in Washington.

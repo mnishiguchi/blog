@@ -24,11 +24,10 @@ MacBook Air, iTerm, Atom, Sublime Text
 Web development using Semantic HTML, CSS, JS, Ruby, Rails and AngularJS
 
 ### Did:
-HTML5, CSS3, SASS, JavaScript, Rails,
-AngularJS, Angular2, ReactJS, Jekyll, WordPress,
-Ruby, Java (Android), Python, C/C++, PHP,
-Linux, Git,
-Adobe Photoshop, Adobe Illustrator, Adobe InDesign
+HTML5, CSS3, SASS, JavaScript, Ruby, Rails,
+AngularJS, Angular2, TypeScript, ReactJS, Jekyll, WordPress,
+Java (Android), Python, C/C++, PHP,
+Linux, Git, Photoshop, Illustrator, InDesign
 
 <h2 class="h1">
   Natural languages
@@ -40,35 +39,3 @@ Japanese(Fluent), English(Proficient), Spanish(Intermediate)
 </h2>
 
 {% include posts_list.html limit=3 %}
-
-
-<!--
-<div class="posts">
-  {% for post in paginator.posts %}
-  <article class="post">
-    <h1 class="post-title">
-      <a href="{{ site.baseurl }}{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
-
-    {{ post.content }}
-  </article>
-  {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
- -->
