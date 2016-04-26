@@ -98,18 +98,18 @@ $hamburger-side: 44px;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 333;
-  @media only screen and (min-width : 768px) {
-    top: 0;
-    left: 0;
-  }
+  z-index: 3;
+  // @media only screen and (min-width : 768px) {
+  //   top: 0;
+  //   left: 0;
+  // }
 }
 
 #hamburger {
   position: absolute;
   top: 16px;
   right: 10px;
-  z-index: 333;
+  z-index: 3;
   display: inline-block;
   background: rbga(255,255,255, 0);
   color: $gray-3;
@@ -137,15 +137,16 @@ $hamburger-side: 44px;
   width: 100%; height: 70vh;
   display: flex;
   align-items: center;
-  justify-content: center;
   text-align: center;
-  @media only screen and (min-width : 768px) {
-    height: 70vh;
-  }
+  // justify-content: center;
+
+  // @media only screen and (min-width : 768px) {
+  //   height: 70vh;
+  // }
 }
 
 #hero-canvas {
-  width: 100%; height: 100%; // Match parent.
+  width: 100%; height: 70vh; // Match parent.
   position: absolute;
   top:0; left:0; z-index: 0;
 }

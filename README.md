@@ -9,45 +9,6 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 
 ---
 
-## What I learned
-
-### [page.url](http://jekyllrb.com/docs/variables/#page-variables)
-- the URL of the current page, without the host (e.g. /index.html)
-
-### Setting up Disqus
-- [Jekyll Installation Instructions](https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions)
-
-### Canonical URLs with Jekyll
-```html
-<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
-```
-
-### Links to Assets
-
-```html
-<link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
-```
-
-### [Subtle Click Feedback Effects](https://github.com/codrops/ClickEffects)
-- Adopted from Codrops.
-
-### [Pagination only works within HTML files](http://jekyllrb.com/docs/pagination/)
-- Pagination does not work from within Markdown or Textile files from your Jekyll site. Pagination works when called from within the HTML file, named index.html, which optionally may reside in and produce pagination from within a subdirectory, via the paginate_path configuration value.
-
-### [Is git not case sensitive?](http://stackoverflow.com/a/8482021/3837223)
-- Depends on the `core.ignorecase` configuration value.
-
-```
-sudo git config --unset-all core.ignorecase
-sudo git config --system core.ignorecase false
-```
-
-### [Post excerpts](https://jekyllrb.com/docs/posts/#post-excerpts)
-- `{{ post.excerpt }}` in a template
-- `excerpt_separator: <!--more-->` in `_config`
-
----
-
 ## Reference
 
 #### Jekyll
@@ -61,39 +22,84 @@ sudo git config --system core.ignorecase false
 
 #### Web design
 - [Codrops](http://tympanus.net/codrops/) - Ideas for UI
- design](https://www.google.com/design/spec/material-design/introduction.html#)
+- [Design - material-design](https://www.google.com/design/spec/material-design/introduction.html#)
 - [Animation - Authentic motion](https://www.google.com/design/spec/animation/authentic-motion.html#)
-- [Sticky div](https://jsfiddle.net/livibetter/HV9HM/)
 
 ---
 
+## Thanks to the following
+
+#### jekyll
+- [License](https://github.com/jekyll/jekyll/blob/master/LICENSE)
+
+#### poole
+- [License](https://github.com/poole/poole/blob/master/LICENSE.md)
+
+#### [Subtle Click Feedback Effects](https://github.com/codrops/ClickEffects)
+- [License](http://tympanus.net/codrops/licensing/)
+
+#### [SVG Drawing Animation](http://tympanus.net/codrops/?p=18012)
+- [License](http://tympanus.net/codrops/licensing/)
+
+#### [Animated Background Headers]( http://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html)
+- [License](http://tympanus.net/codrops/licensing/)
+
+#### [Sticky div](https://jsfiddle.net/livibetter/HV9HM/)
+
+#### [Rachid Mrad](http://rachidmrad.com/)
+ for teaching me desiging
+
+ ---
+
+ ## What I learned
+
+ ### [page.url](http://jekyllrb.com/docs/variables/#page-variables)
+ - the URL of the current page, without the host (e.g. /index.html)
+
+ ### Setting up Disqus
+ - [Jekyll Installation Instructions](https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions)
+
+ ### Canonical URLs with Jekyll
+ ```html
+ <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+ ```
+
+ ### Links to Assets
+
+ ```html
+ <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
+ ```
+
+ ### [Subtle Click Feedback Effects](https://github.com/codrops/ClickEffects)
+ - Adopted from Codrops.
+
+ ### [Pagination only works within HTML files](http://jekyllrb.com/docs/pagination/)
+ - Pagination does not work from within Markdown or Textile files from your Jekyll site. Pagination works when called from within the HTML file, named index.html, which optionally may reside in and produce pagination from within a subdirectory, via the paginate_path configuration value.
+
+ ### [Is git not case sensitive?](http://stackoverflow.com/a/8482021/3837223)
+ - Depends on the `core.ignorecase` configuration value.
+
+ ```
+ sudo git config --unset-all core.ignorecase
+ sudo git config --system core.ignorecase false
+ ```
+
+ ### [Post excerpts](https://jekyllrb.com/docs/posts/#post-excerpts)
+ - `{{ post.excerpt }}` in a template
+ - `excerpt_separator: <!--more-->` in `_config`
+
+ ### [Placing a div within a canvas](http://stackoverflow.com/questions/5763911/placing-a-div-within-a-canvas)
+ - Just use z-index!
+
+ ---
+
 ## Some ideas
-
-### Background scrolling
-- https://davidwalsh.name/demo/background-animation-css.php
-
-### Moving stars animation
-- Possibly change background position by CSS
-
-### Scrolling Effects 1
-- When scrolling up and reaching the top, an object stays at the top of the page.
-
-### Scrolling Effects 2
-- When the page is scrolling, objects will move at different speeds.
-
-### Profile picture
-- Black and white
-- Crop the face
 
 ### Responsive design
 - Read [Luke W's articles](http://www.lukew.com/presos/)
 
 ### Parallax-scrolling
 - https://ihatetomatoes.net/simple-parallax-scrolling-tutorial/
-
-### Background interactive animation
-- http://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html
-- [Placing a <div> within a <canvas>](http://stackoverflow.com/questions/5763911/placing-a-div-within-a-canvas)
 
 ---
 
@@ -120,3 +126,5 @@ $ dig mnishiguchi.com +nostats +nocomments +nocmd
 ;mnishiguchi.com.		IN	A
 mnishiguchi.com.	600	IN	A	192.30.252.153
 ```
+
+---

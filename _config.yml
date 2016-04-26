@@ -7,7 +7,6 @@ tagline:             Web developer
 description:         Masatoshi Nishiguchi's blog
 url:                 "http://mnishiguchi.com"  # the base hostname & protocol for your site
 baseurl:             ""
-analytics_id:        UA-76603801-1
 
 # Navigation links in the header of the website
 pages_list:
@@ -30,6 +29,9 @@ sass:
 
 # Include custom directories
 include: ['_pages']
+
+# Exclude from _site
+exclude: ['node_modules']
 
 # Post excerpts
 excerpt_separator: <!--more-->

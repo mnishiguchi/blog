@@ -1,6 +1,6 @@
 /**
  * Animated Background Headers :: Demo 1 http://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html
- * Dependencies: TweenLite.js, EasePack.js, animated-background-header.js
+ * Dependencies: TweenLite.js, EasePack.js
  */
 (function() {
 
@@ -19,8 +19,8 @@
         height = window.innerHeight;
         target = {x: width/2, y: height/2};
 
-        largeHeader = document.getElementById( wrapperId );
-        largeHeader.style.height = height+'px';
+        // largeHeader = document.getElementById( wrapperId );
+        // largeHeader.style.height = height+'px';
 
         canvas = document.getElementById( canvasId );
         canvas.width = width;
@@ -104,11 +104,14 @@
     }
 
     function resize() {
-        width = window.innerWidth;
-        height = window.innerHeight;
-        largeHeader.style.height = height+'px';
-        canvas.width = width;
-        canvas.height = height;
+        initHeader();
+        initAnimation();
+
+        // width = window.innerWidth;
+        // height = window.innerHeight;
+        // largeHeader.style.height = height+'px';
+        // canvas.width = width;
+        // canvas.height = height;
     }
 
     // animation
