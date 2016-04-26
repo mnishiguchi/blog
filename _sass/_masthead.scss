@@ -63,7 +63,7 @@ $hamburger-side: 44px;
     // position: fixed;
     top: 0; left: 0; z-index: 2;
     width: 100%;
-    background: $black-transparent;
+    background-color: rgba(255,255,255,.1);
     ul {
       display: flex;
       justify-content: center;
