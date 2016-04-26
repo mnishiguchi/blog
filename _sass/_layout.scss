@@ -9,6 +9,10 @@ body {
   min-width: 320px;
 }
 
+main {
+  position: relative;
+}
+
 // NOTE: .container is used in multiple places.
 .container {
   max-width: 38rem;

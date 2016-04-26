@@ -13,7 +13,7 @@
     // Find elements and store eferences to them.
     hamburger = document.getElementById( "hamburger" );
     logo      = document.getElementById( "logo" );
-    nav       = document.querySelector( "#masthead" );
+    nav       = document.getElementById( "masthead" );
 
     // Apply the slide up animation defined in CSS to the navigation when:
     // - the hamburger is clicked.

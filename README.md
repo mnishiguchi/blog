@@ -57,6 +57,7 @@ sudo git config --system core.ignorecase false
 - [Make a Static Website with Jekyll](https://www.taniarascia.com/make-a-static-website-with-jekyll/) by Tania Rascia
 - [How I Created a Beautiful and Minimal Blog Using Jekyll, Github Pages, and poole](http://joshualande.com/jekyll-github-pages-poole/) by Joshua Lande
 - [Using a custom domain with GitHub Pages](https://help.github.com/articles/using-a-custom-domain-with-github-pages/)
+- [Jekyll themes](http://jekyllthemes.org/)
 
 #### Web design
 - [Codrops](http://tympanus.net/codrops/) - Ideas for UI
@@ -89,6 +90,10 @@ sudo git config --system core.ignorecase false
 
 ### Parallax-scrolling
 - https://ihatetomatoes.net/simple-parallax-scrolling-tutorial/
+
+### Background interactive animation
+- http://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html
+- [Placing a <div> within a <canvas>](http://stackoverflow.com/questions/5763911/placing-a-div-within-a-canvas)
 
 ---
 

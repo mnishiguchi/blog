@@ -1,6 +1,6 @@
 // Masthead
 //
-// Super small header above the content for site name and short description.
+// Navigation and animated canvas header that displays page title.
 
 // * { border: 1px dotted red; }
 
@@ -11,9 +11,12 @@ $toggle-menu-height: $toggle-menu-item-height * 6;
 $hamburger-side: 44px;
 
 #masthead {
+  position: absolute;
+  top: 0; left: 0; right: 0; z-index: 2;
+  background-color: rgba(255,255,255,.8);
   display: block; // Ensure visibility during the transition.
   height: 0;
-  overflow: hidden;
+  overflow: hidden;  // Hide nav menu items.
   @media only screen and (min-width : 768px) {
     height: $masthead-height;
     margin-top: 0;
@@ -58,9 +61,7 @@ $hamburger-side: 44px;
 @media only screen and (min-width : 768px) {
   #masthead {
     // position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1111;
+    top: 0; left: 0; z-index: 2;
     width: 100%;
     background: $black-transparent;
     ul {
@@ -97,7 +98,7 @@ $hamburger-side: 44px;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 333;
   @media only screen and (min-width : 768px) {
     top: 0;
     left: 0;
@@ -108,7 +109,7 @@ $hamburger-side: 44px;
   position: absolute;
   top: 16px;
   right: 10px;
-  z-index: 9999;
+  z-index: 333;
   display: inline-block;
   background: rbga(255,255,255, 0);
   color: $gray-3;
@@ -129,30 +130,11 @@ $hamburger-side: 44px;
   }
 }
 
-// // UNUSED: Replaced with logo.
-// .masthead-title {
-//   display: inline-block;
-//   margin: 0;
-//   line-height: $masthead-height;
-//   height: $masthead-height;
-//   vertical-align: middle;
-//   color: $gray-4;
-//   @media only screen and (min-width : 768px) { display: inline-block; }
-//   a { color: inherit; }
-//   small {
-//     display: none;
-//     font-size: 75%;
-//     font-weight: 400;
-//     opacity: .5;
-//     @media only screen and (min-width : 900px) { display: inline-block; }
-//   }
-// }
 
-.header-canvas {
+.large-header {
   position: relative;
   background-color: $black;
-  width: 100vw;
-  height: 70vh;
+  width: 100%; height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,13 +143,18 @@ $hamburger-side: 44px;
     height: 70vh;
   }
 }
-#header-canvas-text {
+
+#hero-canvas {
+  width: 100%; height: 100%; // Match parent.
+  position: absolute;
+  top:0; left:0; z-index: 0;
+}
+
+.hero-canvas-text {
   display: block;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // text-align: center;
   img {
+    position: relative;
+    z-index: 1;
     display: block;
     margin: 0 auto;
     padding: 5px 0;
@@ -175,6 +162,7 @@ $hamburger-side: 44px;
     width: auto;
     height: auto;
     border: 4px solid white;
+    background-color: black;
   }
   .intro-title {
     display: block;
@@ -231,7 +219,7 @@ $hamburger-side: 44px;
   margin-top: 0 !important;
   position: fixed;
   top: 0;
-  z-index: 10000;
+  z-index: 3;
 }
 
 // Rotate the page-scroll icon. By default, it points down.
@@ -241,9 +229,9 @@ $hamburger-side: 44px;
   -webkit-transition: all .3s ease-out;
           transition: all .3s ease-out;
   &.up {
-    -ms-transform:rotate(180deg);
-    -moz-transform:rotate(180deg);
-    -webkit-transform:rotate(180deg);
-    transform:rotate(180deg);
+      -ms-transform:rotate(180deg);
+     -moz-transform:rotate(180deg);
+  -webkit-transform:rotate(180deg);
+          transform:rotate(180deg);
   }
 }
