@@ -91,6 +91,24 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
  ### [Placing a div within a canvas](http://stackoverflow.com/questions/5763911/placing-a-div-within-a-canvas)
  - Just use z-index!
 
+### Markdown in yaml
+
+#### Single paragraphs
+```md
+# Markdown enabled, however don't use more than one paragraph (enforced by `>`)
+description:      >
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+```
+
+#### Multiple paragraphs
+```
+# Markdown enabled, can use multiple paragraphs (enabled by `|`)
+about:          |
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+```
+
  ---
 
 ## Some ideas
@@ -126,5 +144,3 @@ $ dig mnishiguchi.com +nostats +nocomments +nocmd
 ;mnishiguchi.com.		IN	A
 mnishiguchi.com.	600	IN	A	192.30.252.153
 ```
-
----

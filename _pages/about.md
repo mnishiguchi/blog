@@ -10,6 +10,8 @@ linguistics, counseling, customer service, engineering sales, etc
 so that I will become a resourceful and unique developer.
 </section>
 
+<br />
+
 <h2 class="h1">
   Linguistics
 </h2>

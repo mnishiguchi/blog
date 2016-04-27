@@ -20,12 +20,9 @@ MacBook Air, iTerm, Atom, Sublime Text
   Programming
 </h2>
 
-### Specialize in:
-Web development using Semantic HTML, CSS, JS, Ruby, Rails and AngularJS
+Web development using Semantic HTML5, CSS3, JS, Ruby, Rails and Angular
 
-### Did:
-HTML5, CSS3, SASS, JavaScript, Ruby, Rails,
-AngularJS, Angular2, TypeScript, ReactJS, Jekyll, WordPress,
+SASS, TypeScript, ReactJS, Jekyll, WordPress,
 Java (Android), Python, C/C++, PHP,
 Linux, Git, Photoshop, Illustrator, InDesign
 

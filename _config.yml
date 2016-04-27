@@ -1,40 +1,12 @@
-# Permalinks
-permalink:           pretty
+# Meta
+title:       Masatoshi Nishiguchi
+tagline:     Web developer
+description: An aspiring web developer who specializes in HTML5, CSS3, Ruby, Rails and AngularJS
+keywords:    html, css, javascript, ruby, rails, angularjs, reactjs, web development
 
-# Setup
-title:               Masatoshi Nishiguchi
-tagline:             Web developer
-description:         Masatoshi Nishiguchi's blog
-url:                 "http://mnishiguchi.com"  # the base hostname & protocol for your site
-baseurl:             ""
-
-# Navigation links in the header of the website
-pages_list:
-  Home:     '/'
-  About:    '/about'
-  Blog:     '/blog'
-  Projects: '/projects'
-  Archive:  '/archive'
-
-# Pagination
-paginate:            5
-paginate_path:       /blog/page:num
-
-# Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:          _sass
-  style:            :compressed
-
-# Include custom directories
-include: ['_pages']
-
-# Exclude from _site
-exclude: ['node_modules']
-
-# Post excerpts
-excerpt_separator: <!--more-->
+version:     1.0.0
+github:
+  repo:      https://github.com/mnishiguchi/mnishiguchi.github.io
 
 # About/contact
 author:
@@ -46,10 +18,42 @@ author:
   twitter_url:       https://twitter.com/mnishiguchiDC
   stackoverflow_url: http://stackoverflow.com/users/3837223/mnishiguchi
 
-# Custom vars
-version:             1.0.0
-github:
-  repo:              https://github.com/mnishiguchi/mnishiguchi.github.io
+# Permalinks
+permalink:  pretty
+
+# Hostname & protocol for your site
+url:        "http://mnishiguchi.com"
+
+# Set to '' in case of hosting on `http://<your-github-name>.github.io`
+baseurl:    ""
+
+# Navigation links in the header of the website
+pages_list:
+  Home:     '/'
+  About:    '/about'
+  Blog:     '/blog'
+  Projects: '/projects'
+  Archive:  '/archive'
+
+# Pagination
+paginate:      5
+paginate_path: /blog/page:num
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir: _sass
+  style:    :compressed
+
+# Include custom directories
+include: ['_pages']
+
+# Exclude from _site
+exclude: ['node_modules']
+
+# Post excerpts
+excerpt_separator: <!--more-->
 
 # Gems
 gems:

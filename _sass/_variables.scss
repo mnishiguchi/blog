@@ -1,3 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Serif);
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans);
+@import url(https://fonts.googleapis.com/css?family=Muli:400,300);
+
 $gray-1: #f9f9f9;
 $gray-2: #ccc;
 $gray-3: #767676;
@@ -15,7 +19,7 @@ $cyan: #75b5aa;
 $blue: #268bd2;
 $brown: #8f5536;
 
-$root-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+$root-font-family: "PT Serif", "Helvetica Neue", Arial, sans-serif;
 $root-font-size: 16px;
 $root-line-height: 1.5;
 
