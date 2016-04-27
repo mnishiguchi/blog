@@ -6,7 +6,7 @@ permalink: /projects
 ---
 
 {% for project in site.data.projects %}
-## {{ project.title }} TEST
+## {{ project.title }}
 {{ project.description }}
 
 ---

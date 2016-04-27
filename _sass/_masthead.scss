@@ -193,6 +193,14 @@ $hamburger-side: 44px;
     padding-top: 40px;
     img {
       max-height: 150px;
+    	-webkit-transform: scale(1);
+    	        transform: scale(1);
+    	-webkit-transition: .3s ease-in-out;
+    	        transition: .3s ease-in-out;
+    }
+    img:hover {
+    	-webkit-transform: scale(1.1);
+    	        transform: scale(1.1);
     }
     .intro-title {
       font-size: 30px;

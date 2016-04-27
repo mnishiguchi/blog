@@ -19,6 +19,7 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 - [How I Created a Beautiful and Minimal Blog Using Jekyll, Github Pages, and poole](http://joshualande.com/jekyll-github-pages-poole/) by Joshua Lande
 - [Using a custom domain with GitHub Pages](https://help.github.com/articles/using-a-custom-domain-with-github-pages/)
 - [Jekyll themes](http://jekyllthemes.org/)
+- [CSS Image Hover Effects](http://codepen.io/nxworld/pen/ZYNOBZ)
 
 #### Web design
 - [Codrops](http://tympanus.net/codrops/) - Ideas for UI
@@ -28,13 +29,13 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 ---
 
 ## Thanks to the following
-- jekyll [[License](https://github.com/jekyll/jekyll/blob/master/LICENSE)]
-- poole [[License](https://github.com/poole/poole/blob/master/LICENSE.md)]
+- [Jekyll](http://jekyllrb.com) [[License](https://github.com/jekyll/jekyll/blob/master/LICENSE)]
+- [Poole](https://github.com/poole/poole) [[License](https://github.com/poole/poole/blob/master/LICENSE.md)]
 - [Subtle Click Feedback Effects](https://github.com/codrops/ClickEffects) [[License](http://tympanus.net/codrops/licensing/)]
 - [SVG Drawing Animation](http://tympanus.net/codrops/?p=18012) [[License](http://tympanus.net/codrops/licensing/)]
 - [Animated Background Headers]( http://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html) [[License](http://tympanus.net/codrops/licensing/)]
 - [Sticky div](https://jsfiddle.net/livibetter/HV9HM/)
-- [Rachid Mrad](http://rachidmrad.com/) for teaching me desiging
+- [Rachid Mrad](http://rachidmrad.com/) for teaching me designing
 
 ---
 

@@ -48,7 +48,7 @@ main {
     }
     a:hover {
       text-decoration: none;
-      color:inherit;
+      color:$link-hover-color;
     }
   }
 }
