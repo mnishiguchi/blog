@@ -28,88 +28,75 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 ---
 
 ## Thanks to the following
+- jekyll [[License](https://github.com/jekyll/jekyll/blob/master/LICENSE)]
+- poole [[License](https://github.com/poole/poole/blob/master/LICENSE.md)]
+- [Subtle Click Feedback Effects](https://github.com/codrops/ClickEffects) [[License](http://tympanus.net/codrops/licensing/)]
+- [SVG Drawing Animation](http://tympanus.net/codrops/?p=18012) [[License](http://tympanus.net/codrops/licensing/)]
+- [Animated Background Headers]( http://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html) [[License](http://tympanus.net/codrops/licensing/)]
+- [Sticky div](https://jsfiddle.net/livibetter/HV9HM/)
+- [Rachid Mrad](http://rachidmrad.com/) for teaching me desiging
 
-#### jekyll
-- [License](https://github.com/jekyll/jekyll/blob/master/LICENSE)
+---
 
-#### poole
-- [License](https://github.com/poole/poole/blob/master/LICENSE.md)
+## What I learned
 
-#### [Subtle Click Feedback Effects](https://github.com/codrops/ClickEffects)
-- [License](http://tympanus.net/codrops/licensing/)
+### [page.url](http://jekyllrb.com/docs/variables/#page-variables)
+- the URL of the current page, without the host (e.g. /index.html)
 
-#### [SVG Drawing Animation](http://tympanus.net/codrops/?p=18012)
-- [License](http://tympanus.net/codrops/licensing/)
+### Setting up Disqus
+- [Jekyll Installation Instructions](https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions)
 
-#### [Animated Background Headers]( http://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html)
-- [License](http://tympanus.net/codrops/licensing/)
+### Canonical URLs with Jekyll
+```html
+<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+```
 
-#### [Sticky div](https://jsfiddle.net/livibetter/HV9HM/)
+### Links to Assets
 
-#### [Rachid Mrad](http://rachidmrad.com/)
- for teaching me desiging
+```html
+<link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
+```
 
- ---
+### [Subtle Click Feedback Effects](https://github.com/codrops/ClickEffects)
+- Adopted from Codrops.
 
- ## What I learned
+### [Pagination only works within HTML files](http://jekyllrb.com/docs/pagination/)
+- Pagination does not work from within Markdown or Textile files from your Jekyll site. Pagination works when called from within the HTML file, named index.html, which optionally may reside in and produce pagination from within a subdirectory, via the paginate_path configuration value.
 
- ### [page.url](http://jekyllrb.com/docs/variables/#page-variables)
- - the URL of the current page, without the host (e.g. /index.html)
+### [Is git not case sensitive?](http://stackoverflow.com/a/8482021/3837223)
+- Depends on the `core.ignorecase` configuration value.
 
- ### Setting up Disqus
- - [Jekyll Installation Instructions](https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions)
+```
+sudo git config --unset-all core.ignorecase
+sudo git config --system core.ignorecase false
+```
 
- ### Canonical URLs with Jekyll
- ```html
- <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
- ```
+### [Post excerpts](https://jekyllrb.com/docs/posts/#post-excerpts)
+- `{{ post.excerpt }}` in a template
+- `excerpt_separator: <!--more-->` in `_config`
 
- ### Links to Assets
-
- ```html
- <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
- ```
-
- ### [Subtle Click Feedback Effects](https://github.com/codrops/ClickEffects)
- - Adopted from Codrops.
-
- ### [Pagination only works within HTML files](http://jekyllrb.com/docs/pagination/)
- - Pagination does not work from within Markdown or Textile files from your Jekyll site. Pagination works when called from within the HTML file, named index.html, which optionally may reside in and produce pagination from within a subdirectory, via the paginate_path configuration value.
-
- ### [Is git not case sensitive?](http://stackoverflow.com/a/8482021/3837223)
- - Depends on the `core.ignorecase` configuration value.
-
- ```
- sudo git config --unset-all core.ignorecase
- sudo git config --system core.ignorecase false
- ```
-
- ### [Post excerpts](https://jekyllrb.com/docs/posts/#post-excerpts)
- - `{{ post.excerpt }}` in a template
- - `excerpt_separator: <!--more-->` in `_config`
-
- ### [Placing a div within a canvas](http://stackoverflow.com/questions/5763911/placing-a-div-within-a-canvas)
- - Just use z-index!
+### [Placing a div within a canvas](http://stackoverflow.com/questions/5763911/placing-a-div-within-a-canvas)
+- Just use z-index!
 
 ### Markdown in yaml
 
 #### Single paragraphs
 ```md
 # Markdown enabled, however don't use more than one paragraph (enforced by `>`)
-description:      >
+description: >
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 ```
 
 #### Multiple paragraphs
-```
+```md
 # Markdown enabled, can use multiple paragraphs (enabled by `|`)
-about:          |
+about:       |
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ```
 
- ---
+---
 
 ## Some ideas
 
@@ -126,9 +113,9 @@ about:          |
 - http://andrewsturges.com/blog/jekyll/tutorial/2014/11/06/github-and-godaddy.html
 
 ### The objective
-- Use the following URLs for my website instead of the `github.io` urls:
-  - mnishiguchi.com
-  - www.mnishiguchi.com
+Use the following URLs for my website instead of the `github.io` urls:
+- mnishiguchi.com
+- www.mnishiguchi.com
 
 ### Adding an A record on DNS manager
 1. Open DNS manager

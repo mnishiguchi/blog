@@ -1,8 +1,10 @@
 # Meta
 title:       Masatoshi Nishiguchi
 tagline:     Web developer
-description: An aspiring web developer who specializes in HTML5, CSS3, Ruby, Rails and AngularJS
-keywords:    html, css, javascript, ruby, rails, angularjs, reactjs, web development
+description: >
+  An aspiring web developer who specializes in HTML5, CSS3, Ruby, Rails and AngularJS
+keywords:    >
+  html, css, javascript, ruby, rails, angularjs, reactjs, web development
 
 version:     1.0.0
 github:
@@ -18,13 +20,9 @@ author:
   twitter_url:       https://twitter.com/mnishiguchiDC
   stackoverflow_url: http://stackoverflow.com/users/3837223/mnishiguchi
 
-# Permalinks
+# Url and Permalinks
 permalink:  pretty
-
-# Hostname & protocol for your site
-url:        "http://mnishiguchi.com"
-
-# Set to '' in case of hosting on `http://<your-github-name>.github.io`
+url:        "http://mnishiguchi.com"  # Hostname & protocol for your site
 baseurl:    ""
 
 # Navigation links in the header of the website

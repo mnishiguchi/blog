@@ -41,12 +41,14 @@ main {
   .social-links {
     display: inline-block;
     float: right;
-    font-size: 1.3em;
+    font-size: 1.0em;
     a {
+      color:inherit;
       margin: 0 .5rem;
     }
     a:hover {
       text-decoration: none;
+      color:inherit;
     }
   }
 }
