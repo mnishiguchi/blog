@@ -92,7 +92,7 @@
   }
 
   // Setup a click listener to trigger automatic scroll animation.
-  $( '#page-scroll' ).bind( 'click', function( event ) {
+  $( '.page-scroll' ).bind( 'click', function( event ) {
     var $anchor  = $( this );
     // console.debug( distanceFromDisplayTop( $anchor ) );
     distanceFromDisplayTop( $anchor ) > 10 ? scrollDownTo( $anchor ) : scrollUpToTop() ;

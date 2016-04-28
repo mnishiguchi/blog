@@ -1,3 +1,19 @@
+{% assign logo_url    = "/images/mn_logo_80_no_border_clear.png" %}
+
+{% if page.title == "Home" %}
+  {% assign image_url = "/images/masatoshi_face_transparent.png" %}
+  {% assign clip      = "clip-right-point" %}
+{% elsif page.title == "About" %}
+  {% assign image_url = "/images/masa_chinatown_300_cropped.png" %}
+  {% assign clip      = "clip-bevel" %}
+{% elsif page.title == "Blog" %}
+  {% assign image_url = "/images/mount_fuji.jpg" %}
+  {% assign clip      = "clip-message" %}
+{% else %}
+  {% assign image_url = "/images/mn_logo_200_no_border.png" %}
+  {% assign clip      = "clip-circle" %}
+{% endif %}
+
 <div id="hamburger">&#8801</div>
 
 <div id="logo-wrapper">
@@ -9,9 +25,9 @@
       <path class="darker" d="M 80.889194,41.80541 C 80.889194,63.45198 63.341174,81 41.694594,81 20.048024,81 2.5,63.45198 2.5,41.80541 2.5,20.158827 20.048024,2.61081 41.694594,2.61081 c 21.64658,0 39.1946,17.548017 39.1946,39.1946 z" />
     </svg>
     <div
-     data-svg="logo-svg"
-     class="logo hide"
-     style='background: url({{ site.baseurl }}/images/mn_logo_80_no_border_clear.png);'>
+      data-svg="logo-svg"
+      class="logo hide"
+      style='background: url({{ logo_url | prepend: site.baseurl }});'>
     </div>
   </a>
 </div>
@@ -33,20 +49,22 @@
   <canvas id="hero-canvas"></canvas>
 
   <div class="container hero-canvas-text">
+
+    {% if page.id == null %}
+      <a href="#scroll-to" class="page-scroll">
+        <img
+          src="{{ image_url | prepend: site.baseurl }}"
+          alt="Masatoshi Nishiguchi"
+          class="{{ clip }}">
+      </a>
+    {% endif %}
+
     {% if page.title == "Home" %}
-      <img src="{{ site.baseurl }}/images/masa_christine.png" alt="Masatoshi Nishiguchi">
       <h1 class="intro-title">
         <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
         <small class="tagline">{{ site.tagline }}</small>
       </h1>
-    {% elsif page.title == "About" %}
-      <img src="{{ site.baseurl }}/images/masatoshi_face_transparent.png" alt="Masatoshi Nishiguchi">
-      <h1 class="page-title">{{ page.title }}</h1>
-    {% elsif page.title == "Blog" %}
-      <img src="{{ site.baseurl }}/images/mount_fuji.jpg" alt="Masatoshi Nishiguchi">
-      <h1 class="page-title">{{ page.title }}</h1>
     {% else %}
-      <img src="{{ site.baseurl }}/images/mn_logo_100.png" alt="Masatoshi Nishiguchi">
       <h1 class="page-title">{{ page.title }}</h1>
     {% endif %}
   </div>
@@ -55,8 +73,10 @@
 <div id="sticky-anchor"></div>
 
 <div id="sticky" class="scroll-control">
-  <a id="page-scroll" href="#scroll-to">
-    <div id="rotate-icon" class="cbutton cbutton--effect-radomir btn-scroll">
+  <a class="page-scroll" href="#scroll-to">
+    <div
+      id="rotate-icon"
+      class="cbutton cbutton--effect-radomir btn-scroll">
       <i class="cbutton__icon fa fa-angle-down fa-fw"></i>
     </div>
   </a>

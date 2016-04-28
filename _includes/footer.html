@@ -35,11 +35,11 @@
           <i class="cbutton__icon fa fa-twitter"></i>
         </a>
       {% endif %}
-<!--
-      <a class="cbutton cbutton--effect-radomir" href="{{ site.baseurl }}/atom.xml">
-        <i class="cbutton__icon fa fa-feed"></i>
-      </a>
- -->
+      {% if site.feed %}
+        <a class="cbutton cbutton--effect-radomir" href="{{ site.baseurl }}/atom.xml">
+          <i class="cbutton__icon fa fa-feed"></i>
+        </a>
+      {% endif %}
     </div>
   </div>
 </footer>

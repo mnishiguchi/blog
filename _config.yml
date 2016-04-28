@@ -38,10 +38,8 @@ paginate:      5
 paginate_path: /blog/page:num
 
 # Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
 sass:
-  sass_dir: _sass
+  sass_dir: _sass  # Specify the directory that contains sass partials.
   style:    :compressed
 
 # Include custom directories
@@ -52,6 +50,9 @@ exclude: ['node_modules']
 
 # Post excerpts
 excerpt_separator: <!--more-->
+
+# Feed
+feed: false
 
 # Gems
 gems:

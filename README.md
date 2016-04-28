@@ -9,6 +9,17 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 
 ---
 
+## Special thanks to the following
+- [Jekyll](http://jekyllrb.com) [[License](https://github.com/jekyll/jekyll/blob/master/LICENSE)]
+- [Poole](https://github.com/poole/poole) [[License](https://github.com/poole/poole/blob/master/LICENSE.md)]
+- [Subtle Click Feedback Effects](https://github.com/codrops/ClickEffects) [[License](http://tympanus.net/codrops/licensing/)]
+- [SVG Drawing Animation](http://tympanus.net/codrops/?p=18012) [[License](http://tympanus.net/codrops/licensing/)]
+- [Animated Background Headers]( http://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html) [[License](http://tympanus.net/codrops/licensing/)]
+- [Sticky div](https://jsfiddle.net/livibetter/HV9HM/)
+- [Rachid Mrad](http://rachidmrad.com/) for teaching me designing
+
+---
+
 ## Reference
 
 #### Jekyll
@@ -26,17 +37,10 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 - [Animation - Authentic motion](https://www.google.com/design/spec/animation/authentic-motion.html#)
 - [CSS Image Hover Effects](http://codepen.io/nxworld/pen/ZYNOBZ)
 - [The Shapes of CSS](https://css-tricks.com/examples/ShapesOfCSS/)
-
----
-
-## Thanks to the following
-- [Jekyll](http://jekyllrb.com) [[License](https://github.com/jekyll/jekyll/blob/master/LICENSE)]
-- [Poole](https://github.com/poole/poole) [[License](https://github.com/poole/poole/blob/master/LICENSE.md)]
-- [Subtle Click Feedback Effects](https://github.com/codrops/ClickEffects) [[License](http://tympanus.net/codrops/licensing/)]
-- [SVG Drawing Animation](http://tympanus.net/codrops/?p=18012) [[License](http://tympanus.net/codrops/licensing/)]
-- [Animated Background Headers]( http://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html) [[License](http://tympanus.net/codrops/licensing/)]
-- [Sticky div](https://jsfiddle.net/livibetter/HV9HM/)
-- [Rachid Mrad](http://rachidmrad.com/) for teaching me designing
+- [Image shapes with CSS3](http://codepen.io/CreativeJuiz/pen/Hizkh)
+- [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
+- [CSS clip-path maker](http://bennettfeely.com/clippy/)
+- [Vendor-prefixed CSS Property Overview](http://peter.sh/experiments/vendor-prefixed-css-property-overview/)
 
 ---
 
@@ -96,6 +100,24 @@ about:       |
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
   Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+```
+
+### Creating local variables using variable tags
+- https://docs.shopify.com/themes/liquid/tags/variable-tags
+
+```md
+{% assign my_variable = false %}
+{% if my_variable != true %}
+This statement is valid.
+{% endif %}
+```
+
+### [Detect page or posts](http://stackoverflow.com/a/14090469/3837223)
+
+```html
+<div class="{% if page.id %} post {% else %} page {% endif %}">
+   ...
+</div>
 ```
 
 ---
