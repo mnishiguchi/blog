@@ -34,12 +34,19 @@
 
   <div class="container hero-canvas-text">
     {% if page.title == "Home" %}
-      <img src="{{ site.baseurl }}/images/masatoshi_face_transparent.png" alt="Masatoshi Nishiguchi">
+      <img src="{{ site.baseurl }}/images/masa_christine.png" alt="Masatoshi Nishiguchi">
       <h1 class="intro-title">
         <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
         <small class="tagline">{{ site.tagline }}</small>
       </h1>
+    {% elsif page.title == "About" %}
+      <img src="{{ site.baseurl }}/images/masatoshi_face_transparent.png" alt="Masatoshi Nishiguchi">
+      <h1 class="page-title">{{ page.title }}</h1>
+    {% elsif page.title == "Blog" %}
+      <img src="{{ site.baseurl }}/images/mount_fuji.jpg" alt="Masatoshi Nishiguchi">
+      <h1 class="page-title">{{ page.title }}</h1>
     {% else %}
+      <img src="{{ site.baseurl }}/images/mn_logo_100.png" alt="Masatoshi Nishiguchi">
       <h1 class="page-title">{{ page.title }}</h1>
     {% endif %}
   </div>

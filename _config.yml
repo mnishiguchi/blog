@@ -31,7 +31,7 @@ pages_list:
   About:    '/about'
   Blog:     '/blog'
   Projects: '/projects'
-  Archive:  '/archive'
+  # Archive:  '/archive'
 
 # Pagination
 paginate:      5
