@@ -9,6 +9,8 @@ $masthead-height: 44px;
 $toggle-menu-item-height: 50px;
 $toggle-menu-height: $toggle-menu-item-height * 5;
 $hamburger-side: 44px;
+$image-background: rgba(100,100,100,.5);
+
 
 #masthead {
   position: absolute;
@@ -164,7 +166,7 @@ $hamburger-side: 44px;
     width: auto;
     height: auto;
     // border: 4px solid white;
-    background-color: black;
+    background-color: $image-background;
   }
   .intro-title {
     display: block;

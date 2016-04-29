@@ -5,7 +5,7 @@
   {% assign clip      = "clip-right-point" %}
 {% elsif page.title == "About" %}
   {% assign image_url = "/images/masa_chinatown_300_cropped.png" %}
-  {% assign clip      = "clip-bevel" %}
+  {% assign clip      = "clip-shogi" %}
 {% elsif page.title == "Blog" %}
   {% assign image_url = "/images/mount_fuji.jpg" %}
   {% assign clip      = "clip-message" %}
@@ -64,6 +64,13 @@
         <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
         <small class="tagline">{{ site.tagline }}</small>
       </h1>
+    {% elsif page.id %}
+      <h2 class="page-title">{{ page.title }}</h2>
+      <time
+        datetime="{{ page.date | date_to_xmlschema }}"
+        class="post-date">
+        {{ page.date | date_to_string }}
+      </time>
     {% else %}
       <h1 class="page-title">{{ page.title }}</h1>
     {% endif %}
