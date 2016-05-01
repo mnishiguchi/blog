@@ -40,6 +40,7 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 - [Image shapes with CSS3](http://codepen.io/CreativeJuiz/pen/Hizkh)
 - [Clipping and Masking in CSS](https://css-tricks.com/clipping-masking-css/)
 - [CSS clip-path maker](http://bennettfeely.com/clippy/)
+- [Clip-path: Border simulation](http://codepen.io/imohkay/pen/MwaBBK/)
 - [Vendor-prefixed CSS Property Overview](http://peter.sh/experiments/vendor-prefixed-css-property-overview/)
 
 ---
