@@ -121,6 +121,59 @@ This statement is valid.
 </div>
 ```
 
+### Parallex using transform3d
+- https://github.com/Prinzhorn/skrollr
+- https://muut.com/blog/technology/riot-2.0/
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script>
+  // Init Skrollr
+  skrollr.init();
+</script>
+<style>
+  #parallex {
+    position: absolute;
+    top:0;left:0;
+    width:100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+</style>
+<section id="parallex">
+  <img src="http://lorempixel.com/1100/550/abstract/" alt=""
+        data-0="transform: translate3d(0px,0px,0px);" data-500="transform: translate3d(0px,180px,0px);"
+  >
+</section>
+```
+
+### Parallex using background-position
+```html
+<style>
+.introduction {
+  background: url("{{ site.baseurl }}/images/mount_fuji_800_400.jpg")
+}
+</style>
+<section
+  class="introduction"
+  data-0="background-position: 50% 0px;"
+  data-end="background-position: 50% -100px;" >
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus earum, distinctio atque tenetur id nihil in excepturi est accusantium animi, itaque ipsum quos laborum repudiandae fugit placeat possimus? Praesentium, porro.
+</section>
+```
+```css
+.introduction {
+  min-height: 300px;
+  padding: 1.5em;
+  color: #d24226;
+  background: $gray-2;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%; height: 100%;
+}
+```
 ---
 
 ## Some ideas

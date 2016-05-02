@@ -4,7 +4,7 @@
  */
 (function() {
 
-    var wrapperId = 'large-header';
+    // var wrapperId = 'large-header';
     var canvasId  = 'hero-canvas';
 
     var width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;

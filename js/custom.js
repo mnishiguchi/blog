@@ -50,11 +50,11 @@
     if (window_top > div_top) {
       $( '#sticky' ).addClass( 'stick' );
       $( '#sticky-anchor' ).height($( '#sticky' ).outerHeight());
-      $( "#rotate-icon" ).addClass( "up" );
+      $( "#rotating-icon" ).addClass( "up" );
     } else {
       $( '#sticky' ).removeClass( 'stick' );
       $( '#sticky-anchor' ).height( 0 );
-      $( "#rotate-icon" ).removeClass( "up" );
+      $( "#rotating-icon" ).removeClass( "up" );
     }
   }
   $(document).ready( function() {
@@ -75,7 +75,7 @@
     return $element.offset().top - $( window ).scrollTop();
   }
   function scrollDownTo( $anchor ) {
-    $( "#rotate-icon" ).addClass( "up" );
+    $( "#rotating-icon" ).addClass( "up" );
 
     $( 'html, body' ).stop().animate({
         scrollTop: ( $( $anchor.attr( 'href' ) ).offset().top - anchorHeight )
@@ -83,7 +83,7 @@
     event.preventDefault();
   }
   function scrollUpToTop() {
-    $( "#rotate-icon" ).removeClass( "up" );
+    $( "#rotating-icon" ).removeClass( "up" );
 
     $( 'html, body' ).stop().animate({
         scrollTop: 0

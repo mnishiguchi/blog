@@ -141,21 +141,23 @@ $image-background: rgba(100,100,100,.5);
   display: flex;
   align-items: center;
   text-align: center;
-  // justify-content: center;
-
+  padding-top: $masthead-height;
+  min-height: 330px;  // For mobile landscape mode.
   // @media only screen and (min-width : 768px) {
   //   height: 60vh;
   // }
 }
-
 #hero-canvas {
   width: 100%; height: 60vh; // Match parent.
   position: absolute;
   top:0; left:0; z-index: 0;
 }
-
-.hero-canvas-text {
+.hero-content {
   display: block;
+  @media only screen and (min-width : 768px) {
+    display: block;
+    padding-top: 40px;
+  }
   img {
     position: relative;
     z-index: 1;
@@ -165,16 +167,35 @@ $image-background: rgba(100,100,100,.5);
     width: auto;
     height: auto;
     background: $image-background;
+    border-radius: 0;
+    &:hover {
+      background: $link-hover-color;
+    }
+    @media only screen and (min-width : 768px) {
+      max-height: 150px;
+    	-webkit-transform: scale(1);
+    	        transform: scale(1);
+    	-webkit-transition: .3s ease-in-out;
+    	        transition: .3s ease-in-out;
+      &:hover {
+      	-webkit-transform: scale(1.1);
+      	        transform: scale(1.1);
+        background: $link-hover-color;
+      }
+    }
   }
   .intro-title {
     display: block;
     color: $gray-2;
     font-size: 24px;
     margin: .5rem 0;
+    @media only screen and (min-width : 768px) {
+      font-size: 30px;
+    }
     a {
       color: inherit;
       padding: 2em 0;
-      &:hover {
+      img:hover {
         text-decoration: none;
       }
     }
@@ -188,24 +209,6 @@ $image-background: rgba(100,100,100,.5);
   .page-title {
     color: $gray-3;
     font-size: 40px;
-  }
-  @media only screen and (min-width : 768px) {
-    display: block;
-    padding-top: 40px;
-    img {
-      max-height: 150px;
-    	-webkit-transform: scale(1);
-    	        transform: scale(1);
-    	-webkit-transition: .3s ease-in-out;
-    	        transition: .3s ease-in-out;
-    }
-    img:hover {
-    	-webkit-transform: scale(1.1);
-    	        transform: scale(1.1);
-    }
-    .intro-title {
-      font-size: 30px;
-    }
   }
 }
 .scroll-control {
@@ -235,7 +238,7 @@ $image-background: rgba(100,100,100,.5);
 
 // Rotate the page-scroll icon. By default, it points down.
 // When .up class is added by JS.
-#rotate-icon {
+#rotating-icon {
      -moz-transition: all .3s ease-out;
   -webkit-transition: all .3s ease-out;
           transition: all .3s ease-out;

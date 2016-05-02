@@ -1,4 +1,6 @@
+// Simulated border
 // http://codepen.io/imohkay/pen/MwaBBK/
+//
 .clip-wrapper {
   display: inline-block;
   vertical-align: top;
@@ -16,6 +18,8 @@
   background: #fff;
 }
 
+// Shapes
+//
 .clip-nonagon {
   -webkit-clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
   clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
@@ -37,8 +41,8 @@
   clip-path: circle(50% at 50% 50%);
 }
 .clip-message {
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 73% 76%, 35% 100%, 35% 76%, 0% 75%);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 73% 76%, 35% 100%, 35% 76%, 0% 75%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 67% 75%, 39% 100%, 34% 75%, 0% 75%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 67% 75%, 39% 100%, 34% 75%, 0% 75%);
 }
 .clip-heptagon {
   -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);

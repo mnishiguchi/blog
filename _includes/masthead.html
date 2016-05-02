@@ -10,7 +10,7 @@
   {% assign image_url = "/images/mount_fuji_800_400_transparent.png" %}
   {% assign clip      = "clip-message" %}
 {% else %}
-  {% assign image_url = "/images/mn_logo_200_no_border.png" %}
+  {% assign image_url = "/images/mn_logo_200_no_border_clear.png" %}
   {% assign clip      = "clip-circle" %}
 {% endif %}
 
@@ -44,16 +44,16 @@
 </nav>
 <!-- .masthead -->
 
-<header class="large-header" id="large-header">
+<header class="large-header">
 
   <canvas id="hero-canvas"></canvas>
 
-  <div class="container hero-canvas-text">
+  <div class="container hero-content">
 
     {% if page.id == null %}
       <a
         href="#scroll-to"
-        class="page-scroll clip-wrapper {{ clip }}">
+        class="clip-wrapper {{ clip }} page-scroll">
         <img
           src="{{ image_url | prepend: site.baseurl }}"
           alt="Masatoshi Nishiguchi"
@@ -84,7 +84,7 @@
 <div id="sticky" class="scroll-control">
   <a class="page-scroll" href="#scroll-to">
     <div
-      id="rotate-icon"
+      id="rotating-icon"
       class="cbutton cbutton--effect-radomir btn-scroll">
       <i class="cbutton__icon fa fa-angle-down fa-fw"></i>
     </div>
