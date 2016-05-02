@@ -1,3 +1,3 @@
 {% for post in site.posts limit:include.limit %}
-  * {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url | prepend: site.baseurl }})
+  {{ post.date | date_to_string }} &raquo; [ {{ post.title }} ]({{ post.url | prepend: site.baseurl }})
 {% endfor %}

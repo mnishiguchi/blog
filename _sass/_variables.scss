@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Serif);
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans);
 @import url(https://fonts.googleapis.com/css?family=Muli:400,300);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100italic);
 
 $gray-1: #f9f9f9;
 $gray-2: #ccc;
@@ -23,7 +24,7 @@ $root-font-family: "PT Serif", "Helvetica Neue", Arial, sans-serif;
 $root-font-size: 16px;
 $root-line-height: 1.5;
 
-$body-color: #262626;
+$body-color: $gray-4;
 $body-bg: #fff;
 $link-color: $blue;
 $link-hover-color: #6a9fb5;

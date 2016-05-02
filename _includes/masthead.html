@@ -1,16 +1,16 @@
-{% assign logo_url    = "/images/mn_logo_80_no_border_clear.png" %}
+{% assign logo_url    = "/images/logo_80.png" %}
 
 {% if page.title == "Home" %}
-  {% assign image_url = "/images/masatoshi_face_transparent.png" %}
+  {% assign image_url = "/images/masatoshi_face_300.png" %}
   {% assign clip      = "clip-right-point" %}
 {% elsif page.title == "About" %}
-  {% assign image_url = "/images/masa_chinatown_300_cropped_posterized.png" %}
+  {% assign image_url = "/images/masatoshi_chinatown_300.png" %}
   {% assign clip      = "clip-shogi" %}
 {% elsif page.title == "Blog" %}
-  {% assign image_url = "/images/mount_fuji_800_400_transparent.png" %}
+  {% assign image_url = "/images/mount_fuji_300_150.png" %}
   {% assign clip      = "clip-message" %}
 {% else %}
-  {% assign image_url = "/images/mn_logo_200_no_border_clear.png" %}
+  {% assign image_url = "/images/logo_200.png" %}
   {% assign clip      = "clip-circle" %}
 {% endif %}
 
@@ -36,8 +36,12 @@
 <nav id="masthead">
   <ul class="nav-menu">
     {% for page in site.pages_list %}
-      <li>
-        <a href="{{ page[1] | prepend: site.baseurl }}">{{ page[0] }}</a>
+      <li class="nav-item">
+        <a
+          href="{{ page[1] | prepend: site.baseurl }}"
+          class="nav-link">
+          {{ page[0] }}
+        </a>
       </li>
     {% endfor %}
   </ul>

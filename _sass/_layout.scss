@@ -27,6 +27,15 @@ main {
   }
 }
 
+.introduction {
+  padding: 1.5em;
+  background: $gray-2;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 1.2rem;
+  color: $black;
+}
+
 .site-footer {
   vertical-align: middle;
   padding: 4em 0;
@@ -45,10 +54,11 @@ main {
     a {
       color:inherit;
       margin: 0 .5rem;
+      color: $link-hover-color;
     }
     a:hover {
       text-decoration: none;
-      color:$link-hover-color;
+      color: white;
     }
   }
 }
@@ -56,13 +66,8 @@ main {
   clear: both;
 }
 // https://www.w3.org/Style/Examples/007/center.en.html
-.img-centered {
-    display: block;
-    margin-left: auto;
-    margin-right: auto
-}
-.introduction {
-  padding: 1.5em;
-  background: $gray-2;
-  border-radius: 5px;
-}
+// .img-centered {
+//     display: block;
+//     margin-left: auto;
+//     margin-right: auto
+// }

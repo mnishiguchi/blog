@@ -21,7 +21,10 @@ $image-background: rgba(100,100,100,.5);
   overflow: hidden;  // Hide nav menu items.
   @media only screen and (min-width : 768px) {
     height: $masthead-height;
+    width: 100%;
+    background-color: rgba(255,255,255,.1);
     margin-top: 0;
+    top: 0; left: 0; z-index: 2;
   }
   &.slide-down {
     transition: .1s linear all;
@@ -49,25 +52,17 @@ $image-background: rgba(100,100,100,.5);
         line-height: inherit;
         height: inherit;
         transition: color 0.6s, background 0.6s;
-        &.active {
-          background: none;
-          font-weight: bold;
-          cursor: default;  // Use default cursor instead of the finger pointer.
-        }
+        // &.active {
+        //   background: none;
+        //   font-weight: bold;
+        //   cursor: default;  // Use default cursor instead of the finger pointer.
+        // }
         &:hover {
           color: $link-hover-color;
         }
       }
     }
-  }
-}
-@media only screen and (min-width : 768px) {
-  #masthead {
-    // position: fixed;
-    top: 0; left: 0; z-index: 2;
-    width: 100%;
-    background-color: rgba(255,255,255,.1);
-    ul {
+    @media only screen and (min-width : 768px) {
       display: flex;
       justify-content: center;
       height: $masthead-height;
@@ -88,6 +83,7 @@ $image-background: rgba(100,100,100,.5);
     }
   }
 }
+
 // Remove the default underline associated with links.
 #masthead li a,
 #masthead li a.active,
@@ -102,10 +98,6 @@ $image-background: rgba(100,100,100,.5);
   top: 0;
   left: 0;
   z-index: 3;
-  // @media only screen and (min-width : 768px) {
-  //   top: 0;
-  //   left: 0;
-  // }
 }
 
 #hamburger {
@@ -173,14 +165,14 @@ $image-background: rgba(100,100,100,.5);
     }
     @media only screen and (min-width : 768px) {
       max-height: 150px;
-    	-webkit-transform: scale(1);
-    	        transform: scale(1);
-    	-webkit-transition: .3s ease-in-out;
-    	        transition: .3s ease-in-out;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transition: .3s ease-in-out;
+              transition: .3s ease-in-out;
       &:hover {
-      	-webkit-transform: scale(1.1);
-      	        transform: scale(1.1);
-        background: $link-hover-color;
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
+        // background: $link-hover-color;
       }
     }
   }
@@ -211,6 +203,8 @@ $image-background: rgba(100,100,100,.5);
     font-size: 40px;
   }
 }
+
+
 .scroll-control {
   display: flex;
   align-items: center;
@@ -235,7 +229,6 @@ $image-background: rgba(100,100,100,.5);
   top: 0;
   z-index: 3;
 }
-
 // Rotate the page-scroll icon. By default, it points down.
 // When .up class is added by JS.
 #rotating-icon {

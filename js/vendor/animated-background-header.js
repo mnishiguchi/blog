@@ -1,8 +1,12 @@
 /**
  * Animated Background Headers :: Demo 1 http://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html
- * Dependencies: TweenLite.js, EasePack.js
+ * Dependencies: TweenLite.js, EasePack.js, mobilecheck
  */
+
 (function() {
+
+    // Activate the animation only for large devices.
+    if ( mobilecheck() ) { return; }
 
     // var wrapperId = 'large-header';
     var canvasId  = 'hero-canvas';
