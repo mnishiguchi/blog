@@ -1,19 +1,5 @@
 {% assign logo_url    = "/images/logo_80.png" %}
 
-{% if page.title == "Home" %}
-  {% assign image_url = "/images/masatoshi_face_300.png" %}
-  {% assign clip      = "clip-right-point" %}
-{% elsif page.title == "About" %}
-  {% assign image_url = "/images/masatoshi_chinatown_300.png" %}
-  {% assign clip      = "clip-shogi" %}
-{% elsif page.title == "Blog" %}
-  {% assign image_url = "/images/mount_fuji_300_150.png" %}
-  {% assign clip      = "clip-message" %}
-{% else %}
-  {% assign image_url = "/images/logo_200.png" %}
-  {% assign clip      = "clip-circle" %}
-{% endif %}
-
 <div id="hamburger">&#8801</div>
 
 <div id="logo-wrapper">
@@ -35,18 +21,51 @@
 
 <nav id="masthead">
   <ul class="nav-menu">
-    {% for page in site.pages_list %}
-      <li class="nav-item">
-        <a
-          href="{{ page[1] | prepend: site.baseurl }}"
-          class="nav-link">
-          {{ page[0] }}
-        </a>
-      </li>
+    {% for each in site.pages_list %}
+
+      {% if each[1] == page.url %}
+        <li class="nav-item active">
+          <a class="nav-link">{{ each[0] }}</a>
+        </li>
+      {% else %}
+        <li class="nav-item">
+          <a
+            href="{{ each[1] | prepend: site.baseurl }}"
+            class="nav-link">
+            {{ each[0] }}
+          </a>
+        </li>
+      {% endif %}
+
     {% endfor %}
   </ul>
 </nav>
 <!-- .masthead -->
+
+
+{% if page.title == "Home" %}
+  {% assign image_url = "/images/masatoshi_face_300.png" %}
+  {% assign clip      = "clip-right-point" %}
+{% elsif page.title == "About" %}
+  {% assign image_url = "/images/masatoshi_chinatown_300.png" %}
+  {% assign clip      = "clip-shogi" %}
+{% elsif page.title == "Blog" %}
+  {% assign image_url = "/images/mount_fuji_300_150.png" %}
+  {% assign clip      = "clip-message" %}
+{% else %}
+  {% assign image_url = "/images/logo_200.png" %}
+  {% assign clip      = "clip-circle" %}
+{% endif %}
+
+{% if page.id %}
+  <style>
+    /* Reduce height for blog posts */
+    .large-header,
+    #hero-canvas {
+      height: 330px; /* Match it with min-height */
+    }
+  </style>
+{% endif %}
 
 <header class="large-header">
 
@@ -57,7 +76,7 @@
     {% if page.id == null %}
       <a
         href="#scroll-to"
-        class="clip-wrapper {{ clip }} page-scroll">
+        class="{{ clip }} clip-wrapper page-scroll">
         <img
           src="{{ image_url | prepend: site.baseurl }}"
           alt="Masatoshi Nishiguchi"
@@ -71,14 +90,14 @@
         <small class="tagline">{{ site.tagline }}</small>
       </h1>
     {% elsif page.id %}
-      <h1 class="page-title">{{ page.title }}</h1>
+      <h1 class="intro-title">{{ page.title }}</h1>
       <time
         datetime="{{ page.date | date_to_xmlschema }}"
         class="post-date">
         {{ page.date | date_to_string }}
       </time>
     {% else %}
-      <h1 class="page-title">{{ page.title }}</h1>
+      <h1 class="intro-title">{{ page.title }}</h1>
     {% endif %}
   </div>
 </header>

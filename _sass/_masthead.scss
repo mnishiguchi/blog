@@ -14,7 +14,8 @@ $image-background: rgba(100,100,100,.5);
 
 #masthead {
   position: absolute;
-  top: 0; left: 0; right: 0; z-index: 2;
+  top: 0; left: 0; right: 0;
+  z-index: 2;
   background-color: rgba(255,255,255,.9);
   display: block; // Ensure visibility during the transition.
   height: 0;
@@ -24,10 +25,11 @@ $image-background: rgba(100,100,100,.5);
     width: 100%;
     background-color: rgba(255,255,255,.1);
     margin-top: 0;
-    top: 0; left: 0; z-index: 2;
+    top: 0; left: 0;
+    z-index: 2;
   }
   &.slide-down {
-    transition: .1s linear all;
+    transition: .2s ease-out all;
     height: $toggle-menu-height;
   }
   ul {
@@ -39,28 +41,21 @@ $image-background: rgba(100,100,100,.5);
       display: block;
       height: $toggle-menu-item-height;
       line-height: $toggle-menu-item-height;
-      &:hover>a {
-        border-bottom: 1px solid $blue;
-      }
       a {
         font-family: $root-font-family;
-        color: $gray-3;
+        color: $gray-5;
         display: block;
         font-size: 80%;
-        padding: 0 .5rem;
+        padding: 0 .8rem;
         width: 100%;
         line-height: inherit;
         height: inherit;
         transition: color 0.6s, background 0.6s;
-        // &.active {
-        //   background: none;
-        //   font-weight: bold;
-        //   cursor: default;  // Use default cursor instead of the finger pointer.
-        // }
         &:hover {
           color: $link-hover-color;
         }
       }
+
     }
     @media only screen and (min-width : 768px) {
       display: flex;
@@ -74,10 +69,22 @@ $image-background: rgba(100,100,100,.5);
         border-top: none; // Remove separators.
         line-height: $masthead-height;
         height: $masthead-height;
+        &:hover>a {
+          border-bottom: 1px solid $blue;
+          background: rgba(0,0,0,.5);
+        }
         a {
           color: $gray-2;  // Make it brighter due to masthead's dark background.
           line-height: $masthead-height;
           height: $masthead-height;
+        }
+        &.active>a {
+          background: rgba(255,255,255,.1);
+          cursor: default;  // Use default cursor instead of the finger pointer.
+          &:hover {
+            border: none;
+            color: white;
+          }
         }
       }
     }
@@ -172,7 +179,6 @@ $image-background: rgba(100,100,100,.5);
       &:hover {
         -webkit-transform: scale(1.1);
                 transform: scale(1.1);
-        // background: $link-hover-color;
       }
     }
   }
@@ -185,6 +191,8 @@ $image-background: rgba(100,100,100,.5);
       font-size: 30px;
     }
     a {
+      min-width: 150px;
+      min-height: 150px;
       color: inherit;
       padding: 2em 0;
       img:hover {

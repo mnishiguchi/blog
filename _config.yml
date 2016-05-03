@@ -27,10 +27,10 @@ baseurl:    ""
 
 # Navigation links in the header of the website
 pages_list:
-  Home:     '/'
-  About:    '/about'
-  Blog:     '/blog'
-  Projects: '/projects'
+  Home:     '/'         # /index.html
+  About:    '/about'    # /about.html
+  Blog:     '/blog/'    # /blog/index.html
+  Projects: '/projects' # /project.html
   # Archive:  '/archive'
 
 # Pagination

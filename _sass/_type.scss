@@ -4,11 +4,12 @@
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: .5rem;
+  font-family: $heading-font-family;
   font-weight: 600;
   line-height: 1.25;
-  color: $gray-5;
+  color: $heading-font-color;
   text-rendering: optimizeLegibility;
+  margin-bottom: .5rem;
 }
 
 h1, .h1 {
@@ -24,6 +25,7 @@ h2, .h2 {
 h3, .h3 {
   margin-top: 1.5rem;
   font-size: 1.25rem;
+  font-weight: normal;
 }
 
 h4, h5, h6,
