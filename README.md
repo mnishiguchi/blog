@@ -32,7 +32,7 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 - [Jekyll themes](http://jekyllthemes.org/)
 
 #### Web design
-- [Codrops](http://tympanus.net/codrops/) - Ideas for UI
+- [Codrops](http://tympanus.net/codrops/)
 - [Design - material-design](https://www.google.com/design/spec/material-design/introduction.html#)
 - [Animation - Authentic motion](https://www.google.com/design/spec/animation/authentic-motion.html#)
 - [CSS Image Hover Effects](http://codepen.io/nxworld/pen/ZYNOBZ)
@@ -42,6 +42,7 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 - [CSS clip-path maker](http://bennettfeely.com/clippy/)
 - [Clip-path: Border simulation](http://codepen.io/imohkay/pen/MwaBBK/)
 - [Vendor-prefixed CSS Property Overview](http://peter.sh/experiments/vendor-prefixed-css-property-overview/)
+- [High Performance Animations](http://www.html5rocks.com/en/tutorials/speed/high-performance-animations/)
 
 ---
 

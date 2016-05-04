@@ -41,8 +41,8 @@
   clip-path: circle(50% at 50% 50%);
 }
 .clip-message {
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 67% 75%, 39% 100%, 34% 75%, 0% 75%);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 67% 75%, 39% 100%, 34% 75%, 0% 75%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 77% 80%, 43% 100%, 30% 80%, 0 80%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 77% 80%, 43% 100%, 30% 80%, 0 80%);
 }
 .clip-heptagon {
   -webkit-clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
