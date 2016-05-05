@@ -20,6 +20,10 @@ title: Blog
       </time>
 
       {{ post.excerpt }}
+
+      {% if post.excerpt != post.content %}
+          <a href="{{ post.url | prepend: site.baseurl }}">Read more >></a>
+      {% endif %}
     </article>
   {% endfor %}
 </div>
