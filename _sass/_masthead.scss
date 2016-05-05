@@ -6,17 +6,19 @@
 
 // Local variables
 $masthead-height: 44px;
-$toggle-menu-item-height: 50px;
+$toggle-menu-item-height: 60px;
 $toggle-menu-height: $toggle-menu-item-height * 5;
 $hamburger-side: 44px;
-$image-background: rgba(100,100,100,.5);
+
+$image-background:       lighten($link-hover-color, 30%);
+$image-background-hover: lighten($link-hover-color, 20%);
 
 
 #masthead {
   position: absolute;
   top: -($toggle-menu-height); left: 0; right: 0;
   z-index: 2;
-  background-color: rgba(255,255,255,.9);
+  background-color: rgba(255,255,255,.99);
   opacity: 0;
   @media only screen and (min-width : 768px) {
     height: $masthead-height;
@@ -46,7 +48,7 @@ $image-background: rgba(100,100,100,.5);
       height: $toggle-menu-item-height;
       line-height: $toggle-menu-item-height;
       a {
-        font-family: $root-font-family;
+        font-family: $heading-font-family;
         color: $gray-5;
         display: block;
         font-size: 80%;
@@ -169,7 +171,7 @@ $image-background: rgba(100,100,100,.5);
     background: $image-background;
     border-radius: 0;
     &:hover {
-      background: $link-hover-color;
+      background: $image-background-hover;
     }
     @media only screen and (min-width : 768px) {
       max-height: 150px;

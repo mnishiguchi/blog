@@ -86,6 +86,18 @@ sudo git config --system core.ignorecase false
 ### [Placing a div within a canvas](http://stackoverflow.com/questions/5763911/placing-a-div-within-a-canvas)
 - Just use z-index!
 
+### Sitemaps for GitHub Pages
+
+#### Without plugin
+http://digitalshore.io/build-jekyll-sitemap-without-plugin/
+
+#### jekyll-sitemap plugin
+https://help.github.com/articles/sitemaps-for-github-pages/
+```yml
+gems:
+  - jekyll-sitemap
+```
+
 ### Markdown in yaml
 
 #### Single paragraphs

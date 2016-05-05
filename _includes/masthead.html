@@ -62,7 +62,8 @@
     /* Reduce height for blog posts */
     .large-header,
     #hero-canvas {
-      height: 0; /* Hight will be min-height */
+      height: 250px;
+      min-height: 250px;
     }
   </style>
 {% endif %}
@@ -96,6 +97,13 @@
         class="post-date">
         {{ page.date | date_to_string }}
       </time>
+    {% elsif paginator %}
+      <h1 class="intro-title">
+        {{ page.title }}
+        <small>
+          Page #{{ paginator.page }} of {{ paginator.total_pages }}
+        </small>
+      </h1>
     {% else %}
       <h1 class="intro-title">{{ page.title }}</h1>
     {% endif %}

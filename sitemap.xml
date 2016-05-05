@@ -1,0 +1,25 @@
+---
+sitemap: false
+# Add this variable to the YAML front matter and set it to false fo all of the
+# pages that you do not wish to have included in the sitemap.
+# E.g., atom.xml, the sitemap itself, the 404 error page, or shallow content pages, etc.
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for post in site.posts %}
+    <url>
+      <loc>{{ site.url }}{{ post.url }}</loc>
+      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    </url>
+  {% endfor %}
+
+  {% for page in site.pages %}
+    {% if page.sitemap != false %}
+      <url>
+        <loc>{{ site.url }}{{ page.url }}</loc>
+        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+      </url>
+    {% endif %}
+  {% endfor %}
+</urlset>

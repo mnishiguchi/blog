@@ -1,6 +1,6 @@
 ---
 layout: post
-title: web-design-is-fun-to-learn
+title: Web design is fun to learn
 comments: true
 ---
 
