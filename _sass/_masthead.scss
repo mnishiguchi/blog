@@ -234,12 +234,21 @@ $image-background-hover: lighten($link-hover-color, 20%);
     }
   }
 }
-#sticky.stick {
-  margin-top: 0 !important;
-  position: fixed;
-  top: 0;
-  z-index: 3;
+#sticky {
+  -moz-transition: all .3s ease-out;
+-webkit-transition: all .3s ease-out;
+       transition: all .3s ease-out;
+  &.stick {
+    margin-top: 0 !important;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+  }
+  &:hover {
+    background: lighten($black-transparent, 10%);
+  }
 }
+
 // Rotate the page-scroll icon. By default, it points down.
 // When .up class is added by JS.
 #rotating-icon {
