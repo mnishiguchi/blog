@@ -1,3 +1,0 @@
-{% for post in site.posts limit:include.limit %}
-  {{ post.date | date: "%B %d, %Y" }} &raquo; [ {{ post.title }} ]({{ post.url | prepend: site.baseurl }})
-{% endfor %}

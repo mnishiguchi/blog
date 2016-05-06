@@ -10,5 +10,10 @@ comments: true
 </article>
 
 {% if site.related_posts != empty %}
-  {% include related.html heading="Related posts" posts=site.related_posts %}
+  <aside class="related">
+
+    <h3>Related posts</h3>
+
+    {% include related_posts.html posts=site.related_posts %}
+  </aside>
 {% endif %}
