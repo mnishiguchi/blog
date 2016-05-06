@@ -13,11 +13,7 @@ title: Blog
         </a>
       </h2>
 
-      <time
-        datetime="{{ post.date | date_to_xmlschema }}"
-        class="post-date">
-        {{ post.date | date_to_string }}
-      </time>
+      {% include post_meta.html %}
 
       {{ post.excerpt }}
 
@@ -28,27 +24,4 @@ title: Blog
   {% endfor %}
 </div>
 
-<div class="pagination">
-  {% assign older = "<< Older Entries" %}
-  {% assign newer = "Newer Entries >>" %}
-
-  {% if paginator.next_page %}
-    <a
-      class="pagination-item older"
-      href="{{ paginator.next_page_path | prepend: site.baseurl }}">
-      {{ older }}
-    </a>
-  {% else %}
-    <span class="pagination-item older">{{ older }}</span>
-  {% endif %}
-
-  {% if paginator.previous_page %}
-    <a
-      class="pagination-item newer"
-      href="{{ paginator.previous_page_path | prepend: site.baseurl }}">
-      {{ newer }}
-    </a>
-  {% else %}
-    <span class="pagination-item newer">{{ newer }}</span>
-  {% endif %}
-</div>
+{% include pagination.html %}

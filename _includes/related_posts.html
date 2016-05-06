@@ -1,15 +1,11 @@
 <ul class="related-posts">
   {% for post in site.posts limit:include.limit %}
     <li>
-      <small>
-        <time datetime="{{ post.date | date_to_xmlschema }}">
-          {{ post.date | date_to_string }}
-        </time>
-      </small>
-      &raquo;
-      <a href="{{ site.baseurl }}{{ post.url }}">
+      <a href="{{ post.url | prepend: site.baseurl }}">
         {{ post.title }}
       </a>
+      <br />
+      {% include post_meta.html %}
     </li>
   {% endfor %}
 </ul>

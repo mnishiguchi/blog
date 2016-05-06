@@ -3,11 +3,13 @@ layout: default
 ---
 
 <article class="page">
-
-  {% if page.title != "Home" %}
-    <!-- <h1 class="page-title">{{ page.title }}</h1> -->
-  {% endif %}
-
   {{ content }}
-
 </article>
+
+{% if page.url == "/" and site.related_posts != empty %}
+  <!--Displayed only for the Home page-->
+  <aside class="related">
+    <h3 class="h2">Recent posts</h3>
+    {% include related_posts.html posts=site.related_posts limit=6 %}
+  </aside>
+{% endif %}

@@ -1,0 +1,24 @@
+<div class="pagination">
+  {% assign older = "<< Older Entries" %}
+  {% assign newer = "Newer Entries >>" %}
+
+  {% if paginator.next_page %}
+    <a
+      class="pagination-item older"
+      href="{{ paginator.next_page_path | prepend: site.baseurl }}">
+      {{ older }}
+    </a>
+  {% else %}
+    <span class="pagination-item older">{{ older }}</span>
+  {% endif %}
+
+  {% if paginator.previous_page %}
+    <a
+      class="pagination-item newer"
+      href="{{ paginator.previous_page_path | prepend: site.baseurl }}">
+      {{ newer }}
+    </a>
+  {% else %}
+    <span class="pagination-item newer">{{ newer }}</span>
+  {% endif %}
+</div>

@@ -30,6 +30,7 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 - [How I Created a Beautiful and Minimal Blog Using Jekyll, Github Pages, and poole](http://joshualande.com/jekyll-github-pages-poole/) by Joshua Lande
 - [Using a custom domain with GitHub Pages](https://help.github.com/articles/using-a-custom-domain-with-github-pages/)
 - [Jekyll themes](http://jekyllthemes.org/)
+- [Liquid](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers)
 
 #### Web design
 - [Codrops](http://tympanus.net/codrops/)
@@ -187,6 +188,41 @@ This statement is valid.
   width: 100%; height: 100%;
 }
 ```
+
+### Offset an HTML anchor destination
+- http://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
+
+```scss
+// To offset an HTML anchor destination.
+.posts_by_tag {
+  h3:before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 0;
+    height: 50px;
+    margin-top: -50px
+  }
+}
+```
+
+### Creating an array with Jekyll
+- https://talk.jekyllrb.com/t/how-do-you-add-items-to-an-array-in-jekyll/324
+- https://jekyllrb.com/docs/templates/
+
+```html
+<!--Create an emply array-->
+{% assign tag_names = "" | split: "|"  %}
+
+<!--Obtain a tag name and push it to the array-->
+{% for posts_by_tag in site.tags %}
+  {% assign tag_names = tag_names | push: posts_by_tag.first %}
+{% endfor %}
+
+<!--Sort the tag names-->
+{% assign tag_names = tag_names | sort %}
+```
+
 ---
 
 ## Some ideas

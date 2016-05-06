@@ -1,0 +1,20 @@
+---
+layout: page
+title: Projects
+permalink: /projects  
+# Specify the permalink because this file is not in the root.
+---
+
+<div class="posts">
+  {% for project in site.data.projects %}
+    <article class="post">
+      <h2 class="post-title">
+        <a href="{{ post.url | prepend: project.url }}">
+          {{ project.title }}
+        </a>
+      </h2>
+
+      {{ project.description | markdownify }}
+    </article>
+  {% endfor %}
+</div>

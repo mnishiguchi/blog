@@ -26,7 +26,7 @@ url:        "http://mnishiguchi.com"  # Hostname & protocol for your site
 baseurl:    ""
 
 # Navigation links in the header of the website
-pages_list:
+navigation_items:
   Home:     '/'         # /index.html
   About:    '/about'    # /about.html
   Blog:     '/blog/'    # /blog/index.html

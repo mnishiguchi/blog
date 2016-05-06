@@ -18,7 +18,7 @@ $image-background-hover: lighten($link-hover-color, 20%);
   position: absolute;
   top: -($toggle-menu-height); left: 0; right: 0;
   z-index: 2;
-  background-color: rgba(255,255,255,.99);
+  background-color: $gray-1;
   opacity: 0;
   @media only screen and (min-width : 768px) {
     height: $masthead-height;
@@ -41,6 +41,7 @@ $image-background-hover: lighten($link-hover-color, 20%);
     text-align: center;
     padding: 0;
     margin: 0;
+    border-bottom: 2px solid $blue;
     // Lower the height of the menu a little for usability.
     padding-top: $toggle-menu-item-height;
     li {
@@ -69,6 +70,7 @@ $image-background-hover: lighten($link-hover-color, 20%);
       height: $masthead-height;
       margin: 0;
       padding: 0;
+      border: none;
       li {
         display: inline-block;
         width: auto;      // Deactivate width 100%.
@@ -156,6 +158,10 @@ $image-background-hover: lighten($link-hover-color, 20%);
 }
 .hero-content {
   display: block;
+  padding-left:  1.5rem;
+  padding-right: 1.5rem;
+  margin-left:  auto;
+  margin-right: auto;
   @media only screen and (min-width : 768px) {
     display: block;
     padding-top: 40px;
@@ -202,12 +208,20 @@ $image-background-hover: lighten($link-hover-color, 20%);
         text-decoration: none;
       }
     }
-    small {
-      display: block;
-      font-size: 60%;
-      font-weight: 400;
-      opacity: .8;
+  }
+  .post_meta {
+    display: block;
+    width: 100%;
+    time {
+      margin-top: -10px;
+      display: inline-block;
     }
+  }
+  small {
+    display: block;
+    font-size: 60%;
+    font-weight: 400;
+    opacity: .8;
   }
   .page-title {
     color: $gray-3;

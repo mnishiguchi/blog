@@ -1,4 +1,4 @@
-{% assign logo_url    = "/images/logo_80.png" %}
+{% assign logo_url = "/images/logo_80.png" %}
 
 <div id="hamburger">&#8801</div>
 
@@ -21,7 +21,7 @@
 
 <nav id="masthead">
   <ul class="nav-menu">
-    {% for each in site.pages_list %}
+    {% for each in site.navigation_items %}
 
       {% if each[1] == page.url %}
         <li class="nav-item active">
@@ -42,6 +42,11 @@
 </nav>
 <!-- .masthead -->
 
+{% comment %}
+<!--
+Determine an image and its shape for the page.
+-->
+{% endcomment %}
 
 {% if page.title == "Home" %}
   {% assign image_url = "/images/masatoshi_face_300.png" %}
@@ -57,9 +62,15 @@
   {% assign clip      = "clip-circle" %}
 {% endif %}
 
-{% if page.id %}
+{% comment %}
+<!--
+Determine an image and its shape based on page title.  
+-->
+{% endcomment %}
+
+{% if page.id or page.url contains "tags" %}
   <style>
-    /* Reduce height for blog posts */
+    /* Reduce height for blog posts and tags */
     .large-header,
     #hero-canvas {
       height: 250px;
@@ -72,9 +83,12 @@
 
   <canvas id="hero-canvas"></canvas>
 
-  <div class="container hero-content">
+  <div class="hero-content">
 
-    {% if page.id == null %}
+    {% if page.title == "Home"
+       or page.title == "About"
+       or page.title == "Blog"
+       or page.title == "Projects" %}
       <a
         href="#scroll-to"
         class="{{ clip }} clip-wrapper page-scroll">
@@ -90,13 +104,11 @@
         <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
         <small class="tagline">{{ site.tagline }}</small>
       </h1>
+
     {% elsif page.id %}
       <h1 class="intro-title">{{ page.title }}</h1>
-      <time
-        datetime="{{ page.date | date_to_xmlschema }}"
-        class="post-date">
-        {{ page.date | date_to_string }}
-      </time>
+      {% include post_meta.html %}
+
     {% elsif paginator %}
       <h1 class="intro-title">
         {{ page.title }}
@@ -104,6 +116,7 @@
           Page #{{ paginator.page }} of {{ paginator.total_pages }}
         </small>
       </h1>
+
     {% else %}
       <h1 class="intro-title">{{ page.title }}</h1>
     {% endif %}
