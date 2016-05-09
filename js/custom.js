@@ -12,44 +12,6 @@ function mobilecheck() {
 
 
 /**
- * Navigation toggle.
- */
-( function() {
-  // Store references to elements so that we can add/remove classes to those elements anytime.
-  var hamburger, logo, nav;
-
-  // Wait until DOM is loaded and then execute.
-  document.addEventListener( "DOMContentLoaded", function( event ) {
-
-    // Find elements and store eferences to them.
-    hamburger = document.getElementById( "hamburger" );
-    logo      = document.getElementById( "logo" );
-    nav       = document.getElementById( "masthead" );
-
-    // Apply the slide up animation defined in CSS to the navigation when:
-    // - the hamburger is clicked.
-    hamburger.addEventListener( 'click', toggleNavbarAnimations );
-
-    // Remove the animation when:
-    // - the navigation is clicked
-    // - the logo is clicked
-    // - the window size is resized
-    nav.addEventListener( 'click', removeNavbarAnimations );
-    logo.addEventListener( 'click', removeNavbarAnimations );
-    window.addEventListener( 'resize', removeNavbarAnimations );
-  });
-  function toggleNavbarAnimations() {
-    nav.classList.toggle( "slide-down" );
-    hamburger.classList.toggle( "active" );
-  }
-  function removeNavbarAnimations() {
-    nav.classList.remove( "slide-down" );
-    hamburger.classList.remove( "active" );
-  }
-})();
-
-
-/**
  * Sticky element.
  * http://blog.yjl.im/2010/01/stick-div-at-top-after-scrolling.html
  */
@@ -109,3 +71,72 @@ function mobilecheck() {
     distanceFromDisplayTop( $anchor ) > 10 ? scrollDownTo( $anchor ) : scrollUpToTop() ;
   });
 })();
+
+
+/**
+ * Toggle the ".modal-open" class on body when navigation modal dialog is opened or closed.
+ * This can be used to disable page scroll when modal is open.
+ */
+( function() {
+  // Wait until DOM is loaded and then execute.
+  document.addEventListener( "DOMContentLoaded", function( event ) {
+
+    // Check the initial state.
+    handleHashchange();
+
+    // Keep watch on hash change due to back buttoon or history.
+    window.addEventListener( "hashchange", handleHashchange );
+
+    // Keep watch on page refresh.
+    window.addEventListener( "load", handleHashchange );
+
+    /**
+     * Toggle the ".modal-open" class on document.body checking whether the nav
+     * is targeted of not.
+     */
+    function handleHashchange() {
+      if ( document.querySelector( "nav[role='banner']:target" ) ) {
+        document.body.classList.add( "modal-open" );
+      } else {
+        document.body.classList.remove( "modal-open" );
+      }
+    }
+  });
+})();
+
+/**
+ * Navigation toggle.
+ * When the hamburger is clicked, toggle `.modal-open` on `document.body`.
+ */
+// ( function() {
+//   // Store references to elements so that we can add/remove classes to those elements anytime.
+//   var hamburger, logo, modal;
+//
+//   // Wait until DOM is loaded and then execute.
+//   document.addEventListener( "DOMContentLoaded", function( event ) {
+//
+//     // Find elements and store eferences to them.
+//     hamburger = document.getElementById( "hamburger" );
+//     logo      = document.getElementById( "logo" );
+//     modal     = document.querySelector( "nav[role='banner']" );
+//
+//     // Toggle modal when:
+//     // - the hamburger is clicked.
+//     hamburger.addEventListener( 'click', toggleModal );
+//
+//     // Close modal when:
+//     // - the user clicks anywhere outside of the dialog box
+//     // - the logo is clicked
+//     // - the window size is resized
+//     modal.addEventListener( 'click', closeModal );
+//     logo.addEventListener( 'click', closeModal );
+//     window.addEventListener( 'resize', closeModal );
+//   });
+//
+//   function toggleModal() {
+//     document.body.classList.toggle( "modal-open" );
+//   }
+//   function closeModal() {
+//     document.body.classList.remove( "modal-open" );
+//   }
+// })();

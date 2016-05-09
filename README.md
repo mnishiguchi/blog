@@ -135,60 +135,6 @@ This statement is valid.
 </div>
 ```
 
-### Parallex using transform3d
-- https://github.com/Prinzhorn/skrollr
-- https://muut.com/blog/technology/riot-2.0/
-
-```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
-<script>
-  // Init Skrollr
-  skrollr.init();
-</script>
-<style>
-  #parallex {
-    position: absolute;
-    top:0;left:0;
-    width:100%;
-    z-index: -1;
-    overflow: hidden;
-  }
-</style>
-<section id="parallex">
-  <img src="http://lorempixel.com/1100/550/abstract/" alt=""
-        data-0="transform: translate3d(0px,0px,0px);" data-500="transform: translate3d(0px,180px,0px);"
-  >
-</section>
-```
-
-### Parallex using background-position
-```html
-<style>
-.introduction {
-  background: url("{{ site.baseurl }}/images/mount_fuji_800_400.jpg")
-}
-</style>
-<section
-  class="introduction"
-  data-0="background-position: 50% 0px;"
-  data-end="background-position: 50% -100px;" >
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus earum, distinctio atque tenetur id nihil in excepturi est accusantium animi, itaque ipsum quos laborum repudiandae fugit placeat possimus? Praesentium, porro.
-</section>
-```
-```css
-.introduction {
-  min-height: 300px;
-  padding: 1.5em;
-  color: #d24226;
-  background: $gray-2;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  width: 100%; height: 100%;
-}
-```
-
 ### Offset an HTML anchor destination
 - http://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header
 
@@ -223,15 +169,110 @@ This statement is valid.
 {% assign tag_names = tag_names | sort %}
 ```
 
----
+### Modal dialog using pure CSS
+- http://jsfiddle.net/raving/1mhsynmw/
 
-## Some ideas
-
-### Responsive design
-- Read [Luke W's articles](http://www.lukew.com/presos/)
 
 ### Parallax-scrolling
 - https://ihatetomatoes.net/simple-parallax-scrolling-tutorial/
+- https://github.com/Prinzhorn/skrollr
+- https://muut.com/blog/technology/riot-2.0/
+
+#### using transform3d
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+<script>
+  // Init Skrollr
+  skrollr.init();
+</script>
+<style>
+  #parallex {
+    position: absolute;
+    top:0;left:0;
+    width:100%;
+    z-index: -1;
+    overflow: hidden;
+  }
+</style>
+<section id="parallex">
+  <img src="http://lorempixel.com/1100/550/abstract/" alt=""
+        data-0="transform: translate3d(0px,0px,0px);" data-500="transform: translate3d(0px,180px,0px);"
+  >
+</section>
+```
+
+#### using background-position
+```html
+<style>
+.introduction {
+  background: url("{{ site.baseurl }}/images/mount_fuji_800_400.jpg")
+}
+</style>
+<section
+  class="introduction"
+  data-0="background-position: 50% 0px;"
+  data-end="background-position: 50% -100px;" >
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus earum, distinctio atque tenetur id nihil in excepturi est accusantium animi, itaque ipsum quos laborum repudiandae fugit placeat possimus? Praesentium, porro.
+</section>
+```
+```css
+.introduction {
+  min-height: 300px;
+  padding: 1.5em;
+  color: #d24226;
+  background: $gray-2;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%; height: 100%;
+}
+```
+
+### Detecting hashchange
+```js
+( function() {
+  // Wait until DOM is loaded and then execute.
+  document.addEventListener( "DOMContentLoaded", function( event ) {
+
+    // Check the initial state.
+    handleHashchange();
+
+    // In case that the modal is opened through back buttoon or history,
+    // keep watch on hash change.
+    window.addEventListener( "hashchange", handleHashchange );
+
+    /**
+     * Toggle the ".modal-open" class on document.body checking whether the nav
+     * is targeted of not.
+     */
+    function handleHashchange() {
+      if ( document.querySelector( "nav[role='banner']:target" ) ) {
+        document.body.classList.add( "modal-open" );
+      } else {
+        document.body.classList.remove( "modal-open" );
+      }
+    }
+  });
+})();
+```
+
+### Disable scroll
+#### By disabling mouse/touch events
+```scss
+pointer-events: none; // Disable mouse/touch events.
+```
+
+#### By toggling overflow: hidden
+
+```scss
+// Prevent BODY from scrolling when a modal is opened
+body.modal-open {
+  position: fixed;
+  overflow: hidden;
+}
+```
 
 ---
 

@@ -143,13 +143,16 @@ I styled them with basic CSS (SCSS).
 
 {% raw %}
 ```scss
-@mixin post-tag {
-  padding: 0 .3rem;
-  margin: 0 .1rem;
-  background: $link-color;
-  color: white;
-  &:hover {
-    text-decoration: none;
+@mixin post-tag($font-size) {
+  a {
+    font-size: $font-size;
+    padding: 0 .3rem;
+    margin: 0 .1rem;
+    background: $link-color;
+    color: white;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
@@ -165,11 +168,7 @@ I styled them with basic CSS (SCSS).
     margin-right: .5rem;
   }
   .post-tags {
-    display: inline-block;
-    a {
-      @include post-tag;
-      font-size: .8rem;
-    }
+    @include post-tag(.8rem);
   }
 }
 
@@ -182,9 +181,7 @@ I styled them with basic CSS (SCSS).
   margin: 0;
   li {
     display: inline-block;
-    a {
-      @include post-tag;
-    }
+    @include post-tag(.8rem);
   }
 }
 ```

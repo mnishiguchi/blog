@@ -1,10 +1,11 @@
-<footer class="site-footer">
+<footer>
   <div class="container">
     <div class="contact-info">
-      <span>
-        &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>.
-        {{ site.author.name }}
-      </span>
+      &copy;
+      <time datetime="{{ site.time | date_to_xmlschema }}">
+        {{ site.time | date: '%Y' }}
+      </time>.
+      {{ site.author.name }}
     </div>
 
     <div class="social-links">

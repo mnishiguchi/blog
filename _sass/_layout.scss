@@ -37,16 +37,14 @@ main {
   color: $black;
 }
 
-.site-footer {
+footer {
   vertical-align: middle;
   padding: 4em 0;
   color: $gray-2;
   background: $black;
   .contact-info {
     display: inline-block;
-    span {
-      padding: 0 5px;
-    }
+    padding: 0 5px;
   }
   .social-links {
     display: inline-block;

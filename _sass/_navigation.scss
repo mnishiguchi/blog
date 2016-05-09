@@ -1,0 +1,170 @@
+// Navigation
+//
+// On mobile devices
+// - Displayed as a modal dialog.
+// - Opened by clicking on the hamburger.
+// - Closed by clicking on the close button.
+// - The overlay's z-index: 9999
+//
+// On larger devices
+// - Displayed as a top-navbar.
+
+@mixin modal {
+  opacity: 0; // Hidden by default
+  pointer-events: none; // Disable mouse/touch events by default
+  position: fixed;
+  // top: 0; right: 0; bottom: 0; left: 0;
+  z-index: 9999; // Sit on top of contents
+  width: 100vw; // Full width
+  height: 100vh; // Full height
+  background: rgba(0,0,0,0.8);
+  &:target { // This is triggered by an anchor hash link to this element.
+    opacity: 1;
+    * {
+      pointer-events: auto;  // Enable mouse/touch events.
+    }
+  }
+}
+@mixin modal-dialog {
+  position: relative;
+  z-index: 10000;
+  display: block;
+  width: 60%;
+  height: auto;
+  padding: 0;
+  margin: 30% auto;
+  background: white;
+  pointer-events: none;
+}
+
+#logo-wrapper {
+  padding: 2px;  // Determine based on dimensions of svg.line-drawing and .logo.
+  position: absolute;
+  top: 0; left: 0;
+  z-index: 3;
+}
+
+// Prevent BODY from scrolling when a modal is opened
+body.modal-open {
+  position: fixed;
+  overflow: hidden;
+}
+
+.hamburger {
+  position: absolute;
+  top: 16px; right: 10px;
+  z-index: 3;
+  display: inline-block;
+  background: none;
+  color: $gray-3;
+  border: 1px solid $gray-3;
+  width: $hamburger-side;
+  height: $hamburger-side;
+  line-height: $hamburger-side;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
+  // Hide it when larger than iPad.
+  @media only screen and (min-width : 768px) {
+    display: none;
+  }
+}
+.close-modal {
+  @extend .hamburger;
+  z-index: 10000;
+}
+
+// Mobile devices: The Modal (background)
+nav[role="banner"] {
+  @include modal;
+  ul {
+    @include modal-dialog;
+    li {
+      display: block;
+      height: $toggle-menu-item-height;
+      line-height: $toggle-menu-item-height;
+      color: $gray-3;
+      background: white;
+      a {
+        display: block;
+        font-size: 80%;
+        font-family: $heading-font-family;
+        color: $gray-4;
+        background: white;
+        padding: 0 .8rem;
+        width: 100%;
+        height: $toggle-menu-item-height;
+        line-height: $toggle-menu-item-height;
+        // transition: color 0.6s, background 0.6s;
+      }
+      &.active a{
+        color: $gray-2;
+        background: $gray-1;
+        text-decoration: none;
+        cursor: default;  // Use default cursor instead of the finger pointer.
+      }
+    }
+  }
+  // Larger devices: Navigation bar at the top.
+  @media only screen and (min-width : 768px) {
+    opacity: 1;
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 2;
+    width: 100%;
+    height: $top-nav-height;
+    background: none;
+    pointer-events: auto;
+    ul {
+      position:static;
+      pointer-events: auto;
+      display: flex; justify-content: center; // Align the items in the center.
+      width: auto;
+      height: $top-nav-height;
+      margin: 0; padding: 0;
+      border: none;
+      opacity: 1;
+      background: rgba(255,255,255,.1);
+      li {
+        display: inline-block;
+        width: auto;   // Reset 100% width.
+        height: $top-nav-height;
+        line-height: $top-nav-height;
+        text-align: center;
+        border: none; // Reset the border.
+        background: none;
+        a {
+          font-family: $heading-font-family;
+          color: $gray-2;
+          background: none;
+          display: block;
+          font-size: 80%;
+          padding: 0 .8rem;
+          width: 100%;
+          height: $top-nav-height;
+          line-height: $top-nav-height;
+          -webkit-transition: all 0.4s ease;
+             -moz-transition: all 0.4s ease;
+                  transition: all 0.4s ease;
+        }
+        &:hover>a {
+          color: $link-hover-color;
+          background: rgba(0,0,0,.5);
+          border: none; // Reset the border.
+          border-bottom: 1px solid $blue;
+          text-decoration: none;
+        }
+        &.active>a {
+          background: rgba(255,255,255,.1);
+          cursor: default;  // Use default cursor instead of the finger pointer.
+          &:hover {
+            border: none;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
