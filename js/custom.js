@@ -82,20 +82,24 @@ function mobilecheck() {
   document.addEventListener( "DOMContentLoaded", function( event ) {
 
     // Check the initial state.
-    handleHashchange();
+    toggleModal();
 
     // Keep watch on hash change due to back buttoon or history.
-    window.addEventListener( "hashchange", handleHashchange );
+    window.addEventListener( "hashchange", toggleModal );
 
     // Keep watch on page refresh.
-    window.addEventListener( "load", handleHashchange );
+    window.addEventListener( "load", toggleModal );
+
+    // Keep watch on screen rotation or resize.
+    window.addEventListener( 'resize', toggleModal );
+
 
     /**
      * Toggle the ".modal-open" class on document.body checking whether the nav
      * is targeted of not.
      */
-    function handleHashchange() {
-      if ( document.querySelector( "nav[role='banner']:target" ) ) {
+    function toggleModal() {
+      if ( document.querySelector( "nav:target" ) ) {
         document.body.classList.add( "modal-open" );
       } else {
         document.body.classList.remove( "modal-open" );
@@ -118,7 +122,7 @@ function mobilecheck() {
 //     // Find elements and store eferences to them.
 //     hamburger = document.getElementById( "hamburger" );
 //     logo      = document.getElementById( "logo" );
-//     modal     = document.querySelector( "nav[role='banner']" );
+//     modal     = document.querySelector( "nav" );
 //
 //     // Toggle modal when:
 //     // - the hamburger is clicked.

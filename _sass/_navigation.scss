@@ -77,7 +77,7 @@ body.modal-open {
 }
 
 // Mobile devices: The Modal (background)
-nav[role="banner"] {
+nav {
   @include modal;
   ul {
     @include modal-dialog;
