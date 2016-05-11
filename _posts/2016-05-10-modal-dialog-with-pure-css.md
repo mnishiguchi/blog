@@ -9,7 +9,7 @@ tags:
 - modal
 ---
 
-I wanted to make the site navigation appear on a modal dialog box. After googling around, I found that I could implement modal with pure CSS. I thought this was a great opportunity to learn how to implement modal without JS.
+I wanted to make the site navigation appear on a modal dialog box. After googling around, I found that I could implement modal with pure CSS. I thought this was a great opportunity to learn how to implement simple modal without JS.
 
 <!--more-->
 
@@ -27,17 +27,22 @@ I wanted to make the site navigation appear on a modal dialog box. After googlin
 - The code for the functionality is located in a single place.
 
 #### Disadvantages
-- When I re-visit a URL to open the modal by pressing the back button, the modal dialog is triggered to open.
-- It is difficult to prevent the page from scrolling without JavaScript. Even if the modal is open, we can still scroll the page from above the overlay, which is a little strange in the material design standpoint.
+- When I press the back button and re-visit the URL where the modal was open, the modal dialog is triggered to open again. This behavior is a little strange.
+- It is difficult to prevent the page from scrolling without JavaScript. Even if the transparent modal overlay is covering the whole page, we can still scroll the page from above the overlay, which is a little strange in the material design standpoint.
 
-## Things that were challenging to me
-It was very challenging to me to figure out how to prevent the page from scrolling when the modal is open. I came up with these solutions:
+## My solutions to above-mentioned disadvantages
+At first, I was trying to prevent the page from scrolling when the modal is open.
+And because I wanted to stick to the pure CSS implementation, it was very challenging to do it.
+In fact, as of now I do not know how to stop the page from scrolling without JS.
 
-- Not using transparent color for the overlay background.
-- Covering most of or entirety of the real estate with the dialog box.
+Then after doing experiments by trail and error, I came up with these solutions:
+
+- Not using transparent color for the overlay background so that I do not even see the scrolling page under the overlay, which makes me not worry about it.
 - Giving up on pure CSS implementation and disabling the scrolling using JS.
 
-I realized that simply not using transparent color solves the problem of the page scrolling because if it is invisible, we do not care even if it is actually scrolling!
+I realized that the simplest solution for the problem of the page scrolling was
+to simply not use transparent background color because if it is invisible,
+we do not care even if it is actually scrolling.
 
 ![]({{ site.baseurl }}/images/20160510_modal_nav_menu_1.png)
 
@@ -84,7 +89,7 @@ I trigger the opening/closing of the modal by using an anchor link and the CSS p
   pointer-events: none; // Disable mouse/touch events by default
   position: fixed;
   top: 0; right: 0; bottom: 0; left: 0;
-  z-index: 9999; // Sit on top of contents
+  z-index: 10; // Sit on top of contents
   width: 100vw; // Full width
   height: 100vh; // Full height
   background: $black;
@@ -96,10 +101,10 @@ I trigger the opening/closing of the modal by using an anchor link and the CSS p
 @mixin modal-dialog {
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
-  z-index: 10000;
+  z-index: 11;
   display: block;
   width: 80%;
-  height: 80%;
+  height: 77%;
   padding: 0;
   margin: auto;
   background: $black;
@@ -170,7 +175,9 @@ body.modal-is-open {
 {% endraw %}
 
 #### JavaScript (optional)
-We could optionally prevent the page from scrolling without JavaScript as it is difficult to do so with CSS; however now that we use JavaScript giving up on pure CSS implementation, maybe we might as well trigger the modal opening/closing by toggling the `modal-is-open` class unless I really want to support no-js users.
+If I really have to prevent the page from scrolling, I can do it with JavaScript;
+however if I do so, maybe I might as well trigger the modal opening/closing by
+toggling the `modal-is-open` class.
 
 {% raw %}
 ```js

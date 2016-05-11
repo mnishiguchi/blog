@@ -4,7 +4,7 @@
 // - Displayed as a modal dialog.
 // - Opened by clicking on the hamburger.
 // - Closed by clicking on the close button.
-// - The overlay's z-index: 9999
+// - The overlay's z-index: 10
 //
 // On larger devices
 // - Displayed as a top-navbar.
@@ -14,7 +14,7 @@
   pointer-events: none; // Disable mouse/touch events by default
   position: fixed;
   top: 0; right: 0; bottom: 0; left: 0;
-  z-index: 9999; // Sit on top of contents
+  z-index: 10; // Sit on top of contents
   width: 100vw; // Full width
   height: 100vh; // Full height
   background: $black;
@@ -26,7 +26,7 @@
 @mixin modal-dialog {
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
-  z-index: 10000;
+  z-index: 11;
   display: block;
   width: 80%;
   height: 77%;

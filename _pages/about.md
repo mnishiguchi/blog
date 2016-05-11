@@ -12,7 +12,7 @@ so that I will become a resourceful and unique developer.
 
 <br />
 
-<h2 class="h1">
+<h2>
   Linguistics
 </h2>
 
@@ -26,7 +26,7 @@ Because both syntactical analysis and lexical analysis are similar,
 understanding how natural languages work is useful in understanding
 computer languages.
 
-<h2 class="h1">
+<h2>
   Counseling
 </h2>
 
@@ -39,7 +39,7 @@ Counseling skills can be useful in programming when working with clients
 to assist them in identifying their programming needs and collaboratively
 working with the clients to deliver a quality and meaningful product.
 
-<h2 class="h1">
+<h2>
   Sales and engineering
 </h2>
 
@@ -51,8 +51,8 @@ I acquired not only sales and customer service skills,
 but also some insight into mechanical and software engineering through
 working with clients and in-house engineers.
 
-<h2 class="h1">
-  Self-directed coding
+<h2>
+  Self-Directed Coding
 </h2>
 
 Shortly after moving to the United States, I met a professional programmer
@@ -65,40 +65,45 @@ and job experiences were, in a sense, bread crumbs leading to a career in progra
 
 My IT-pro friends recommended me a few online courses such as Harvard's CS50. Since I started programming, I completed several online courses. I really appreciate the generosity of the industry. I feel like now is time to contribute back to the community in return.
 
-### CS50
-This is the one who taught me all the basics of Computer Science early on. I gained understanding of how computer software works and insight into data structures through a broad range of assignment projects (C, Linux, JavaScript, SQL, PHP, Cryptography, etc)
+Early on, Harvard's CS50 and Codeacademy helped me absorb basic concepts of programming and computer science. I was able to gain understanding of how computer software works, insight into data structures and basic knowledge of several programming languages (C, HTML, CSS, JavaScript, SQL, PHP, Ruby, Python, etc)
 
-### Code adademy
-This is where I practiced coding when I did not even know how to use a text editor.
-
-### Other courses / tutorials I did
+#### Certifications
 
 - [Web Application Architectures - University of New Mexico]({{ site.data.pdfs.certificates.web_apps }})
 - [6.00.1x: Introduction to Computer Science and Programming Using Python - MIT]({{ site.data.pdfs.certificates.python }})
 - [COMP102x: Introduction to Computing with Java - HKUST]({{ site.data.pdfs.certificates.java }})
 - [Introduction to Linux - Linux Foundation]({{ site.data.pdfs.certificates.linux }})
-- Programming Mobile Applications for Android Handheld Systems - University of Maryland
 
-<h2 class="h1">
-  University of the District of Columbia
+
+<h2>
+  Mobile development (Android)
 </h2>
 
-Without hesitation, I enrolled in a Computer Science program at [University of the District of Columbia](http://www.udc.edu/) to complement my self-directed learning. Among others, I enjoyed the following excellent courses:
+When I became comfortable with problem solving in coding, I started to want to
+create something concrete using my programming skills, and I decided to learn
+Android application development using Java. I learned it through the following resources:
+
+- [Programming Mobile Applications for Android Handheld Systems - University of Maryland](https://www.coursera.org/course/androidpart1)
+- [Android Programming: The Big Nerd Ranch Guide 2nd Edition](https://www.bignerdranch.com/we-write/android-programming/)
+
+Then I made it to publish an app on the Google Play:
+
+- [Moving Estimator (Android)](https://play.google.com/store/apps/details?id=com.mnishiguchi.android.movingestimator)
+
+<h2>
+  Associate of Computer Science
+</h2>
+
+Without hesitation, I enrolled in a Computer Science program at [University of the District of Columbia](http://www.udc.edu/) to complement my self-directed learning. I was able to fortify my programming skills with better understanding of operating systems and data structures as well as intense programming trainings for C++ and Java. I also developed basic graphic designing skills with Photoshop, Illustrator and InDesign. Here are some of the excellent courses that I really enjoy:
 
 - Data Structures Using C++ (Professor: Joel Belcher)
-- Web Design (Professor: Rachid Mrad)
+- Web Design (Professor: [Rachid Mrad](http://rachidmrad.com/#/portfolio))
 - Digital Applications / Desktop Publishing
 
-<h2 class="h1">
+<h2>
   Web development
 </h2>
 
-When I was itching to create something useful using my coding skills, I came across this web developing tutorial, [Ruby on Rails Tutorial by Michael Hartl](https://www.railstutorial.org/). It taught me how to build web applications as well as Unix command-line and other development tools. Ever since I am passionate about improving web application development skills. By following Rails philosophy and conventions, I was able to absorb key elements of web development rapidly. Now I want to expand my field of expertise towards web components using AngularJS and ReactJS.
+When I was itching to create a larger scale web application, I came across this web developing tutorial, [Ruby on Rails Tutorial by Michael Hartl](https://www.railstutorial.org/). It taught me how to build web applications as well as Unix command-line and other development tools. Ever since I am passionate about improving web application development skills. By following Rails philosophy and conventions, I was able to absorb key elements of web development rapidly. I managed to built a web service called "[Moving Estimator (Web)](https://moving-estimator.herokuapp.com/)".
 
-<h2 class="h1">
-  Web design
-</h2>
-
-I am currently striving to improve my web design skills with assistance of this [awesome designer](http://rachidmrad.com/#/portfolio) in Washington DC. To be honest, I was underestimating the importance of visual design for a long time. Now I realized that even if you are a back-end developer, being able to create something beautiful is a valuable ability.
-
-My goal is to gain insight into web design and to be aware of good design so that I will be able to avoid making unattractive or hard-to-use user interfaces as I develop applications.
+Now I am ambitious to expand my field of expertise towards web components using AngularJS and ReactJS.
