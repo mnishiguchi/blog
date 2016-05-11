@@ -44,7 +44,7 @@
  */
 .post-meta {
   display: block;
-  margin-top: -.3rem;
+  margin-top: 0;
   margin-bottom: 1rem;
   color: #9a9a9a;
   time {
@@ -70,7 +70,8 @@
   list-style: none;
   li {
     &>a {
-      font-size: 24px;
+      font-size: 22px;
+      line-height: 1;
       &:hover {
         color: $link-hover-color;
         text-decoration: none;

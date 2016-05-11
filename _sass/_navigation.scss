@@ -13,28 +13,26 @@
   opacity: 0; // Hidden by default
   pointer-events: none; // Disable mouse/touch events by default
   position: fixed;
-  // top: 0; right: 0; bottom: 0; left: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   z-index: 9999; // Sit on top of contents
   width: 100vw; // Full width
   height: 100vh; // Full height
-  background: rgba(0,0,0,0.8);
+  background: $black;
   &:target { // This is triggered by an anchor hash link to this element.
     opacity: 1;
-    * {
-      pointer-events: auto;  // Enable mouse/touch events.
-    }
+    pointer-events: auto;  // Enable mouse/touch events.
   }
 }
 @mixin modal-dialog {
-  position: relative;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
   z-index: 10000;
   display: block;
-  width: 60%;
-  height: auto;
+  width: 80%;
+  height: 77%;
   padding: 0;
-  margin: 30% auto;
-  background: white;
-  pointer-events: none;
+  margin: auto;
+  background: $black;
 }
 
 #logo-wrapper {
@@ -73,7 +71,8 @@ body.modal-open {
 }
 .close-modal {
   @extend .hamburger;
-  z-index: 10000;
+  z-index: 10001;
+  background: $black;
 }
 
 // Mobile devices: The Modal (background)
@@ -83,21 +82,17 @@ nav {
     @include modal-dialog;
     li {
       display: block;
-      height: $toggle-menu-item-height;
-      line-height: $toggle-menu-item-height;
-      color: $gray-3;
-      background: white;
       a {
         display: block;
-        font-size: 80%;
+        font-size: 1em;
         font-family: $heading-font-family;
         color: $gray-4;
         background: white;
         padding: 0 .8rem;
         width: 100%;
-        height: $toggle-menu-item-height;
-        line-height: $toggle-menu-item-height;
-        // transition: color 0.6s, background 0.6s;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
       }
       &.active a{
         color: $gray-2;

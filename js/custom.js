@@ -73,40 +73,39 @@ function mobilecheck() {
 })();
 
 
-/**
- * Toggle the ".modal-open" class on body when navigation modal dialog is opened or closed.
- * This can be used to disable page scroll when modal is open.
- */
-( function() {
-  // Wait until DOM is loaded and then execute.
-  document.addEventListener( "DOMContentLoaded", function( event ) {
-
-    // Check the initial state.
-    toggleModal();
-
-    // Keep watch on hash change due to back buttoon or history.
-    window.addEventListener( "hashchange", toggleModal );
-
-    // Keep watch on page refresh.
-    window.addEventListener( "load", toggleModal );
-
-    // Keep watch on screen rotation or resize.
-    window.addEventListener( 'resize', toggleModal );
-
-
-    /**
-     * Toggle the ".modal-open" class on document.body checking whether the nav
-     * is targeted of not.
-     */
-    function toggleModal() {
-      if ( document.querySelector( "nav:target" ) ) {
-        document.body.classList.add( "modal-open" );
-      } else {
-        document.body.classList.remove( "modal-open" );
-      }
-    }
-  });
-})();
+// /**
+//  * Toggle the ".modal-open" class on body when navigation modal dialog is opened or closed.
+//  */
+// ( function() {
+//   // Wait until DOM is loaded and then execute.
+//   document.addEventListener( "DOMContentLoaded", function( event ) {
+//
+//     // Check the initial state.
+//     toggleModal();
+//
+//     // Keep watch on hash change due to back buttoon or history.
+//     window.addEventListener( "hashchange", toggleModal );
+//
+//     // Keep watch on page refresh.
+//     window.addEventListener( "load", toggleModal );
+//
+//     // Keep watch on screen rotation or resize.
+//     window.addEventListener( 'resize', toggleModal );
+//
+//
+//     /**
+//      * Toggle the ".modal-open" class on document.body checking whether the nav
+//      * is targeted of not.
+//      */
+//     function toggleModal() {
+//       if ( mobilecheck() && document.querySelector( "nav:target" ) ) {
+//         document.body.classList.add( "modal-open" );
+//       } else {
+//         document.body.classList.remove( "modal-open" );
+//       }
+//     }
+//   });
+// })();
 
 /**
  * Navigation toggle.

@@ -9,22 +9,37 @@ tags:
 - modal
 ---
 
-I wanted to make the site navigation appear on a modal dialog box. After googling around, I learned that I could implement modal with pure CSS.
+I wanted to make the site navigation appear on a modal dialog box. After googling around, I found that I could implement modal with pure CSS. I thought this was a great opportunity to learn how to implement modal without JS.
 
 <!--more-->
+
+![]({{ site.baseurl }}/images/20160510_modal_nav_menu.png)
 
 ## Objectives
 - Create a simple modal dialog box that displays the navigation menu.
 - Open and close the modal by clicking a button.
 - Implement it with pure CSS (an anchor link and the CSS pseudo selector `:target`).
 
-## Advantages
-- Implementation without JS significantly simplified my navigation code.
-- I can maintain the code at a single place.
+## Analysis
 
-## Disadvantages
-- When I re-visit a URL with the anchor link to open the modal, for example, by pressing the back button, the modal dialog appears.
-- Without using JavaScript, it is difficult to prevent the page from scrolling. Even if the modal is open, I can still scroll the page, which is a little strange in the material design standpoint.
+#### Advantages
+- It works without JavaScript.
+- The code for the functionality is located in a single place.
+
+#### Disadvantages
+- When I re-visit a URL to open the modal by pressing the back button, the modal dialog is triggered to open.
+- It is difficult to prevent the page from scrolling without JavaScript. Even if the modal is open, we can still scroll the page from above the overlay, which is a little strange in the material design standpoint.
+
+## Things that were challenging to me
+It was very challenging to me to figure out how to prevent the page from scrolling when the modal is open. I came up with these solutions:
+
+- Not using transparent color for the overlay background.
+- Covering most of or entirety of the real estate with the dialog box.
+- Giving up on pure CSS implementation and disabling the scrolling using JS.
+
+I realized that simply not using transparent color solves the problem of the page scrolling because if it is invisible, we do not care even if it is actually scrolling!
+
+![]({{ site.baseurl }}/images/20160510_modal_nav_menu_1.png)
 
 ## Implementation
 
@@ -68,27 +83,26 @@ I trigger the opening/closing of the modal by using an anchor link and the CSS p
   opacity: 0; // Hidden by default
   pointer-events: none; // Disable mouse/touch events by default
   position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
   z-index: 9999; // Sit on top of contents
   width: 100vw; // Full width
   height: 100vh; // Full height
-  background: rgba(0,0,0,0.8);
+  background: $black;
   &:target { // This is triggered by an anchor hash link to this element.
     opacity: 1;
-    * {
-      pointer-events: auto;  // Enable mouse/touch events.
-    }
+    pointer-events: auto;  // Enable mouse/touch events.
   }
 }
 @mixin modal-dialog {
-  position: relative;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
   z-index: 10000;
   display: block;
-  width: 60%;
-  height: auto;
+  width: 80%;
+  height: 80%;
   padding: 0;
-  margin: 30% auto;
-  background: white;
-  pointer-events: none;
+  margin: auto;
+  background: $black;
 }
 
 .hamburger {
@@ -148,7 +162,7 @@ nav {
 }
 
 // Prevent BODY from scrolling when a modal is opened
-body.modal-open {
+body.modal-is-open {
   position: fixed;
   overflow: hidden;
 }
@@ -156,14 +170,10 @@ body.modal-open {
 {% endraw %}
 
 #### JavaScript (optional)
-This is to prevent the page from scrolling. Even after opening the modal, the page under the modal overlay still can scroll. I could not find a way to disable the page scrolling therefore after all I decided to use JavaScript only for this purpose.
+We could optionally prevent the page from scrolling without JavaScript as it is difficult to do so with CSS; however now that we use JavaScript giving up on pure CSS implementation, maybe we might as well trigger the modal opening/closing by toggling the `modal-is-open` class unless I really want to support no-js users.
 
 {% raw %}
 ```js
-/**
- * Toggle the ".modal-open" class on body when navigation modal dialog is opened or closed.
- * This can be used to disable page scroll when modal is open.
- */
 ( function() {
   // Wait until DOM is loaded and then execute.
   document.addEventListener( "DOMContentLoaded", function( event ) {
@@ -180,15 +190,16 @@ This is to prevent the page from scrolling. Even after opening the modal, the pa
     // Keep watch on screen rotation or resize.
     window.addEventListener( 'resize', toggleModal );
 
+
     /**
-     * Toggle the ".modal-open" class on document.body checking whether the nav
+     * Toggle the ".modal-is-open" class on document.body checking whether the nav
      * is targeted of not.
      */
     function toggleModal() {
       if ( document.querySelector( "nav:target" ) ) {
-        document.body.classList.add( "modal-open" );
+        document.body.classList.add( "modal-is-open" );
       } else {
-        document.body.classList.remove( "modal-open" );
+        document.body.classList.remove( "modal-is-open" );
       }
     }
   });
