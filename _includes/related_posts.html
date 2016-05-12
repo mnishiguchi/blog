@@ -1,5 +1,38 @@
+{% comment %}
+<!--
+- Create an empty array, posts_list.
+- If the page has any tags,
+  + Iterate over lists under each tag,
+    * push all items to posts_list unless it is the current page.
+  + Remove duplicate items.
+  + Iterate over posts_list.
+  - If the page have no tags,
+    + iterate over Jekyll's default site.posts array.
+===
+Jekyll variables: https://jekyllrb.com/docs/variables/
+- site.posts     - A reverse chronological list of all Posts.
+- site.tags[TAG] - The list of all Posts with tag TAG.
+- page.tags      - The list of tags to which this post belongs.
+-->
+{% endcomment %}
+
+{% assign posts_list = "" | split: "|" %}
+
+{% if page.tags %}
+  {% for each_tag in page.tags %}
+    {% for each_post in site.tags[each_tag] %}
+      {% if each_post.title != page.title %}
+        {% assign posts_list = posts_list | push: each_post %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  {% assign posts_list = posts_list | uniq %}
+{% else %}
+  {% assign posts_list = site.posts %}
+{% endif %}
+
 <ul class="related-posts">
-  {% for post in site.posts limit:include.limit %}
+  {% for post in posts_list limit:include.limit %}
     <li>
       <a href="{{ post.url | prepend: site.baseurl }}">
         {{ post.title }}
