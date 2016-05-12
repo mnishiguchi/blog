@@ -1,0 +1,42 @@
+<!--
+  Target for toggling the sidebar `.sidebar-checkbox` is for regular styles,
+  `#sidebar-checkbox` for behavior.
+-->
+<input
+  type="checkbox"
+  class="sidebar-checkbox"
+  id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div
+  class="sidebar"
+  id="sidebar">
+  <div class="sidebar-item">
+    <h4>{{ site.title }}</h4>
+    <p>{{ site.description }}</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    {% for each in site.navigation_items %}
+      {% if each[1] == page.url %}
+        <a class="sidebar-nav-item active">{{ each[0] }}</a>
+      {% else %}
+        <a
+          href="{{ each[1] | prepend: site.baseurl }}"
+          class="sidebar-nav-item">
+          {{ each[0] }}
+        </a>
+      {% endif %}
+    {% endfor %}
+    <a
+      class="sidebar-nav-item"
+      href="{{ site.github.repo }}">
+      This site
+    </a>
+  </nav>
+
+  <div class="sidebar-item">
+    <h4>Posts by tags</h4>
+    {% include tag_cloud.html %}
+  </div>
+</div>

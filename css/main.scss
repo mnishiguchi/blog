@@ -6,15 +6,14 @@ sitemap: false
 
 @import "variables";
 @import "base";
+@import "sidebar";
 @import "type";
 @import "syntax";
 @import "code";
 @import "layout";
-@import "svg_drawing";
-@import "navigation";
+@import "logo_animation";
 @import "canvas_header";
 @import "posts";
 @import "pagination";
-@import "message";
 @import "cbutton";
 @import "clip_path";

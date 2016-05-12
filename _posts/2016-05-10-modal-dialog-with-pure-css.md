@@ -5,8 +5,8 @@ comments: true
 tags:
 - html
 - css
-- js
-- modal
+- javascript
+- navigation
 ---
 
 I wanted to make the site navigation appear on a modal dialog box. After googling around, I found that I could implement modal with pure CSS. I thought this was a great opportunity to learn how to implement simple modal without JS.
@@ -15,36 +15,42 @@ I wanted to make the site navigation appear on a modal dialog box. After googlin
 
 ![]({{ site.baseurl }}/images/20160510_modal_nav_menu.png)
 
+---
+
 ## Objectives
 - Create a simple modal dialog box that displays the navigation menu.
 - Open and close the modal by clicking a button.
 - Implement it with pure CSS (an anchor link and the CSS pseudo selector `:target`).
 
+---
+
 ## Analysis
 
 #### Advantages
 - It works without JavaScript.
-- The code for the functionality is located in a single place.
+- The code for the functionality is simple and located in a single place.
 
 #### Disadvantages
-- When I press the back button and re-visit the URL where the modal was open, the modal dialog is triggered to open again. This behavior is a little strange.
+- When I press the back button and re-visit the URL where the modal was open, the modal dialog opens again. This behavior is a little strange.
 - It is difficult to prevent the page from scrolling without JavaScript. Even if the transparent modal overlay is covering the whole page, we can still scroll the page from above the overlay, which is a little strange in the material design standpoint.
 
-## My solutions to above-mentioned disadvantages
+---
+
+## Solutions to above-mentioned disadvantages
 At first, I was trying to prevent the page from scrolling when the modal is open.
 And because I wanted to stick to the pure CSS implementation, it was very challenging to do it.
 In fact, as of now I do not know how to stop the page from scrolling without JS.
 
-Then after doing experiments by trail and error, I came up with these solutions:
+Then after doing experiments by trail and error, I came up with these two solutions:
 
-- Not using transparent color for the overlay background so that I do not even see the scrolling page under the overlay, which makes me not worry about it.
-- Giving up on pure CSS implementation and disabling the scrolling using JS.
+- Not using transparent color for the overlay background so that I do not even see the scrolling page under the overlay.
+- Giving up on pure CSS implementation and considering use of JS in the first place.
 
 I realized that the simplest solution for the problem of the page scrolling was
 to simply not use transparent background color because if it is invisible,
 we do not care even if it is actually scrolling.
 
-![]({{ site.baseurl }}/images/20160510_modal_nav_menu_1.png)
+---
 
 ## Implementation
 
@@ -78,6 +84,8 @@ The anchor link to `#open-navigation` is used to trigger the modal to open.
 </nav>
 ```
 {% endraw %}
+
+---
 
 #### SCSS
 I trigger the opening/closing of the modal by using an anchor link and the CSS pseudo selector `:target`. When the hamburger that is lined to `#open-navigation` is clicked, the browser targets the element with that ID and gives that element the `:target` pseudo selector. Taking advantage of that, I can switch the modal by the presence of the `:target` pseudo selector on the modal container element.
@@ -133,7 +141,7 @@ I trigger the opening/closing of the modal by using an anchor link and the CSS p
 }
 .close-modal {
   @extend .hamburger;
-  z-index: 10000;
+  z-index: 12;
 }
 
 // Mobile devices: The Modal (background)
@@ -174,10 +182,17 @@ body.modal-is-open {
 ```
 {% endraw %}
 
+---
+
 #### JavaScript (optional)
-If I really have to prevent the page from scrolling, I can do it with JavaScript;
+If I really have to prevent the page from scrolling, I could do it with JavaScript;
 however if I do so, maybe I might as well trigger the modal opening/closing by
-toggling the `modal-is-open` class.
+toggling the `modal-is-open` class in the first place.
+
+Disabling the scroll with JavaScript can be complex because there are several
+possible scenarios where we want to re-configure the ability of scrolling on and off appropriately
+(For example, screen rotation, screen resize and browser refresh).
+Because of that, the code can become buggy or difficult to maintain.
 
 {% raw %}
 ```js
@@ -213,6 +228,21 @@ toggling the `modal-is-open` class.
 })();
 ```
 {% endraw %}
+
+---
+
+## Conclusion
+- It is great to know that I can trigger the navigation to open with pure CSS only.
+- Although classic-style modal often comes with transparent overlay, we can consider
+non-transparent overlay so that I need not worry about potential issue of
+scrolling page contents.
+- There are tons of other options to consider, including:
+  - [Sliding Sidebar by mdo](https://github.com/poole/lanyon)
+  - [Full-Screen Pushing Navigation by Sebastiano Guerriero](https://codyhouse.co/gem/full-screen-pushing-navigation/)
+
+![]({{ site.baseurl }}/images/20160510_sidebar_nav_menu.png)
+
+---
 
 ## Reference
 - [Modal in pure html and css - JSFiddle](http://jsfiddle.net/raving/1mhsynmw/)

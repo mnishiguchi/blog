@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
-    {% include navigation.html %}
+<body>
+  {% include sidebar.html %}
+
+  <!--
+  Wrap is the content to shift when toggling the sidebar. We wrap the
+  content to avoid any CSS collisions with our real content.
+  -->
+  <div class="wrap">
     {% include canvas_header.html %}
-
-    <div class="container content-wrapper">
+    <div class="container content">
       <main>{{ content }}</main>
       {% include comments.html %}
     </div>
-
     {% include footer.html %}
-    {% include javascripts.html %}
+  </div>
 
-    {% include google_analytics.html %}
+  <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+  {% include javascripts.html %}
+  {% include google_analytics.html %}
+    <script>
+      (function(document) {
+        var toggle   = document.querySelector('.sidebar-toggle');
+        var sidebar  = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
   </body>
 </html>

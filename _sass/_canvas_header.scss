@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   text-align: center;
-  padding-top: $top-nav-height;
+  padding-top: 2.5em;
   min-height: 330px;  // For mobile landscape mode.
 }
 #hero-canvas {
@@ -98,7 +98,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: $top-nav-height;
+  height: 44px;
   background: $black-transparent;
   width: 100%;
   a {

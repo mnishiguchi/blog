@@ -29,9 +29,9 @@ NOTE: post is a local variable used in a loop
   <div
     class="post-tags"
     style="opacity: 0.8;">
-    {% for tag in tags %}
-      <a href="{{ site.baseurl }}/tags#{{ tag | slugize }}">
-        {{ tag }}
+    {% for tag_name in tags %}
+      <a href="{{ site.baseurl }}/tags#{{ tag_name | slugize }}">
+        {{ tag_name | upcase | replace "_", " " }}
       </a>
     {% endfor %}
   </div>

@@ -5,7 +5,6 @@ comments: true
 tags:
 - html
 - css
-- web_design
 ---
 
 I am currently striving to improve my web design skills with assistance of this [awesome designer](http://rachidmrad.com) at University of District of Columbia in Washington DC. To be honest, I was underestimating the importance of visual design for a long time. Now I realized that even if I am focused on a back-end development, being able to create something beautiful is a valuable ability.

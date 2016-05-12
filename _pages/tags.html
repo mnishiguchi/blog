@@ -29,7 +29,7 @@ permalink: /tags
   {% for tag_name in tag_names %}
     <div>
       <h3 id="{{ tag_name }}">
-        {{ tag_name | capitalize | replace: "_", " " }}
+        {{ tag_name | upcase | replace: "_", " " }}
       </h3>
 
       <ul class="related-posts">

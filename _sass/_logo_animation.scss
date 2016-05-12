@@ -1,5 +1,12 @@
+#logo-wrapper {
+  padding: 2px;  // Determine based on dimensions of svg.line-drawing and .logo.
+  position: absolute;
+  top: 0; left: 0;
+  z-index: 3;
+}
+
 @media screen and (max-width: 46.0625em) {
-  .logo-wrapper {
+  #logo-wrapper {
     margin-bottom: 0;
     // padding-bottom: 1em;
   }

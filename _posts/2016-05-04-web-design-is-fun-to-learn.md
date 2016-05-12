@@ -5,7 +5,6 @@ comments: true
 tags:
 - html
 - css
-- web_design
 ---
 
 I was taking this wonderful Web Design course (Professor: [Rachid Mrad](http://rachidmrad.com)) at University of District of Columbia in the Spring 2016 semester, and today was the last class. Mr. Mrad kindly invited us students to dinner. It was so much fun. I really enjoyed my whole time in this course. I was so fortunate to have an awesome professor and hard-working "graphic designer" classmates. Me surrounded by graphic designers was the important part to me, because I was primarily a web developer and was avoiding the designing process since I first started learning HTML.

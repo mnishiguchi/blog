@@ -74,7 +74,6 @@ Early on, Harvard's CS50 and Codeacademy helped me absorb basic concepts of prog
 - [COMP102x: Introduction to Computing with Java - HKUST]({{ site.data.pdfs.certificates.java }})
 - [Introduction to Linux - Linux Foundation]({{ site.data.pdfs.certificates.linux }})
 
-
 <h2>
   Mobile development (Android)
 </h2>
@@ -94,16 +93,16 @@ Then I made it to publish an app on the Google Play:
   Associate of Computer Science
 </h2>
 
-Without hesitation, I enrolled in a Computer Science program at [University of the District of Columbia](http://www.udc.edu/) to complement my self-directed learning. I was able to fortify my programming skills with better understanding of operating systems and data structures as well as intense programming trainings for C++ and Java. I also developed basic graphic designing skills with Photoshop, Illustrator and InDesign. Here are some of the excellent courses that I really enjoy:
+Without hesitation, I enrolled in a Computer Science program at [University of the District of Columbia](http://www.udc.edu/) to complement my self-directed learning. I was able to fortify my programming skills with better understanding of operating systems and data structures as well as intense programming trainings for C++ and Java. I also developed basic graphic designing skills with Photoshop, Illustrator and InDesign. Here are some of the UDC's excellent courses that I enjoy most:
 
 - Data Structures Using C++ (Professor: Joel Belcher)
-- Web Design (Professor: [Rachid Mrad](http://rachidmrad.com/#/portfolio))
+- Web Design (Professor: [Rachid Mrad](http://rachidmrad.com/))
 - Digital Applications / Desktop Publishing
 
 <h2>
   Web development
 </h2>
 
-When I was itching to create a larger scale web application, I came across this web developing tutorial, [Ruby on Rails Tutorial by Michael Hartl](https://www.railstutorial.org/). It taught me how to build web applications as well as Unix command-line and other development tools. Ever since I am passionate about improving web application development skills. By following Rails philosophy and conventions, I was able to absorb key elements of web development rapidly. I managed to built a web service called "[Moving Estimator (Web)](https://moving-estimator.herokuapp.com/)".
+When I was itching to create a larger scale web application, I came across this web developing tutorial, [Ruby on Rails Tutorial by Michael Hartl](https://www.railstutorial.org/). It taught me how to build web applications as well as Unix command-line and other development tools. Ever since I am passionate about improving web application development skills. By following Rails philosophy and conventions, I was able to absorb key elements of web development rapidly. I managed to built a web service, [Moving Estimator (Web)](https://moving-estimator.herokuapp.com/).
 
 Now I am ambitious to expand my field of expertise towards web components using AngularJS and ReactJS.

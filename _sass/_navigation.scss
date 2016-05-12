@@ -35,13 +35,6 @@
   background: $black;
 }
 
-#logo-wrapper {
-  padding: 2px;  // Determine based on dimensions of svg.line-drawing and .logo.
-  position: absolute;
-  top: 0; left: 0;
-  z-index: 3;
-}
-
 // Prevent BODY from scrolling when a modal is opened
 body.modal-open {
   position: fixed;

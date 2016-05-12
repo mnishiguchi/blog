@@ -2,6 +2,7 @@
 layout: post
 title: My first blog
 comments: true
+tags: general
 ---
 
 Hi, this is Masatoshi Nishiguchi. I am writing a blog post for the first time.

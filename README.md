@@ -11,7 +11,7 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 
 ## Special thanks to the following
 - [Jekyll](http://jekyllrb.com) [[License](https://github.com/jekyll/jekyll/blob/master/LICENSE)]
-- [Poole](https://github.com/poole/poole) [[License](https://github.com/poole/poole/blob/master/LICENSE.md)]
+- [Poole](https://github.com/poole/poole) and [Lanyon](https://github.com/poole/lanyon) [[License](https://github.com/poole/poole/blob/master/LICENSE.md)]
 - [Subtle Click Feedback Effects](https://github.com/codrops/ClickEffects) [[License](http://tympanus.net/codrops/licensing/)]
 - [SVG Drawing Animation](http://tympanus.net/codrops/?p=18012) [[License](http://tympanus.net/codrops/licensing/)]
 - [Animated Background Headers]( http://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html) [[License](http://tympanus.net/codrops/licensing/)]
@@ -47,7 +47,7 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 
 ---
 
-## What I learned
+## Memo
 
 ### [page.url](http://jekyllrb.com/docs/variables/#page-variables)
 - the URL of the current page, without the host (e.g. /index.html)
@@ -274,23 +274,21 @@ body.modal-open {
 }
 ```
 
----
-
-## GitHub Pages and GoDaddy Setup
+### GitHub Pages and GoDaddy Setup
 - https://medium.com/@LovettLovett/github-pages-godaddy-f0318c2f25a#.ard50ejan
 - http://andrewsturges.com/blog/jekyll/tutorial/2014/11/06/github-and-godaddy.html
 
-### The objective
+#### The objective
 Use the following URLs for my website instead of the `github.io` urls:
 - mnishiguchi.com
 - www.mnishiguchi.com
 
-### Adding an A record on DNS manager
+#### Adding an A record on DNS manager
 1. Open DNS manager
 2. Select the domain name you want to use
 3. Click "Edit Zone"
 
-### Check if the change has been propagated
+#### Check if the change has been propagated
 ```bash
 $ dig mnishiguchi.com +nostats +nocomments +nocmd
 
