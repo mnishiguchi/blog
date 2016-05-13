@@ -1,0 +1,42 @@
+---
+layout: post
+title: Undoing things in Rails
+comments: true
+tags:
+- ruby
+- rails
+---
+
+
+<!--more-->
+
+## Undo generate
+
+```bash
+$ rails generate controller FooBars baz quux
+$ rails destroy controller FooBars
+
+$ rails generate model Foo bar:string baz:integer
+$ rails destroy model Foo
+
+$ rails generate scaffold Micropost content:text user:references
+$ rails destroy scaffold Micropost
+```
+
+--
+
+## Undo migrate
+
+```bash
+$ [bundle exec] rake db:migrate
+$ [bundle exec] rake db:rollback
+
+# To go all the way back to the beginning, we can use
+$ [bundle exec] rake db:migrate VERSION=0
+```
+
+---
+
+## Reference
+- [RUBY ON RAILS TUTORIAL (3RD ED.)](https://www.railstutorial.org/book/static_pages#sidebar-undoing_things)
+- [The Rails Command Line](http://guides.rubyonrails.org/command_line.html)

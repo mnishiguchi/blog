@@ -1,11 +1,6 @@
 # Blog
 
-Masatoshi Nishiguchi's blog built on Poole.
-
----
-
-## [Poole](https://github.com/poole/poole)
-Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator. It's designed and developed by [@mdo](https://twitter.com/mdo) to provide a clear and concise foundational setup for any Jekyll site. It does so by furnishing a full vanilla Jekyll install with example templates, pages, posts, and styles.
+Masatoshi Nishiguchi's blog built on [Poole](https://github.com/poole/poole).
 
 ---
 
@@ -16,7 +11,7 @@ Poole is the butler for [Jekyll](http://jekyllrb.com), the static site generator
 - [SVG Drawing Animation](http://tympanus.net/codrops/?p=18012) [[License](http://tympanus.net/codrops/licensing/)]
 - [Animated Background Headers]( http://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html) [[License](http://tympanus.net/codrops/licensing/)]
 - [Sticky div](https://jsfiddle.net/livibetter/HV9HM/)
-- [Rachid Mrad](http://rachidmrad.com/) for teaching me designing
+- [Rachid Mrad](http://rachidmrad.com/) for teaching me web design
 
 ---
 

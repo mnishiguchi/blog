@@ -33,16 +33,16 @@ I heard that Liquid limits its capability for the safety reason. I realized that
 ## Pseudo-code
 Here is the pseudo-code for logic in this code:
 
-- Create an empty array, `posts_list`.
-- If the current page has any tags,
-  + iterate over lists under each tag,
-    * push all items to posts_list unless it is the current page.
-  + Remove duplicate items.
-  + Iterate over `posts_list`,
-    * generate appropriate HTML.
-  - If the page have no tags,
-    + iterate over Jekyll's default `site.posts` array,
-      * generate appropriate HTML.
+- Create an empty array, `posts_list`
+- If the current page has any tags
+  + iterate over lists under each tag
+    * push all items to `posts_list` unless it is the current page
+  + remove duplicate items
+  + iterate over `posts_list`
+    * generate appropriate HTML
+- If the page have no tags
+  + iterate over Jekyll's default `site.posts` array
+    * generate appropriate HTML
 
 ## Implementation
 {% raw %}

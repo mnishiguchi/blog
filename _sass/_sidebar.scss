@@ -30,7 +30,7 @@ $hamburgar-color-2: #555;
   overflow-y: auto;
   font-family: $heading-font-family;
   font-size: .875rem; /* 15px */
-  color: rgba(255,255,255,.6);
+  color: $gray-2;
   background-color: $black;
   -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
@@ -48,6 +48,9 @@ $hamburgar-color-2: #555;
 }
 .sidebar-item {
   padding: 1rem;
+  h4 {
+    color: white;
+  }
 }
 .sidebar-item p:last-child {
   margin-bottom: 0;
