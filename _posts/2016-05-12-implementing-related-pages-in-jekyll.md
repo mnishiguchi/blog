@@ -18,7 +18,6 @@ I wanted to make a list of related pages at the bottom of each post in my Jekyll
 
 ![]({{ site.baseurl }}/images/20160512_related_posts.png)
 
----
 
 ## [Jekyll variables](https://jekyllrb.com/docs/variables/)
 At first, I was a little bit confused about the usage of these [Jekyll variables](https://jekyllrb.com/docs/variables/). Actually that is the reason I decided to write this post so that I can save time in the future.

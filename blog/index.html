@@ -4,24 +4,29 @@ title: Blog
 # I place /blog/index.html in the root directory so that I can use paginator for the Blog page.
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-    <article class="post">
-      <h2 class="post-title">
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          {{ post.title }}
-        </a>
-      </h2>
+<div class="blog-wrap">
+  <div class="posts">
+    {% for post in paginator.posts %}
+      <article class="post">
+        <h2 class="post-title h3">
+          <a href="{{ post.url | prepend: site.baseurl }}">
+            {{ post.title }}
+          </a>
+        </h2>
 
-      {% include post_meta.html %}
+        <span class="post-meta">
+          {% include post_date.html %}
+          {% include post_tags.html %}
+        </span>
 
-      {{ post.excerpt }}
+        {{ post.excerpt }}
 
-      {% if post.excerpt != post.content %}
-          <a href="{{ post.url | prepend: site.baseurl }}">Read more >></a>
-      {% endif %}
-    </article>
-  {% endfor %}
+        {% if post.excerpt != post.content %}
+            <a href="{{ post.url | prepend: site.baseurl }}">Read more >></a>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </div>
 </div>
 
 {% include pagination.html %}

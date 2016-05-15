@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=PT+Serif);
-@import url(https://fonts.googleapis.com/css?family=Fira+Sans);
-@import url(https://fonts.googleapis.com/css?family=Muli:400,400italic,300);
-@import url(https://fonts.googleapis.com/css?family=Roboto:100italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,300);
+// @import url(https://fonts.googleapis.com/css?family=Muli:400,400italic,300);
+// @import url(https://fonts.googleapis.com/css?family=Roboto:100italic);
 
 // Swatch
 $gray-1: #f9f9f9;
@@ -19,24 +19,25 @@ $yellow: #f4bf75;
 $green: #90a959;
 $cyan: #75b5aa;
 $blue: #268bd2;
+$blue-darker: #1a6091;
 $brown: #8f5536;
 
 // Configure colors for the app.
-$root-font-family: "PT Serif", "Helvetica Neue", Arial, sans-serif;
-$root-font-size: 16px;
-$root-line-height: 1.5;
+$root-font-family: "PT Serif", 'Times New Roman', serif;
+$root-font-size: 18px;
+$root-line-height: 1.6;
 
-$body-color: $gray-4;
+$body-color: $gray-5;
 $body-bg: #fff;
-$link-color: $blue;
+$link-color: $blue-darker;
 $link-hover-color: #6a9fb5;
 
-$heading-font-family: 'Muli', "Helvetica Neue", Arial, sans-serif;
+$heading-font-family: 'Lato', "Helvetica Neue", Arial, sans-serif;
 $heading-font-color: #425469;
 
-$introduction-font-family: 'Roboto', "Helvetica Neue", Arial, sans-serif;
+$introduction-font-family: 'Lato', "Helvetica Neue", Arial, sans-serif;
 
-$border-color: #e5e5e5;
+$border-color: $gray-4;
 
 $large-breakpoint: 38em;
 $large-font-size: 20px;

@@ -1,0 +1,18 @@
+{% comment %}
+<!--
+Obtain tags that are associated with current page/post.
+NOTE: post is a local variable used in a loop
+-->
+{% endcomment %}
+
+{% if post %}
+  {% assign date = post.date %}
+{% else %}
+  {% assign date = page.date %}
+{% endif %}
+
+<time
+  datetime="{{ date | date_to_xmlschema }}"
+  class="post-date">
+  {{ date | date_to_string }}
+</time>

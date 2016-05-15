@@ -15,26 +15,26 @@ I wanted to make the site navigation appear on a modal dialog box. After googlin
 
 ![]({{ site.baseurl }}/images/20160510_modal_nav_menu.png)
 
----
+
 
 ## Objectives
 - Create a simple modal dialog box that displays the navigation menu.
 - Open and close the modal by clicking a button.
 - Implement it with pure CSS (an anchor link and the CSS pseudo selector `:target`).
 
----
+
 
 ## Analysis
 
-#### Advantages
+### Advantages
 - It works without JavaScript.
 - The code for the functionality is simple and located in a single place.
 
-#### Disadvantages
+### Disadvantages
 - When I press the back button and re-visit the URL where the modal was open, the modal dialog opens again. This behavior is a little strange.
 - It is difficult to prevent the page from scrolling without JavaScript. Even if the transparent modal overlay is covering the whole page, we can still scroll the page from above the overlay, which is a little strange in the material design standpoint.
 
----
+
 
 ## Solutions to above-mentioned disadvantages
 At first, I was trying to prevent the page from scrolling when the modal is open.
@@ -50,11 +50,11 @@ I realized that the simplest solution for the problem of the page scrolling was
 to simply not use transparent background color because if it is invisible,
 we do not care even if it is actually scrolling.
 
----
+
 
 ## Implementation
 
-#### HTML
+### HTML
 The anchor link to `#open-navigation` is used to trigger the modal to open.
 
 {% raw %}
@@ -85,9 +85,9 @@ The anchor link to `#open-navigation` is used to trigger the modal to open.
 ```
 {% endraw %}
 
----
 
-#### SCSS
+
+### SCSS
 I trigger the opening/closing of the modal by using an anchor link and the CSS pseudo selector `:target`. When the hamburger that is lined to `#open-navigation` is clicked, the browser targets the element with that ID and gives that element the `:target` pseudo selector. Taking advantage of that, I can switch the modal by the presence of the `:target` pseudo selector on the modal container element.
 
 {% raw %}
@@ -182,9 +182,9 @@ body.modal-is-open {
 ```
 {% endraw %}
 
----
 
-#### JavaScript (optional)
+
+### JavaScript (optional)
 If I really have to prevent the page from scrolling, I could do it with JavaScript;
 however if I do so, maybe I might as well trigger the modal opening/closing by
 toggling the `modal-is-open` class in the first place.
@@ -229,7 +229,7 @@ Because of that, the code can become buggy or difficult to maintain.
 ```
 {% endraw %}
 
----
+
 
 ## Conclusion
 - It is great to know that I can trigger the navigation to open with pure CSS only.
@@ -242,7 +242,7 @@ scrolling page contents.
 
 ![]({{ site.baseurl }}/images/20160510_sidebar_nav_menu.png)
 
----
+
 
 ## Reference
 - [Modal in pure html and css - JSFiddle](http://jsfiddle.net/raving/1mhsynmw/)

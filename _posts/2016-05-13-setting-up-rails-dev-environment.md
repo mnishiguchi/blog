@@ -18,8 +18,6 @@ I have worked on Rails apps more than a few times in the past but every time I s
 - Browser: Chrome etc
 - Git
 
----
-
 ## 2. Install a Ruby version management tool
 - Either [Ruby Version Manager (RVM)](https://rvm.io/) or [rbenv](https://github.com/rbenv/rbenv)
 - Allow you to install and manage multiple versions of Ruby on the same machine.
@@ -47,13 +45,11 @@ $ rvm install 2.3.1
 $ rvm use 2.3.1 --default
 ```
 
-#### If you ever get stuck with RVM
+### If you ever get stuck with RVM
 ```bash
 $ rvm help
 $ rvm gemset help
 ```
-
----
 
 ## 3. Install RubyGems
 - RubyGems is a package manager for Ruby projects.
@@ -61,15 +57,11 @@ $ rvm gemset help
 - NOTE: If you have installed RVM, you already have RubyGems, since RVM includes it automatically.
   + Check `$ which gem`
 
----
-
 ## 4. Install Rails
 ```bash
 # Install Rails with a specific version number.
 $ gem install rails -v 4.2.2
 ```
-
----
 
 ## Reference
 - [RUBY ON RAILS TUTORIAL (4.0 VERSION & 2ND ED.)](http://rails-4-0.railstutorial.org/book/beginning#sec-install_ruby)

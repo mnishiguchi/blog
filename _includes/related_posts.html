@@ -8,6 +8,8 @@
   + Iterate over posts_list.
   - If the page have no tags,
     + iterate over Jekyll's default site.posts array.
+- If the list is empty,
+  + Assign `site.posts`.
 ===
 Jekyll variables: https://jekyllrb.com/docs/variables/
 - site.posts     - A reverse chronological list of all Posts.
@@ -31,14 +33,19 @@ Jekyll variables: https://jekyllrb.com/docs/variables/
   {% assign posts_list = site.posts %}
 {% endif %}
 
+{% if posts_list.size < 1 %}
+  {% assign posts_list = site.posts %}
+{% endif %}
+
 <ul class="related-posts">
   {% for post in posts_list limit:include.limit %}
     <li>
       <a href="{{ post.url | prepend: site.baseurl }}">
         {{ post.title }}
       </a>
-      <br />
-      {% include post_meta.html %}
+      <span class="post-meta">
+        {% include post_tags.html %}
+      </span>
     </li>
   {% endfor %}
 </ul>

@@ -6,6 +6,7 @@
 @mixin post-tag($font-size) {
   a {
     display: inline-block;
+    font-family: $heading-font-family;
     font-size: $font-size;
     padding: 0 .3rem;
     margin: 0 .1rem;
@@ -13,8 +14,7 @@
     color: white;
     text-align: center;
     &:hover {
-      text-decoration: none;
-      background: $link-hover-color;
+      text-decoration: inherit;
     }
   }
 }
@@ -22,7 +22,7 @@
 .page,
 .post {
   margin-top: 2em;
-  margin-bottom: 4em;
+  // margin-bottom: 4em;
 
   li + li {
     margin-top: .25rem;
@@ -49,39 +49,47 @@
   display: block;
   margin-top: 0;
   margin-bottom: 1rem;
-  color: #9a9a9a;
+  color: $gray-2;
   time {
+    display: inline-block;
     margin-right: .5rem;
   }
   .post-tags {
+    display: block;
     @include post-tag(.7rem);
   }
 }
+// For Blog page
+.blog-wrap .post-meta {
+  color: $gray-5;
+  time {
+    display: inline-block;
+  }
+  .post-tags {
+    display: inline-block;
+  }
+}
+
 
 /**
  *  Related posts
+ *  - Has a separator line at the top.
  */
  aside.related {
-   padding-top: 2rem;
-   padding-bottom: 2rem;
-   margin-bottom: 2rem;
-   border-top: 1px solid #eee;
-   border-bottom: 1px solid #eee;
- }
-.related-posts {
-  padding-left: 0;
-  list-style: none;
-  li {
-    &>a {
-      font-size: 22px;
-      line-height: 1;
-      &:hover {
-        color: $link-hover-color;
-        text-decoration: none;
-      }
-    }
+  margin-top: 2rem;
+  border-top: 1px solid #eee;
+  .related-heading {
+    margin-top: inherit;
   }
-}
+  // .related-posts {
+  //   padding: 0;
+  //   list-style: none;
+  //   li >a {
+  //     line-height: inherit;;
+  //   }
+  // }
+ }
+
 
 /**
  * Styles for _pages/tags.html
@@ -106,4 +114,10 @@
     height: 50px;
     margin-top: -50px
   }
+}
+
+#disqus_thread {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
 }

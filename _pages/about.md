@@ -10,11 +10,7 @@ linguistics, counseling, customer service, engineering sales, etc
 so that I will become a resourceful and unique developer.
 </section>
 
-<br />
-
-<h2>
-  Linguistics
-</h2>
+## Linguistics
 
 At [Aichi Shukutoku University](http://www.aasa.ac.jp/) in Japan, I majored in Linguistics, with a specialization in Syntax.
 
@@ -26,9 +22,7 @@ Because both syntactical analysis and lexical analysis are similar,
 understanding how natural languages work is useful in understanding
 computer languages.
 
-<h2>
-  Counseling
-</h2>
+## Counseling
 
 At [Waikato Institute of Technology](http://www.wintec.ac.nz/) in New Zealand, I obtained a certificate in Counseling.
 As part of my Counseling major, I assisted young people experiencing
@@ -39,9 +33,7 @@ Counseling skills can be useful in programming when working with clients
 to assist them in identifying their programming needs and collaboratively
 working with the clients to deliver a quality and meaningful product.
 
-<h2>
-  Sales and engineering
-</h2>
+## Sales and engineering
 
 Because of my desire to use my counseling skills to work in sales and
 my burgeoning interest in technology, I sought and landed a job as a
@@ -51,9 +43,7 @@ I acquired not only sales and customer service skills,
 but also some insight into mechanical and software engineering through
 working with clients and in-house engineers.
 
-<h2>
-  Self-Directed Coding
-</h2>
+## Self-Directed Coding
 
 Shortly after moving to the United States, I met a professional programmer
 at a rock climbing gym. His passion for coding inspired me to research the
@@ -67,16 +57,14 @@ My IT-pro friends recommended me a few online courses such as Harvard's CS50. Si
 
 Early on, Harvard's CS50 and Codeacademy helped me absorb basic concepts of programming and computer science. I was able to gain understanding of how computer software works, insight into data structures and basic knowledge of several programming languages (C, HTML, CSS, JavaScript, SQL, PHP, Ruby, Python, etc)
 
-#### Certifications
+### Certifications
 
 - [Web Application Architectures - University of New Mexico]({{ site.data.pdfs.certificates.web_apps }})
 - [6.00.1x: Introduction to Computer Science and Programming Using Python - MIT]({{ site.data.pdfs.certificates.python }})
 - [COMP102x: Introduction to Computing with Java - HKUST]({{ site.data.pdfs.certificates.java }})
 - [Introduction to Linux - Linux Foundation]({{ site.data.pdfs.certificates.linux }})
 
-<h2>
-  Mobile development (Android)
-</h2>
+## Mobile development (Android)
 
 When I became comfortable with problem solving in coding, I started to want to
 create something concrete using my programming skills, and I decided to learn
@@ -89,9 +77,7 @@ Then I made it to publish an app on the Google Play:
 
 - [Moving Estimator (Android)](https://play.google.com/store/apps/details?id=com.mnishiguchi.android.movingestimator)
 
-<h2>
-  Associate of Computer Science
-</h2>
+## Associate of Computer Science
 
 Without hesitation, I enrolled in a Computer Science program at [University of the District of Columbia](http://www.udc.edu/) to complement my self-directed learning. I was able to fortify my programming skills with better understanding of operating systems and data structures as well as intense programming trainings for C++ and Java. I also developed basic graphic designing skills with Photoshop, Illustrator and InDesign. Here are some of the UDC's excellent courses that I enjoy most:
 
@@ -99,9 +85,7 @@ Without hesitation, I enrolled in a Computer Science program at [University of t
 - Web Design (Professor: [Rachid Mrad](http://rachidmrad.com/))
 - Digital Applications / Desktop Publishing
 
-<h2>
-  Web development
-</h2>
+## Web development
 
 When I was itching to create a larger scale web application, I came across this web developing tutorial, [Ruby on Rails Tutorial by Michael Hartl](https://www.railstutorial.org/). It taught me how to build web applications as well as Unix command-line and other development tools. Ever since I am passionate about improving web application development skills. By following Rails philosophy and conventions, I was able to absorb key elements of web development rapidly. I managed to built a web service, [Moving Estimator (Web)](https://moving-estimator.herokuapp.com/).
 

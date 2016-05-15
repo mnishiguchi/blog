@@ -12,7 +12,6 @@ This is my memo on creating a new Rails app.
 
 <!--more-->
 
----
 
 ## 1. Before getting started
 ```bash
@@ -55,7 +54,6 @@ $ bundle update
 
 ## 10. [Check if it works on Heroku]({{ site.baseurl }}/2016/05/13/deploying-rails-app-to-heroku)
 
----
 
 ## Misc techniques
 

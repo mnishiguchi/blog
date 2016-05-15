@@ -20,7 +20,7 @@ I wanted to add a simple tagging functionality to my Jekyll site. As I googled a
 
 ## Implementation
 
-#### 1. Add tags to to a blog post
+### 1. Add tags to to a blog post
 I added a tag or two to the YAML Front Matter of a blog post. That way, the tags will be accessible through the Jekyll [variables](https://jekyllrb.com/docs/variables/) `site.tags` and `page.tags`.
 
 {% raw %}
@@ -31,12 +31,11 @@ title: Implementing tags in Jekyll site
 tags:
 - jekyll
 ---
-...
 ```
 {% endraw %}
 
 
-#### 2. Create a partial for post meta (datetime and tags)
+### 2. Create a partial for post meta (datetime and tags)
 I created a partial `_include/post_meta.html` for maintainability and reusability.
 This partial will be placed under each post title and display the post date and associated tags.
 
@@ -73,7 +72,7 @@ Obtain time and tags that are associated with current page/post.
 {% endraw %}
 
 
-#### 3. Create a page for displaying a tag cloud and post titles under each tag
+### 3. Create a page for displaying a tag cloud and post titles under each tag
 I create a single page `tags.html` that is dedicated to display a tag cloud and post titles under each tag. At the top of the page, it lists all the tags as a tag cloud, and each tag links to its own section in the page. Below the tag cloud, I place links to blog posts that are grouped by tags.
 
 {% raw %}
@@ -138,7 +137,7 @@ List post titles under each tag.
 {% endraw %}
 
 
-#### 4. Style them
+###4. Style them
 I styled them with basic CSS (SCSS).
 
 {% raw %}

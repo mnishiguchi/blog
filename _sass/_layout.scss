@@ -30,6 +30,7 @@ main {
 // A panel with an introduction text.
 .introduction {
   padding: 1.5em;
+  margin: 0;
   background: $image-background;
   font-family: $introduction-font-family;
   font-weight: 100;
@@ -39,7 +40,8 @@ main {
 
 footer {
   vertical-align: middle;
-  padding: 4em 0;
+  margin-top: 4rem;
+  padding: 4rem 0;
   color: $gray-2;
   background: $black;
   .contact-info {

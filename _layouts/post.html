@@ -9,7 +9,7 @@ comments: true
 
 {% if site.related_posts != empty %}
   <aside class="related">
-    <h3>Related posts</h3>
-    {% include related_posts.html posts=site.related_posts limit=3 %}
+    <h2 class="related-heading">Related posts</h2>
+    {% include related_posts.html posts=site.related_posts limit=6 %}
   </aside>
 {% endif %}

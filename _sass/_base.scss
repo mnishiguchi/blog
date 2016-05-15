@@ -39,21 +39,17 @@ a {
   // `:focus` is linked to `:hover` for basic accessibility
   &:hover,
   &:focus {
-    text-decoration: underline;
+    text-decoration: none;
+    color: $link-hover-color;
   }
-
   strong {
     color: inherit;
   }
 }
-a:hover {
-	color: $link-hover-color;
-	text-decoration: underline;
-}
 img {
   display: block;
   max-width: 100%;
-  margin: 0 0 1rem;
+  margin: 2rem 0;
   border-radius: 5px;
 }
 

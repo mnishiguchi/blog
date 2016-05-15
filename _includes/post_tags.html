@@ -1,0 +1,28 @@
+{% comment %}
+<!--
+Obtain tags that are associated with current page/post.
+NOTE: post is a local variable used in a loop
+-->
+{% endcomment %}
+
+{% if post %}
+  {% assign tags = post.tags %}
+{% else %}
+  {% assign tags = page.tags %}
+{% endif %}
+
+{% comment %}
+<!--
+Display all the tag names that link to a corresponding section of the Tags page.
+NOTE: For some reason, without css opacity set, the href does not work.
+-->
+{% endcomment %}
+<div
+  class="post-tags"
+  style="opacity: 0.8;">
+  {% for tag_name in tags %}
+    <a href="{{ site.baseurl }}/tags#{{ tag_name | slugize }}">
+      {{ tag_name | upcase | replace "_", " " }}
+    </a>
+  {% endfor %}
+</div>
