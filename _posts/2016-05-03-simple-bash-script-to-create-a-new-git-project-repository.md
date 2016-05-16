@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A simple bash script to create a new git project repository
+title: Simple bash script to create a new git project repository
 comments: true
 tags:
 - shell
@@ -11,6 +11,8 @@ tags:
 When I was learning basics on Linux operating system following Linux Foundation's [online lectures](https://www.edx.org/course/introduction-linux-linuxfoundationx-lfs101x-0) a few month ago, I created a simple bash script that helps create a new git repository.
 
 <!--more-->
+
+## [git_mkdir](https://github.com/mnishiguchi/git_mkdir)
 
 The purposes of creating that script were:
 
@@ -23,11 +25,7 @@ create a new project directory and initialize it as a local git repository.
 
 Today I recall that script and tried to use it, but it could not be run from Desktop of my MacBook Air. I thought now is the time to learn how to make a bash script global.
 
-Just as usual, I google around to get general ideas. As it turned out, it was pretty straightforward. All we need to do is just place the script in `/usr/local/bin`. That's it!
-
-Check this out if you like:
-
-- [git_mkdir](https://github.com/mnishiguchi/git_mkdir)
+Just as usual, I google around to get general ideas. As it turned out, it was pretty straightforward. All we need to do is just place the script in `/usr/local/bin`.
 
 ```bash
 #!/bin/bash
@@ -61,6 +59,6 @@ ls -hartl
 echo "Done!"
 ```
 
-I am very happy about this script so far because I was able to factor out and automate the initial steps of creating a new project repository. With this script, I don't need to manually initialize the repository and create README any more!
+## Conclusion
 
-If you have any good resources for learning shell scripting techniques, please share them with me.
+I am very happy about this script so far because I was able to factor out and automate the initial steps of creating a new project repository. With this script, I don't need to manually initialize the repository and create README any more!

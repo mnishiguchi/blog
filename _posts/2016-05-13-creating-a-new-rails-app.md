@@ -8,7 +8,7 @@ tags:
 - postgresql
 ---
 
-This is my memo on creating a new Rails app.
+This is my memo on *{{ page.title }}*.
 
 <!--more-->
 

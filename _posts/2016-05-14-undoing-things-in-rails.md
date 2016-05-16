@@ -7,6 +7,7 @@ tags:
 - rails
 ---
 
+This is my memo on *{{ page.title }}*.
 
 <!--more-->
 
