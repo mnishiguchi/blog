@@ -5,7 +5,7 @@ comments: true
 tags:
 - ruby
 - rails
-- postgres
+- postgresql
 - database
 ---
 
@@ -59,6 +59,13 @@ sample_app_development=# SELECT * FROM "users";
 ----+----------------------+----------------+----------------------------+----------------------------+--------------------------------------------------------------
   1 | Masatoshi Nishiguchi | mn@example.com | 2016-05-17 21:17:17.639944 | 2016-05-17 21:17:17.639944 | $2a$10$l3PW9nG74ey4JXQJLhBtUOJBChLsK0vDv2ogPKwAqsX/lCk3E0UQe
 (1 row)
+```
+
+#### Delete a record from a table
+
+```
+sample_app_development=# DELETE FROM "users" WHERE id=3;
+DELETE 1
 ```
 
 #### Some alternative commands
