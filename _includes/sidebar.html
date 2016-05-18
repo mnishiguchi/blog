@@ -2,7 +2,9 @@
   Target for toggling the sidebar `.sidebar-checkbox` is for regular styles,
   `#sidebar-checkbox` for behavior.
 -->
-<label for="sidebar-checkbox" class="sidebar-toggle"></label>
+<label for="sidebar-checkbox" class="sidebar-toggle">
+  <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+</label>
 <input
   type="checkbox"
   class="sidebar-checkbox"
@@ -12,12 +14,17 @@
 <div
   class="sidebar"
   id="sidebar">
+
+  <label for="sidebar-checkbox" class="sidebar-toggle">
+    <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+  </label>
+
   <div class="sidebar-item">
     <h4>{{ site.title }}</h4>
     <p>{{ site.description }}</p>
   </div>
 
-  <nav class="sidebar-nav">
+  <nav class="sidebar-nav right">
     {% for each in site.navigation_items %}
       {% if each[1] == page.url %}
         <a class="sidebar-nav-item active">{{ each[0] }}</a>
@@ -29,11 +36,11 @@
         </a>
       {% endif %}
     {% endfor %}
-    <a
+    <!-- <a
       class="sidebar-nav-item"
       href="{{ site.github.repo }}">
       This site
-    </a>
+    </a> -->
   </nav>
 
   <div class="sidebar-item">

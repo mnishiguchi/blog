@@ -1,7 +1,13 @@
 // Adopted from https://github.com/poole/lanyon
+$navbar-height: 50px;
 
-$hamburgar-color-1: white;
-$hamburgar-color-2: #555;
+@mixin navbar-item-align {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  height: $navbar-height;
+  line-height: $navbar-height;
+}
 
 /*
  * Sidebar
@@ -21,6 +27,7 @@ $hamburgar-color-2: #555;
 /* Style and "hide" the sidebar */
 .sidebar {
   position: fixed;
+  z-index: 13; // Sit on top of main contents.
   top: 0;
   bottom: 0;
   left: auto;
@@ -29,17 +36,33 @@ $hamburgar-color-2: #555;
   visibility: hidden;
   overflow-y: auto;
   font-family: $heading-font-family;
-  font-size: .875rem; /* 15px */
+  font-size: 0.875rem; /* 15px */
   color: $gray-2;
   background-color: $black;
-  -webkit-transition: all .3s ease-in-out;
-          transition: all .3s ease-in-out;
-}
-@media (min-width: 30em) {
-  .sidebar {
-    font-size: .75rem; /* 14px */
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  .sidebar-item:first-of-type {
+    margin-top: 2rem;
+  }
+  @media (min-width: 30em) {
+    font-size: 0.75rem; /* 14px */
+  }
+  @media only screen and (min-width : 768px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: auto;
+    height: $navbar-height;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    visibility: visible;
+    overflow-y: auto;
   }
 }
+
 
 /* Sidebar content */
 .sidebar a {
@@ -54,140 +77,149 @@ $hamburgar-color-2: #555;
   p {
     color: $gray-2;
     font-size: 0.8rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @media only screen and (min-width : 768px) {
+    display: none;
   }
 }
-.sidebar-item p:last-child {
-  margin-bottom: 0;
-}
+
 
 /* Sidebar nav */
 .sidebar-nav {
   border-bottom: 1px solid rgba(255,255,255,.1);
+  @media only screen and (min-width : 768px) {
+    // @include navbar-item-align;
+    border: none;
+    width: 100%;
+    text-align: center;
+    //  &.right {
+    //    float: right; // Log in link.
+    //  }
+  }
 }
 .sidebar-nav-item {
   display: block;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border-top: 1px solid rgba(255,255,255,.1);
   font-size: 1.0rem;
-}
-.sidebar-nav-item.active,
-a.sidebar-nav-item:hover,
-a.sidebar-nav-item:focus {
   text-decoration: none;
-  background-color: rgba(255,255,255,.1);
-  border-color: transparent;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  &.active {
+    background-color: rgba(255,255,255,.1);
+  }
+  &:hover {
+    background-color: rgba(255,255,255,.1);
+  }
+  &:focus {
+    background-color: rgba(255,255,255,.1);
+  }
+  @media only screen and (min-width : 768px) {
+    @include navbar-item-align;
+    border: none; // Reset the border.
+    &:not(.active):hover {
+      color: $link-hover-color;
+      // background: rgba(0,0,0,.5);
+      border-bottom: 1px solid $blue;
+      text-decoration: none;
+    }
+  }
 }
-
 @media (min-width: 48em) {
-  .sidebar-item {
-    padding: 1.5rem;
+  sidebar-item {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
   .sidebar-nav-item {
-    padding-left:  1.5rem;
-    padding-right: 1.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
+
 
 /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
 .sidebar-checkbox {
   position: absolute;
   opacity: 0;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
+
 
 /* Style the `label` that we use to target the `.sidebar-checkbox` */
 .sidebar-toggle {
   position: absolute;
-  top:  .8rem;
+  top: 0.8rem;
   left: auto;
   right: 1rem;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
   z-index: 12; // Sit on top of canvas header
   display: block;
-  padding: .25rem .75rem;
-  color: $hamburgar-color-2;
+  text-align: center;
+  padding: .25rem;
+  color: white;
   background-color: none;
-  border: 1px solid $gray-3;
+  border: 1px solid $gray-4;
   // border-radius: .25rem;
   cursor: pointer;
+  &:active {
+    opacity: .5;
+  }
+  @media only screen and (min-width : 768px) {
+    display: none;
+  }
 }
-
-.sidebar-toggle:before {
-  display: inline-block;
-  width: 1rem;
-  height: .75rem;
-  content: "";
-  background-image: -webkit-linear-gradient(to bottom, $hamburgar-color-1, $hamburgar-color-1 20%, $hamburgar-color-2 20%, $hamburgar-color-2 40%, $hamburgar-color-1 40%, $hamburgar-color-1 60%, $hamburgar-color-2 60%, $hamburgar-color-2 80%, $hamburgar-color-1 80%, $hamburgar-color-1 100%);
-  background-image:    -moz-linear-gradient(to bottom, $hamburgar-color-1, $hamburgar-color-1 20%, $hamburgar-color-2 20%, $hamburgar-color-2 40%, $hamburgar-color-1 40%, $hamburgar-color-1 60%, $hamburgar-color-2 60%, $hamburgar-color-2 80%, $hamburgar-color-1 80%, $hamburgar-color-1 100%);
-  background-image:     -ms-linear-gradient(to bottom, $hamburgar-color-1, $hamburgar-color-1 20%, $hamburgar-color-2 20%, $hamburgar-color-2 40%, $hamburgar-color-1 40%, $hamburgar-color-1 60%, $hamburgar-color-2 60%, $hamburgar-color-2 80%, $hamburgar-color-1 80%, $hamburgar-color-1 100%);
-  background-image:         linear-gradient(to bottom, $hamburgar-color-1, $hamburgar-color-1 20%, $hamburgar-color-2 20%, $hamburgar-color-2 40%, $hamburgar-color-1 40%, $hamburgar-color-1 60%, $hamburgar-color-2 60%, $hamburgar-color-2 80%, $hamburgar-color-1 80%, $hamburgar-color-1 100%);
-}
-
-.sidebar-toggle:active,
-#sidebar-checkbox:focus ~ .sidebar-toggle,
-#sidebar-checkbox:checked ~ .sidebar-toggle {
-  color: $hamburgar-color-2;
-  background-color: $hamburgar-color-1;
-}
-
-.sidebar-toggle:active:before,
-#sidebar-checkbox:focus ~ .sidebar-toggle:before,
-#sidebar-checkbox:checked ~ .sidebar-toggle:before {
-  background-image: -webkit-linear-gradient(to bottom, $hamburgar-color-2, $hamburgar-color-2 20%, $hamburgar-color-1 20%, $hamburgar-color-1 40%, $hamburgar-color-2 40%, $hamburgar-color-2 60%, $hamburgar-color-1 60%, $hamburgar-color-1 80%, $hamburgar-color-2 80%, $hamburgar-color-2 100%);
-  background-image:    -moz-linear-gradient(to bottom, $hamburgar-color-2, $hamburgar-color-2 20%, $hamburgar-color-1 20%, $hamburgar-color-1 40%, $hamburgar-color-2 40%, $hamburgar-color-2 60%, $hamburgar-color-1 60%, $hamburgar-color-1 80%, $hamburgar-color-2 80%, $hamburgar-color-2 100%);
-  background-image:     -ms-linear-gradient(to bottom, $hamburgar-color-2, $hamburgar-color-2 20%, $hamburgar-color-1 20%, $hamburgar-color-1 40%, $hamburgar-color-2 40%, $hamburgar-color-2 60%, $hamburgar-color-1 60%, $hamburgar-color-1 80%, $hamburgar-color-2 80%, $hamburgar-color-2 100%);
-  background-image:         linear-gradient(to bottom, $hamburgar-color-2, $hamburgar-color-2 20%, $hamburgar-color-1 20%, $hamburgar-color-1 40%, $hamburgar-color-2 40%, $hamburgar-color-2 60%, $hamburgar-color-1 60%, $hamburgar-color-1 80%, $hamburgar-color-2 80%, $hamburgar-color-2 100%);
-}
-
-// @media (min-width: 30.1em) {
-//   .sidebar-toggle {
-//     position: fixed;
-//   }
-// }
-
 @media print {
   .sidebar-toggle {
     display: none;
   }
 }
+.sidebar .sidebar-toggle {
+  z-index: 13;
+}
+
 
 /* Slide effect
- *
- * Handle the sliding effects of the sidebar and content in one spot, seperate
- * from the default styles.
- *
- * As an a heads up, we don't use `transform: translate3d()` here because when
- * mixed with `position: fixed;` for the sidebar toggle, it creates a new
- * containing block. Put simply, the fixed sidebar toggle behaves like
- * `position: absolute;` when transformed.
- *
- * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
- */
-
-.wrap,
+  *
+  * Handle the sliding effects of the sidebar and content in one spot, seperate
+  * from the default styles.
+  *
+  * As an a heads up, we don't use `transform: translate3d()` here because when
+  * mixed with `position: fixed;` for the sidebar toggle, it creates a new
+  * containing block. Put simply, the fixed sidebar toggle behaves like
+  * `position: absolute;` when transformed.
+  *
+  * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
+  */
 .sidebar,
-.sidebar-toggle {
+.sidebar-toggle,
+.wrap {
   -webkit-backface-visibility: hidden;
-      -ms-backface-visibility: hidden;
-          backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
-.wrap,
-.sidebar-toggle {
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-          transition: transform .3s ease-in-out;
+.sidebar-toggle,
+.wrap {
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
-
 #sidebar-checkbox:checked + .sidebar {
-  z-index: 10;
   visibility: visible;
+  width: 100%;
 }
 #sidebar-checkbox:checked ~ .sidebar,
-#sidebar-checkbox:checked ~ .wrap,
-#sidebar-checkbox:checked ~ .sidebar-toggle {
+#sidebar-checkbox:checked ~ .sidebar-toggle,
+#sidebar-checkbox:checked ~ .wrap {
   -webkit-transform: translateX(-14rem);
-      -ms-transform: translateX(-14rem);
-          transform: translateX(-14rem);
+  -ms-transform: translateX(-14rem);
+  transform: translateX(-14rem);
 }
 
 
@@ -197,20 +229,14 @@ a.sidebar-nav-item:focus {
  * Make the sidebar content overlay the viewport content instead of pushing it
  * aside when toggled.
  */
-
 .sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
   -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
 }
 .sidebar-overlay #sidebar-checkbox:checked ~ .sidebar-toggle {
-  box-shadow: 0 0 0 .25rem #555;
+  box-shadow: 0 0 0 0.25rem #555;
 }
 .sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
-  box-shadow: .25rem 0 .5rem rgba(0,0,0,.1);
-}
-
-/* Only one tweak for a reverse layout */
-.layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
-  box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
+  box-shadow: -.25rem 0 0.5rem rgba(0,0,0,.1);
 }
