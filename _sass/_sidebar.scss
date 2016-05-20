@@ -5,6 +5,7 @@ $navbar-height: 50px;
   display: inline-block;
   margin: 0;
   padding: 0;
+  vertical-align: top;
   height: $navbar-height;
   line-height: $navbar-height;
 }
@@ -38,7 +39,7 @@ $navbar-height: 50px;
   font-family: $heading-font-family;
   font-size: 0.875rem; /* 15px */
   color: $gray-2;
-  background-color: $black;
+  background-color: $header-color;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   .sidebar-item:first-of-type {
@@ -104,7 +105,8 @@ $navbar-height: 50px;
   display: block;
   padding: 0.5rem 1rem;
   border-top: 1px solid rgba(255,255,255,.1);
-  font-size: 1.0rem;
+  color: $gray-2;
+  font-size: .9rem;
   text-decoration: none;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
@@ -124,7 +126,7 @@ $navbar-height: 50px;
     &:not(.active):hover {
       color: $link-hover-color;
       // background: rgba(0,0,0,.5);
-      border-bottom: 1px solid $blue;
+      // border-bottom: 1px solid $blue;
       text-decoration: none;
     }
   }
@@ -170,7 +172,8 @@ $navbar-height: 50px;
   // border-radius: .25rem;
   cursor: pointer;
   &:active {
-    opacity: .5;
+    transition: all .4s ease;
+    opacity: .3;
   }
   @media only screen and (min-width : 768px) {
     display: none;

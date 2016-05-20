@@ -3,7 +3,6 @@ layout: post
 title: Creating a new Rails app
 comments: true
 tags:
-- ruby
 - rails
 - postgresql
 ---

@@ -3,9 +3,8 @@ layout: post
 title: Deploying Rails app to Heroku
 comments: true
 tags:
-- ruby
-- rails
 - heroku
+- rails
 ---
 
 This is my memo on *{{ page.title }}*.
@@ -34,13 +33,21 @@ $ git commit -am "Add hello" # Make sure that all changes are committed.
 $ heroku create
 ```
 
+## Before deployment
+
+```bash
+$ rake assets:precompile
+$ [bundle exec] rake test
+$ git add -A
+$ git commit -m "Commit message"
+$ git push
+```
 
 ## Push the app to the Heroku repo
 
 #### On a production site, with little traffic
 
 ```bash
-$ [bundle exec] rake test
 $ git push heroku master     # Push up to Heroku repo
 $ heroku run rake db:migrate # Inform Heroku of our db schema
 ```
@@ -48,7 +55,6 @@ $ heroku run rake db:migrate # Inform Heroku of our db schema
 #### On a production site, with significant traffic (maintenance mode)
 
 ```bash
-$ [bundle exec] rake test
 $ heroku maintenance:on
 
 $ git push heroku master     # Push up to Heroku repo
@@ -60,8 +66,6 @@ $ heroku maintenance:off
 #### Deploy the app, and populate the production database with sample users
 
 ```bash
-$ bundle exec rake test
-
 $ git push heroku master     # Push up to Heroku repo
 $ heroku pg:reset DATABASE   # reset the production database
 

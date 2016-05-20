@@ -2,9 +2,9 @@
 title:       Masatoshi Nishiguchi
 tagline:     Web developer
 description: >
-  An aspiring web developer who specializes in HTML, CSS, JavaScript, Ruby, Rails and AngularJS
+  An aspiring web developer who specializes in HTML, CSS, JavaScript, Ruby, Rails and Angular
 keywords:    >
-  html, css, javascript, ruby, rails, angularjs, reactjs, web development
+  html, css, javascript, ruby, rails, angular, react, web development
 
 version:     1.0.0
 github:
@@ -34,7 +34,7 @@ navigation_items:
   # Archive:  '/archive'
 
 # Pagination
-paginate:      5
+paginate:      10
 paginate_path: /blog/page:num
 
 # Assets

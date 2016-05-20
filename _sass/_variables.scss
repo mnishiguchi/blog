@@ -10,9 +10,6 @@ $gray-3: #767676;
 $gray-4: #515151;
 $gray-5: #313131;
 
-$black: #1D1425;
-$black-transparent: rgba(29, 20, 37, .9);
-
 $blue: #268bd2;
 $blue-darker: rgba(#16527c, 0.6);
 $red: #ac4142;
@@ -26,6 +23,9 @@ $brown: #8f5536;
 $root-font-family: "PT Serif", 'Times New Roman', serif;
 $root-font-size: 18px;
 $root-line-height: 1.6;
+
+$header-color: #082031;
+$header-color-transparent: rgba(8, 32, 49, .9);
 
 $body-color: $gray-5;
 $body-bg: #fff;

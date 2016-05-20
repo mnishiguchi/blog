@@ -3,10 +3,8 @@ layout: post
 title: Column indexing and unique column constraints in Rails
 comments: true
 tags:
-- ruby
-- rails
-- active_record
 - database
+- rails
 ---
 
 This is my memo on *{{ page.title }}*.

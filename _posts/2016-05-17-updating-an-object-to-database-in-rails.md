@@ -3,9 +3,7 @@ layout: post
 title: Updating an object to database in Rails
 comments: true
 tags:
-- ruby
 - rails
-- active_record
 - database
 ---
 

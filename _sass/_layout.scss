@@ -35,7 +35,7 @@ main {
   font-family: $introduction-font-family;
   font-weight: 100;
   font-size: 1.3rem;
-  color: $black;
+  color: $header-color;
 }
 
 footer {
@@ -43,7 +43,7 @@ footer {
   margin-top: 4rem;
   padding: 4rem 0;
   color: $gray-2;
-  background: $black;
+  background: $header-color;
   .contact-info {
     display: inline-block;
     padding: 0 5px;

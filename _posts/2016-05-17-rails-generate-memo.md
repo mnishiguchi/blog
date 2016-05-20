@@ -3,7 +3,6 @@ layout: post
 title: Rails generate memo
 comments: true
 tags:
-- ruby
 - rails
 ---
 

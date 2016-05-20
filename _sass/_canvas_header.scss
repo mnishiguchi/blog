@@ -6,7 +6,7 @@
 
 .large-header {
   position: relative;
-  background-color: $black;
+  background-color: $header-color;
   width: 100vw; height: 60vh;
   display: flex;
   align-items: center;
@@ -98,7 +98,7 @@
   justify-content: center;
   text-align: center;
   height: 44px;
-  background: $black-transparent;
+  background: $header-color-transparent;
   width: 100%;
   a {
     width: 100%;
@@ -121,7 +121,7 @@
     z-index: 3;
   }
   &:hover {
-    background: lighten($black-transparent, 10%);
+    background: lighten($header-color-transparent, 10%);
   }
 }
 

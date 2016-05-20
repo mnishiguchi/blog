@@ -3,9 +3,9 @@ layout: post
 title: Setting up Minitest in Rails
 comments: true
 tags:
-- ruby
-- rails
 - minitest
+- rails
+- ruby
 ---
 
 This is my memo on *{{ page.title }}*.

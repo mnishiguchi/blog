@@ -17,7 +17,7 @@
   z-index: 10; // Sit on top of contents
   width: 100vw; // Full width
   height: 100vh; // Full height
-  background: $black;
+  background: $header-color;
   &:target { // This is triggered by an anchor hash link to this element.
     opacity: 1;
     pointer-events: auto;  // Enable mouse/touch events.
@@ -32,7 +32,7 @@
   height: 77%;
   padding: 0;
   margin: auto;
-  background: $black;
+  background: $header-color;
 }
 
 // Prevent BODY from scrolling when a modal is opened
@@ -65,7 +65,7 @@ body.modal-open {
 .close-modal {
   @extend .hamburger;
   z-index: 10001;
-  background: $black;
+  background: $header-color;
 }
 
 // Mobile devices: The Modal (background)

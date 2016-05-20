@@ -6,7 +6,6 @@ tags:
 - html
 - css
 - javascript
-- navigation
 ---
 
 I wanted to make the site navigation appear on a modal dialog box. After googling around, I found that I could implement modal with pure CSS. I thought this was a great opportunity to learn how to implement simple modal without JS.

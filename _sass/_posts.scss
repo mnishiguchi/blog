@@ -60,13 +60,20 @@
   }
 }
 // For Blog page
-.blog-wrap .post-meta {
-  color: $gray-5;
+.page-blog .post-meta {
+  margin-top: -.3rem;
   time {
     display: inline-block;
+    color: $gray-3;
+    vertical-align: middle;
+    line-height: 1;
+    font-size: .9rem;
   }
   .post-tags {
     display: inline-block;
+    a {
+      vertical-align: middle;
+    }
   }
 }
 
@@ -99,6 +106,7 @@
   padding: 0;
   margin: 0;
   li {
+    margin: 0;
     padding: .2rem .1rem;
     display: inline-block;
     @include post-tag(.8rem);

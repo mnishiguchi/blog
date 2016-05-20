@@ -3,7 +3,6 @@ layout: post
 title: Undoing things in Rails
 comments: true
 tags:
-- ruby
 - rails
 ---
 

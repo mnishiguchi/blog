@@ -3,10 +3,9 @@ layout: post
 title: PostgreSQL memo
 comments: true
 tags:
-- ruby
-- rails
 - postgresql
 - database
+- rails
 ---
 
 *{{ page.title }}*.

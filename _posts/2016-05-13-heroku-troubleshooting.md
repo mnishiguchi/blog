@@ -3,9 +3,8 @@ layout: post
 title: Heroku troubleshooting
 comments: true
 tags:
-- ruby
-- rails
 - heroku
+- rails
 ---
 
 This is my memo on *{{ page.title }}*.
@@ -31,7 +30,7 @@ $ heroku pg:reset DATABASE   # reset the production database
 
 ### [Missing CSS on Heroku Deployment](https://teamtreehouse.com/forum/missing-css-on-heroku-deployment)
 - [Rails Asset Pipeline on Heroku Cedar](https://devcenter.heroku.com/articles/rails-asset-pipeline)
-- `$ rake assets:precompile`
+- `$ rake assets:precompile` or
 - `$ RAILS_ENV=production bundle exec rake assets:precompile`
 
 ### [Check if the current Heroku app name is registered](http://stackoverflow.com/questions/2947190/pushing-app-to-heroku-problem)
