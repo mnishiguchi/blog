@@ -30,7 +30,6 @@ $ heroku pg:reset DATABASE   # reset the production database
 
 ### [Missing CSS on Heroku Deployment](https://teamtreehouse.com/forum/missing-css-on-heroku-deployment)
 - [Rails Asset Pipeline on Heroku Cedar](https://devcenter.heroku.com/articles/rails-asset-pipeline)
-- `$ rake assets:precompile` or
 - `$ RAILS_ENV=production bundle exec rake assets:precompile`
 
 ### [Check if the current Heroku app name is registered](http://stackoverflow.com/questions/2947190/pushing-app-to-heroku-problem)
@@ -56,6 +55,12 @@ $ git remote add heroku git@heroku.com:APP_NAME.git
 # Precompile the assets for production
 $ RAILS_ENV=production bundle exec rake assets:precompile
 # Note: If Devise.secret_key is not set, add one to your Devise initializer
+```
+
+### [Claer the asset pipeline cache](https://github.com/browserify-rails/browserify-rails#clear-the-asset-pipeline-cache)
+
+```bash
+$ rake tmp:cache:clear
 ```
 
 ### [Check Heroku-supported Ruby/Rails versions](https://devcenter.heroku.com/articles/ruby-support#ruby-versions)

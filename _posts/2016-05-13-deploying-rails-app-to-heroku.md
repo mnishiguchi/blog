@@ -12,6 +12,7 @@ This is my memo on *{{ page.title }}*.
 <!--more-->
 
 ## About Heroku
+
 - A hosted platform built specifically for deploying Rails and other web applications.
 - Makes deploying Rails applications ridiculously easy as long as your source code is under version control with Git.
 - Uses the PostgreSQL database (NOTE: You need to add the 'pg' gem to allow Rails to talk to Postgres)
@@ -28,6 +29,7 @@ This is my memo on *{{ page.title }}*.
 
 
 ## Create a Heroku repo for the app
+
 ```bash
 $ git commit -am "Add hello" # Make sure that all changes are committed.
 $ heroku create
@@ -36,8 +38,14 @@ $ heroku create
 ## Before deployment
 
 ```bash
-$ rake assets:precompile
-$ [bundle exec] rake test
+# Prepare the assets for production.
+$ bundle exec rake tmp:cache:clear 
+$ RAILS_ENV=production bundle exec rake assets:precompile
+
+# Make sure nothing is broken.
+$ bundle exec rake test
+
+# Push all the changes to remote repo.
 $ git add -A
 $ git commit -m "Commit message"
 $ git push
@@ -85,6 +93,7 @@ $ heroku rename <new-name>
 
 
 ## Diagnose problems at Heroku
+
 - `$ heroku logs`
 - `$ heroku run rails console`
 - `$ heroku run console --sandbox`
@@ -92,14 +101,16 @@ $ heroku rename <new-name>
 
 ## [Delete and Redeploy Rails app to heroku](http://stackoverflow.com/questions/22043111/delete-and-redeploy-rails-app-to-heroku)
 
-#### 1. Destroy the app
-- `$ heroku apps:destroy --app example`
+```bash
+# 1. Destroy the Heroku repo.
+$ heroku apps:destroy --app sample_app
 
-#### 2. Create a new one
-- `$ heroku create example`
+# 2. Create a new Heroku repo.
+$ heroku create sample_app
 
-#### 3. Push to it
-- `$ git push heroku -u master`
+# 3. Push the project to the new Heroku repo.
+$ git push heroku -u master
+```
 
 
 ## Troubleshooting
