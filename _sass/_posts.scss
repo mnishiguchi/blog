@@ -3,7 +3,7 @@
 // Each post is wrapped in `.post` and is used on default and post layouts.
 // Each page is wrapped in `.page` and is only used on the page layout.
 
-@mixin post-tag($font-size) {
+@mixin post-tag-link($font-size) {
   a {
     display: inline-block;
     font-family: $heading-font-family;
@@ -45,6 +45,7 @@
 /**
  *  Meta data line below post title
  */
+// For
 .post-meta {
   display: block;
   margin-top: 0;
@@ -56,7 +57,7 @@
   }
   .post-tags {
     display: block;
-    @include post-tag(.7rem);
+    @include post-tag-link(.7rem);
   }
 }
 // For Blog page
@@ -109,7 +110,7 @@
     margin: 0;
     padding: .2rem .1rem;
     display: inline-block;
-    @include post-tag(.8rem);
+    @include post-tag-link(.8rem);
   }
 }
 // To offset an HTML anchor destination.

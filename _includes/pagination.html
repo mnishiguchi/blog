@@ -1,4 +1,4 @@
-<div class="pagination">
+<nav class="pagination" role="navigation">
   {% assign older = "<< Older Entries" %}
   {% assign newer = "Newer Entries >>" %}
 
@@ -12,6 +12,8 @@
     <span class="pagination-item older">{{ older }}</span>
   {% endif %}
 
+  <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
   {% if paginator.previous_page %}
     <a
       class="pagination-item newer"
@@ -21,4 +23,4 @@
   {% else %}
     <span class="pagination-item newer">{{ newer }}</span>
   {% endif %}
-</div>
+</nav>

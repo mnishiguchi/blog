@@ -19,12 +19,15 @@ title: Blog
           {% include post_tags.html %}
         </span>
 
-        {{ post.excerpt }}
+        <p>
+          {{ post.excerpt | strip_html | append: "..." }}
+          {% if post.excerpt != post.content %}
+            <a href="{{ post.url | prepend: site.baseurl }}"> >></a>
+          {% endif %}
+        </p>
 
-        {% if post.excerpt != post.content %}
-            <a href="{{ post.url | prepend: site.baseurl }}">Read more >></a>
-        {% endif %}
       </article>
+      <hr>
     {% endfor %}
   </div>
 </div>
