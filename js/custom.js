@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   // Close the sidebar on resize if it is open.
   window.addEventListener('resize', function(e) {
-    console.log("resized");
+    // console.log("resized");
     if(!checkbox.checked) return;
     checkbox.checked = false;
   }, false);
@@ -42,23 +42,63 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 (function() {
 
+  var sticky, stickySpacer, rotatingIcon;
+  var originalDistance, currentOffset, currentDistance;
+
+  function getDistanceFromTop( elem ) {
+    if ( elem != undefined ) return elem.offsetTop;
+  }
+
+  function isStuck() {
+    return currentOffset > originalDistance;
+  }
+
   function initStickyDiv() {
-    var window_top = $( window ).scrollTop();
-    var div_top = $( '#sticky-anchor' ).offset().top;
-    if (window_top > div_top) {
-      $( '#sticky' ).addClass( 'stick' );
-      $( '#sticky-anchor' ).height($( '#sticky' ).outerHeight());
-      $( "#rotating-icon" ).addClass( "up" );
+    sticky       = document.getElementById("sticky");
+    stickySpacer = document.getElementById("sticky-spacer");
+    rotatingIcon = document.getElementById("rotating-icon");
+
+    originalDistance = getDistanceFromTop( stickySpacer );
+    currentOffset    = window.pageYOffset;
+    currentDistance  = originalDistance - currentOffset;
+
+    // console.info("originalDistance", originalDistance);
+    // console.info("currentOffset", currentOffset);
+    // console.info("currentDistance", currentDistance);
+
+    if ( isStuck() ) {
+      stickySpacer.height = sticky.height;
+      classie.add( sticky, 'stick' )
+      classie.add( rotatingIcon, 'up' )
     } else {
-      $( '#sticky' ).removeClass( 'stick' );
-      $( '#sticky-anchor' ).height( 0 );
-      $( "#rotating-icon" ).removeClass( "up" );
+      stickySpacer.height = 0;
+      classie.remove( sticky, 'stick' );
+      classie.remove( rotatingIcon, 'up' )
     }
   }
-  $(document).ready( function() {
-    $( window ).scroll( initStickyDiv );
+
+  document.addEventListener( "DOMContentLoaded", function() {
+    window.addEventListener( 'scroll', initStickyDiv );
     initStickyDiv();
   });
+
+  // function initStickyDiv() {
+  //   var window_top = $( window ).scrollTop();
+  //   var div_top = $( '#sticky-anchor' ).offset().top;
+  //   if (window_top > div_top) {
+  //     $( '#sticky' ).addClass( 'stick' );
+  //     $( '#sticky-anchor' ).height($( '#sticky' ).outerHeight());
+  //     $( "#rotating-icon" ).addClass( "up" );
+  //   } else {
+  //     $( '#sticky' ).removeClass( 'stick' );
+  //     $( '#sticky-anchor' ).height( 0 );
+  //     $( "#rotating-icon" ).removeClass( "up" );
+  //   }
+  // }
+  // $(document).ready( function() {
+  //   $( window ).scroll( initStickyDiv );
+  //   initStickyDiv();
+  // });
 })();
 
 
