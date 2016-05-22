@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 (function() {
 
-  var sticky, stickySpacer, rotatingIcon;
+  var sticky, stickySpacer, rotatingIcon, stickyLink;
   var originalDistance, currentOffset, currentDistance;
 
   function getDistanceFromTop( elem ) {
@@ -50,13 +50,14 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   function isStuck() {
-    return currentOffset > originalDistance;
+    return currentOffset >= originalDistance;
   }
 
   function initStickyDiv() {
     sticky       = document.getElementById("sticky");
     stickySpacer = document.getElementById("sticky-spacer");
     rotatingIcon = document.getElementById("rotating-icon");
+    stickyLink   = document.querySelector("#sticky a[data-scroll]");
 
     originalDistance = getDistanceFromTop( stickySpacer );
     currentOffset    = window.pageYOffset;
@@ -67,14 +68,18 @@ document.addEventListener("DOMContentLoaded", function() {
     // console.info("currentDistance", currentDistance);
 
     if ( isStuck() ) {
-      stickySpacer.height = sticky.height;
-      classie.add( sticky, 'stick' )
-      classie.add( rotatingIcon, 'up' )
+      classie.add( sticky, 'stick' );
+      stickySpacer.style.height = sticky.offsetHeight + "px";
+      classie.add( rotatingIcon, 'up' );
+      stickyLink.href = "#";
     } else {
-      stickySpacer.height = 0;
       classie.remove( sticky, 'stick' );
-      classie.remove( rotatingIcon, 'up' )
+      stickySpacer.style.height = 0 + "px";
+      classie.remove( rotatingIcon, 'up' );
+      stickyLink.href = "#scroll-to";
     }
+    // NOTE: element.style.height requires us to specify a string of "px" value
+    // (E.g., `element.style.height = height + "px";`).
   }
 
   document.addEventListener( "DOMContentLoaded", function() {
@@ -82,57 +87,59 @@ document.addEventListener("DOMContentLoaded", function() {
     initStickyDiv();
   });
 
-  // function initStickyDiv() {
-  //   var window_top = $( window ).scrollTop();
-  //   var div_top = $( '#sticky-anchor' ).offset().top;
-  //   if (window_top > div_top) {
-  //     $( '#sticky' ).addClass( 'stick' );
-  //     $( '#sticky-anchor' ).height($( '#sticky' ).outerHeight());
-  //     $( "#rotating-icon" ).addClass( "up" );
-  //   } else {
-  //     $( '#sticky' ).removeClass( 'stick' );
-  //     $( '#sticky-anchor' ).height( 0 );
-  //     $( "#rotating-icon" ).removeClass( "up" );
-  //   }
-  // }
-  // $(document).ready( function() {
-  //   $( window ).scroll( initStickyDiv );
-  //   initStickyDiv();
-  // });
+  // https://github.com/cferdinandi/smooth-scroll
+  smoothScroll.init();
 })();
 
+// function initStickyDiv() {
+//   var window_top = $( window ).scrollTop();
+//   var div_top = $( '#sticky-anchor' ).offset().top;
+//   if (window_top > div_top) {
+//     $( '#sticky' ).addClass( 'stick' );
+//     $( '#sticky-anchor' ).height($( '#sticky' ).outerHeight());
+//     $( "#rotating-icon" ).addClass( "up" );
+//   } else {
+//     $( '#sticky' ).removeClass( 'stick' );
+//     $( '#sticky-anchor' ).height( 0 );
+//     $( "#rotating-icon" ).removeClass( "up" );
+//   }
+// }
+// $(document).ready( function() {
+//   $( window ).scroll( initStickyDiv );
+//   initStickyDiv();
+// });
 
-/**
- * Smooth page scroll on click.
- * - Dependency: jQuery and jQuery easing
- */
-(function() {
-  var anchorHeight = 40; // Adjust this according to the anchor div's height.
-
-  function distanceFromDisplayTop( $element ) {
-    return $element.offset().top - $( window ).scrollTop();
-  }
-  function scrollDownTo( $anchor ) {
-    $( "#rotating-icon" ).addClass( "up" );
-
-    $( 'html, body' ).stop().animate({
-        scrollTop: ( $( $anchor.attr( 'href' ) ).offset().top - anchorHeight )
-    }, 500, 'easeInOutExpo');
-    event.preventDefault();
-  }
-  function scrollUpToTop() {
-    $( "#rotating-icon" ).removeClass( "up" );
-
-    $( 'html, body' ).stop().animate({
-        scrollTop: 0
-    }, 500, 'easeInOutExpo');
-    event.preventDefault();
-  }
-
-  // Setup a click listener to trigger automatic scroll animation.
-  $( '.page-scroll' ).bind( 'click', function( event ) {
-    var $anchor  = $( this );
-    // console.debug( distanceFromDisplayTop( $anchor ) );
-    distanceFromDisplayTop( $anchor ) > 10 ? scrollDownTo( $anchor ) : scrollUpToTop() ;
-  });
-})();
+// /**
+//  * Smooth page scroll on click.
+//  * - Dependency: jQuery and jQuery easing
+//  */
+// (function() {
+//   var anchorHeight = 40; // Adjust this according to the anchor div's height.
+//
+//   function distanceFromDisplayTop( $element ) {
+//     return $element.offset().top - $( window ).scrollTop();
+//   }
+//   function scrollDownTo( $anchor ) {
+//     $( "#rotating-icon" ).addClass( "up" );
+//
+//     $( 'html, body' ).stop().animate({
+//         scrollTop: ( $( $anchor.attr( 'href' ) ).offset().top - anchorHeight )
+//     }, 500, 'easeInOutExpo');
+//     event.preventDefault();
+//   }
+//   function scrollUpToTop() {
+//     $( "#rotating-icon" ).removeClass( "up" );
+//
+//     $( 'html, body' ).stop().animate({
+//         scrollTop: 0
+//     }, 500, 'easeInOutExpo');
+//     event.preventDefault();
+//   }
+//
+//   // Setup a click listener to trigger automatic scroll animation.
+//   $( '.page-scroll' ).bind( 'click', function( event ) {
+//     var $anchor  = $( this );
+//     // console.debug( distanceFromDisplayTop( $anchor ) );
+//     distanceFromDisplayTop( $anchor ) > 10 ? scrollDownTo( $anchor ) : scrollUpToTop() ;
+//   });
+// })();

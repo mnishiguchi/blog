@@ -58,6 +58,7 @@ Determine an image and its shape based on page title.
        or page.title == "Blog"
        or page.title == "Projects" %}
       <a
+        data-scroll
         href="#scroll-to"
         class="{{ clip }} clip-wrapper page-scroll">
         <img
@@ -91,13 +92,14 @@ Determine an image and its shape based on page title.
 <div id="sticky-spacer"></div>
 
 <div id="sticky" class="scroll-control">
-  <a class="page-scroll" href="#scroll-to">
+  <a
+    data-scroll
+    href="#scroll-to" >
     <div
       id="rotating-icon"
       class="cbutton cbutton--effect-radomir btn-scroll">
       <i class="cbutton__icon fa fa-angle-down fa-fw"></i>
     </div>
   </a>
+  <div id="scroll-to"></div>
 </div>
-
-<div id="scroll-to"></div>
