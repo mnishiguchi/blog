@@ -24,8 +24,11 @@
 
         // If the display width is less than of equal to 1024, clear the canvas.
         if (mobilecheck() || window.innerWidth <= 1024) {
-            canvas.width = 0;
-            canvas.height = 0;
+            if (canvas) {
+              canvas.width = 0;
+              canvas.height = 0;
+            }
+            
             return;
         }
 

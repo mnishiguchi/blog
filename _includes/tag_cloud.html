@@ -11,35 +11,40 @@ Sort by count
 -->
 {% endcomment %}
 
-{% assign sorted_by_count = "" | split: "|" %}
+{% assign tmp_array                   = "" | split: "empty array" %}
+{% assign sorted_by_count             = "" | split: "empty array" %}
+{% assign sorted_by_count_with_prefix = "" | split: "empty array" %}
 
-{% for posts_by_tag in site.tags %}
-  {% assign tag    = posts_by_tag.first %}
+{% for posts_under_tag in site.tags %}
+  {% assign tag    = posts_under_tag.first %}
   {% assign count  = site.tags[tag].size %}
   {% assign prefix = count | plus: 1000 %}
   {% assign tag = tag | prepend: '#' | prepend: prefix %}
   {% assign tag = tag | append: '(' | append: count | append: ')' %}
-  {% assign sorted_by_count = sorted_by_count | push: tag %}
+  {% assign tmp_array = tmp_array | push: tag %}
 {% endfor %}
 
-{% assign sorted_by_count = sorted_by_count | sort %}
+{% assign tmp_array = tmp_array | sort %}
+{% assign sorted_by_count_with_prefix = tmp_array %}
 
-{% assign tmp_array = "" | split: "|" %}
-{% for prefixed_tag in sorted_by_count reversed %}
+{% assign tmp_array = "" | split: "empty array" %}
+
+{% for prefixed_tag in sorted_by_count_with_prefix reversed %}
   {% capture tag_with_count %}
     {{ prefixed_tag | slice: 5, 100 }}
   {% endcapture %}
-
   {% assign tmp_array = tmp_array | push: tag_with_count %}
 {% endfor %}
 
 {% assign sorted_by_count = tmp_array %}
 
 <ul class="tag-cloud">
-  {% for tag_name in sorted_by_count %}
+  {% for tag_name_with_count in sorted_by_count %}
+    {% assign tmp = tag_name_with_count | strip | split: "(" %}
+    {% assign tag_name_only = tmp[0] %}
     <li>
-      <a href="{{ baseurl }}/tags#{{ tag_name | slugize }}">
-        {{ tag_name | upcase | replace "_", " " }}
+      <a href="{{ baseurl }}/tags#{{ tag_name_only | slugize }}">
+        {{ tag_name_with_count | upcase | replace "_", " " }}
       </a>
     </li>
   {% endfor %}

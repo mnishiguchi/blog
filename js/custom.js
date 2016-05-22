@@ -10,12 +10,37 @@ function mobilecheck() {
   return check;
 }
 
+/**
+ * Initialize sidebar toggle.
+ */
+document.addEventListener("DOMContentLoaded", function() {
+  var toggle   = document.querySelector('.sidebar-toggle');
+  var sidebar  = document.querySelector('#sidebar');
+  var checkbox = document.querySelector('#sidebar-checkbox');
+
+  // Close the sidebar when the screen other than the sidebar itself is clicked.
+  document.addEventListener('click', function(e) {
+    var target = e.target;
+    if(!checkbox.checked ||
+       sidebar.contains(target) ||
+       (target === checkbox || target === toggle)) return;
+    checkbox.checked = false;
+  }, false);
+
+  // Close the sidebar on resize if it is open.
+  window.addEventListener('resize', function(e) {
+    console.log("resized");
+    if(!checkbox.checked) return;
+    checkbox.checked = false;
+  }, false);
+});
+
 
 /**
  * Sticky element.
  * http://blog.yjl.im/2010/01/stick-div-at-top-after-scrolling.html
  */
-( function() {
+(function() {
 
   function initStickyDiv() {
     var window_top = $( window ).scrollTop();
@@ -41,7 +66,7 @@ function mobilecheck() {
  * Smooth page scroll on click.
  * - Dependency: jQuery and jQuery easing
  */
-( function() {
+(function() {
   var anchorHeight = 40; // Adjust this according to the anchor div's height.
 
   function distanceFromDisplayTop( $element ) {
@@ -71,75 +96,3 @@ function mobilecheck() {
     distanceFromDisplayTop( $anchor ) > 10 ? scrollDownTo( $anchor ) : scrollUpToTop() ;
   });
 })();
-
-
-// /**
-//  * Toggle the ".modal-open" class on body when navigation modal dialog is opened or closed.
-//  */
-// ( function() {
-//   // Wait until DOM is loaded and then execute.
-//   document.addEventListener( "DOMContentLoaded", function( event ) {
-//
-//     // Check the initial state.
-//     toggleModal();
-//
-//     // Keep watch on hash change due to back buttoon or history.
-//     window.addEventListener( "hashchange", toggleModal );
-//
-//     // Keep watch on page refresh.
-//     window.addEventListener( "load", toggleModal );
-//
-//     // Keep watch on screen rotation or resize.
-//     window.addEventListener( 'resize', toggleModal );
-//
-//
-//     /**
-//      * Toggle the ".modal-open" class on document.body checking whether the nav
-//      * is targeted of not.
-//      */
-//     function toggleModal() {
-//       if ( mobilecheck() && document.querySelector( "nav:target" ) ) {
-//         document.body.classList.add( "modal-open" );
-//       } else {
-//         document.body.classList.remove( "modal-open" );
-//       }
-//     }
-//   });
-// })();
-
-/**
- * Navigation toggle.
- * When the hamburger is clicked, toggle `.modal-open` on `document.body`.
- */
-// ( function() {
-//   // Store references to elements so that we can add/remove classes to those elements anytime.
-//   var hamburger, logo, modal;
-//
-//   // Wait until DOM is loaded and then execute.
-//   document.addEventListener( "DOMContentLoaded", function( event ) {
-//
-//     // Find elements and store eferences to them.
-//     hamburger = document.getElementById( "hamburger" );
-//     logo      = document.getElementById( "logo" );
-//     modal     = document.querySelector( "nav" );
-//
-//     // Toggle modal when:
-//     // - the hamburger is clicked.
-//     hamburger.addEventListener( 'click', toggleModal );
-//
-//     // Close modal when:
-//     // - the user clicks anywhere outside of the dialog box
-//     // - the logo is clicked
-//     // - the window size is resized
-//     modal.addEventListener( 'click', closeModal );
-//     logo.addEventListener( 'click', closeModal );
-//     window.addEventListener( 'resize', closeModal );
-//   });
-//
-//   function toggleModal() {
-//     document.body.classList.toggle( "modal-open" );
-//   }
-//   function closeModal() {
-//     document.body.classList.remove( "modal-open" );
-//   }
-// })();
