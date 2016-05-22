@@ -60,3 +60,6 @@ gems:
   - jekyll-gist
   # - jekyll-redirect-from
 # The jekyll-redirect-from gem allows URL Redirects: https://help.github.com/articles/redirects-on-github-pages
+
+# Helpers
+empty_array: []

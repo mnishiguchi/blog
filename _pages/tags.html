@@ -6,27 +6,64 @@ permalink: /tags
 
 {% comment %}
 <!--
+Sort by name
 - Create an empty array.
 - Obtain a tag name and push it to the array.
-- Sort the tag names.
-- List tags as a tag cloud.
+- Sort the array (by tag names).
 -->
 {% endcomment %}
 
-{% assign tag_names = "" | split: "|"  %}
+{% assign sorted_by_name = "" | split: "|" %}
 
 {% for posts_by_tag in site.tags %}
-  {% assign tag_names = tag_names | push: posts_by_tag.first %}
+  {% assign sorted_by_name = sorted_by_name | push: posts_by_tag.first %}
 {% endfor %}
 
-{% assign tag_names = tag_names | sort %}
+{% assign sorted_by_name = sorted_by_name | sort %}
 
-{% include tag_cloud.html tag_names=tag_names %}
+{% comment %}
+<!--
+Sort by count
+- Create an empty array.
+- For each tag
+  - Obtain a tag name and tag count.
+  - Format the tag in "1003#name(3)".
+  - Push the tag to the array.
+- Sort the array (effectively by tag count).
+- Reverse the array and remove the prefix from each element.
+-->
+{% endcomment %}
+
+{% assign sorted_by_count = "" | split: "|" %}
+
+{% for posts_by_tag in site.tags %}
+  {% assign tag    = posts_by_tag.first %}
+  {% assign count  = site.tags[tag].size %}
+  {% assign prefix = count | plus: 1000 %}
+  {% assign tag = tag | prepend: '#' | prepend: prefix %}
+  {% assign tag = tag | append: '(' | append: count | append: ')' %}
+  {% assign sorted_by_count = sorted_by_count | push: tag %}
+{% endfor %}
+
+{% assign sorted_by_count = sorted_by_count | sort %}
+
+{% assign tmp_array = "" | split: "|" %}
+{% for prefixed_tag in sorted_by_count reversed %}
+  {% capture tag_with_count %}
+    {{ prefixed_tag | slice: 5, 100 }}
+  {% endcapture %}
+
+  {% assign tmp_array = tmp_array | push: tag_with_count %}
+{% endfor %}
+
+{% assign sorted_by_count = tmp_array %}
+
+{% include tag_cloud.html tag_names=sorted_by_count %}
 
 <hr>
 
 <section class="posts-by-tags">
-  {% for tag_name in tag_names %}
+  {% for tag_name in sorted_by_name %}
     <div>
       <h3 id="{{ tag_name }}">
         {{ tag_name | upcase | replace: "_", " " }}
