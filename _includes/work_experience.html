@@ -1,8 +1,7 @@
-<h2 class="h1">WORK EXPERIENCE</h2>
+<h2 class="h1">Work experience</h2>
 
 <div class="timeline">
-
-  {% for job in site.data.timeline %}
+  {% for job in site.data.work_experience %}
   <div class="job">
     <h4 class="job-heading">
       <span class="position">
@@ -19,7 +18,7 @@
     </h4>
 
     <p class="description">
-      {{ job.description }}
+      {{ job.description | markdownify }}
     </p>
   </div>
   {% endfor %}

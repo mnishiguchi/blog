@@ -1,0 +1,13 @@
+<div class="timeline">
+  {% for item in site.data.history %}
+  <div class="history-item">
+    <h2 class="history-item-heading">
+      {{ item.title }}
+    </h2>
+
+    <p class="description">
+      {{ item.description | markdownify }}
+    </p>
+  </div>
+  {% endfor %}
+</div>

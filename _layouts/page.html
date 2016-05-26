@@ -8,8 +8,8 @@ layout: default
 
 {% if page.url == "/" and site.related_posts != empty %}
   <!--Displayed only for the Home page-->
-  <aside class="related">  
-    <h2 class="related-heading">Recent posts</h2>
+  <aside class="related">
+    <h2 class="h1 related-heading">Recent posts</h2>
     {% include related_posts.html posts=site.related_posts limit=6 %}
   </aside>
 {% endif %}
