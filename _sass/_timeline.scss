@@ -1,0 +1,47 @@
+// Timeline layout for the About page.
+.timeline {
+  position: relative;
+  margin-top: 1rem;
+  .job {
+    padding: 1.5rem;
+    border: 3px solid $gray_2;
+    border-radius: 6px;
+  }
+  .job-heading {
+    margin: 0;
+    padding: 0;
+  }
+  .position {
+    @extend .h2;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+  .company {
+    @extend .h3;
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    font-weight:normal;
+  }
+  .duration {
+    display: block;
+    font-size: .8rem;
+    float: right;
+  }
+  .descripton {
+    margin-top: 1.5rem;
+  }
+  @media only screen and (min-width : 768px) {
+    .position {
+
+    }
+    .company {
+      display: inline-block;
+    }
+    .duration {
+      display: inline-block;
+    }
+  }
+}

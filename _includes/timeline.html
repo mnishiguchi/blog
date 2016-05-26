@@ -1,0 +1,26 @@
+<h2 class="h1">WORK EXPERIENCE</h2>
+
+<div class="timeline">
+
+  {% for job in site.data.timeline %}
+  <div class="job">
+    <h4 class="job-heading">
+      <span class="position">
+        {{ job.position }}
+      </span>
+      <span class="company">
+        <a href="{{ job.company_url | prepend: baseurl }}">
+          {{ job.company_name }}
+        </a>
+      </span>
+      <span class="duration">
+        <span><em>{{ job.duration }}</em></span>
+      </span>
+    </h4>
+
+    <p class="description">
+      {{ job.description }}
+    </p>
+  </div>
+  {% endfor %}
+</div>
