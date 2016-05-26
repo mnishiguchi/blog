@@ -10,4 +10,4 @@ linguistics, counseling, customer service, engineering sales, etc
 so that I will become a resourceful and unique developer.
 </section>
 
-{% include history.html %}
+{% include timeline.html %}

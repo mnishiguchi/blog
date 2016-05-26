@@ -1,48 +1,96 @@
-// Timeline layout for the About page.
-.timeline {
-  position: relative;
-  .job {
-    margin-top: 1rem;
-    padding: 1.5rem;
-    border: 3px solid $gray_2;
-    border-radius: 6px;
-  }
-  .job-heading {
-    margin: 0;
-    padding: 0;
-  }
-  .position {
-    @extend .h2;
-    display: block;
-    margin: 0;
-    padding: 0;
-  }
-  .company {
-    @extend .h3;
-    display: block;
-    margin: 0;
-    padding: 0;
-    font-style: italic;
-    font-weight:normal;
-  }
-  .duration {
-    display: block;
-    font-size: .9rem;
-    color: $gray_3;
-  }
-  .descripton {
-    margin-top: 1.5rem;
-  }
-  @media only screen and (min-width : 768px) {
-    .position {
+// The timeline in the About page.
+// Adopted from an article on CodyHouse (http://codyhouse.co/?p=169)
 
-    }
-    .company {
-      display: inline-block;
-    }
-    .duration {
-      display: inline-block;
-      float: right;
-    }
+#timeline {
+  position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  &::before {
+    // The vertical line.
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 18px;
+    height: 100%;
+    width: 4px;
+    background: lighten($link-color, 30%);
+  }
+}
+
+.timeline-block {
+  position: relative;
+  margin: 2em 0;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.timeline-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background: #56C687;
+  padding: .3rem;
+  // box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-content {
+  position: relative;
+  margin-left: 60px;
+  background: white;
+  border-radius: 0.25em;
+  padding: 1rem;
+  box-shadow: 0 3px 0 #d7e4ed;
+  h2 {
+    margin: 0;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  p,
+  li,
+  .read-more,
+  .duration {
+    font-size: 0.9rem;
+  }
+  p {
+    margin: 1rem 0;
+    line-height: 1.6;
+  }
+  // .read-more {
+  //   float: right;
+  //   padding: .6em 1rem;
+  //   background: $blue-darker;
+  //   color: white;
+  // }
+  // .read-more:hover {
+  //   background-color: #bac4cb;
+  // }
+  .duration {
+    float: left;
+    // padding: .8em 0;
+    opacity: .7;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    right: 100%;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-right: 7px solid white;
   }
 }

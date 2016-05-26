@@ -11,48 +11,54 @@ This is my memo on *{{ page.title }}*.
 
 <!--more-->
 
-
-## 1. Before getting started
+#### 1. Before getting started
 ```bash
 $ ruby -v       # Ensure that Ruby is installed.
 $ rails -v      # Ensure that Rails is installed.
 $ git --version # Ensure that git is installed.
 ```
 
-## 2. Generate a new app (with PostgreSQL)
+#### 2. Generate a new app (with PostgreSQL)
 ```bash
 $ cd ~/workspace
-$ rails _4.2.0_ new <app_name> -d postgresql
+$ rails new <app_name> -d postgresql
 # If the command above returns an error like “Could not find ’railties”’, it
 # means you don’t have the right version of Rails installed.
 $ cd <app_name>
 ```
 
-## 3. In Gemfile, specify the gems needed by the app
+In case tha we need to specify a specific version of Rails
+
+```
+$ rails _4.2.0_ new <app_name> -d postgresql
+```
+
+#### 3. In Gemfile, specify the gems needed by the app
 - Include 'pg' gem.
 
-## 4. Install the gems using Bundler
+#### 4. Install the gems using Bundler
 ```bash
 $ bundle install --without production
 $ bundle update
 ```
 
-## 5. Set config/database.yml (if needed)
+#### 5. Set config/database.yml (if needed)
 - Username: By default, the same as your OS X user account.
 
-## 6. Create the database
+#### 6. Create the database
 - `$ [bundle exec] rake db:create`
 
-## 7. Check if it works on local server
+#### 7. Check if it works on local server
 - `$ rails server`
 - Visit [http://localhost:3000/](http://localhost:3000/)
 
-## 8. Hello world test
+#### 8. Create a static pages (such as home, about, etc)
 
-## 9. Initialze a git repo (local and remote)
+#### 9. Initialze a git repo (local and remote)
 
-## 10. [Check if it works on Heroku]({{ site.baseurl }}/2016/05/13/deploying-rails-app-to-heroku)
+#### 10. [Deploy it to Heroku]({{ site.baseurl }}/2016/05/13/deploying-rails-app-to-heroku)
 
+--
 
 ## Misc techniques
 

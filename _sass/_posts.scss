@@ -29,6 +29,7 @@
   }
 }
 
+
 /**
  *  Blog post or page title
  */
@@ -41,6 +42,7 @@
 .post-title {
   margin-top: 0;
 }
+
 
 /**
  *  Meta data line below post title
@@ -93,7 +95,7 @@
   //   padding: 0;
   //   list-style: none;
   //   li >a {
-  //     line-height: inherit;;
+  //     line-height: inherit;
   //   }
   // }
  }
@@ -129,4 +131,53 @@
   margin-top: 2rem;
   padding-top: 2rem;
   border-top: 1px solid #eee;
+}
+
+
+/**
+ *  Work experience for the Home page.
+ */
+.work-experience {
+  position: relative;
+  .job {
+    margin-top: 1rem;
+    padding: 1.0rem;
+    border: 1px solid $gray_2;
+    border-radius: 6px;
+  }
+  .job-heading {
+    margin-top: 0;
+    .position {
+      @extend .h2;
+      display: block;
+      margin-top: 0;
+      line-height: 1;
+    }
+    .company {
+      @extend .h3;
+      display: block;
+      margin: 0;
+      font-style: italic;
+      font-weight:normal;
+      line-height: 1.4;
+      @media only screen and (min-width : 768px) {
+            display: inline-block;
+      }
+    }
+    .duration {
+      display: block;
+      margin: 0;
+      font-size: .9rem;
+      color: $gray_3;
+      line-height: 1.4;
+      @media only screen and (min-width : 768px) {
+        display: inline-block;
+        float: right;
+      }
+    }
+  }
+  .description {
+    margin-top: 1rem;
+    line-height: 1.2;
+  }
 }

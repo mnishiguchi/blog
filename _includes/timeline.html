@@ -1,0 +1,18 @@
+<section id="timeline" class="cd-container">
+{% for item in site.data.history reversed %}
+  <div class="timeline-block">
+    {% if item.year_tag %}
+      <div class="timeline-tag">
+      {{ item.year_tag }}
+      </div>
+    {% endif %}
+
+    <div class="timeline-content">
+      <h2>{{ item.title }}</h2>
+      <p>{{ item.description | markdownify }}</p>
+      <!-- <a href="#0" class="read-more">Read more</a> -->
+      <span class="duration">{{ item.duration }}</span>
+    </div>
+  </div>
+{% endfor %}
+</section>

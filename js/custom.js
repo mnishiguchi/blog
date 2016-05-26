@@ -10,6 +10,7 @@ function mobilecheck() {
   return check;
 }
 
+
 /**
  * Initialize sidebar toggle.
  */
@@ -85,61 +86,11 @@ document.addEventListener("DOMContentLoaded", function() {
   document.addEventListener( "DOMContentLoaded", function() {
     window.addEventListener( 'scroll', initStickyDiv );
     initStickyDiv();
+
+    // https://github.com/cferdinandi/smooth-scroll
+    smoothScroll.init({
+        speed: 200, // Integer. How fast to complete the scroll in milliseconds
+        easing: 'easeOutCubic' // Easing pattern to use
+    });
   });
-
-  // https://github.com/cferdinandi/smooth-scroll
-  smoothScroll.init();
 })();
-
-// function initStickyDiv() {
-//   var window_top = $( window ).scrollTop();
-//   var div_top = $( '#sticky-anchor' ).offset().top;
-//   if (window_top > div_top) {
-//     $( '#sticky' ).addClass( 'stick' );
-//     $( '#sticky-anchor' ).height($( '#sticky' ).outerHeight());
-//     $( "#rotating-icon" ).addClass( "up" );
-//   } else {
-//     $( '#sticky' ).removeClass( 'stick' );
-//     $( '#sticky-anchor' ).height( 0 );
-//     $( "#rotating-icon" ).removeClass( "up" );
-//   }
-// }
-// $(document).ready( function() {
-//   $( window ).scroll( initStickyDiv );
-//   initStickyDiv();
-// });
-
-// /**
-//  * Smooth page scroll on click.
-//  * - Dependency: jQuery and jQuery easing
-//  */
-// (function() {
-//   var anchorHeight = 40; // Adjust this according to the anchor div's height.
-//
-//   function distanceFromDisplayTop( $element ) {
-//     return $element.offset().top - $( window ).scrollTop();
-//   }
-//   function scrollDownTo( $anchor ) {
-//     $( "#rotating-icon" ).addClass( "up" );
-//
-//     $( 'html, body' ).stop().animate({
-//         scrollTop: ( $( $anchor.attr( 'href' ) ).offset().top - anchorHeight )
-//     }, 500, 'easeInOutExpo');
-//     event.preventDefault();
-//   }
-//   function scrollUpToTop() {
-//     $( "#rotating-icon" ).removeClass( "up" );
-//
-//     $( 'html, body' ).stop().animate({
-//         scrollTop: 0
-//     }, 500, 'easeInOutExpo');
-//     event.preventDefault();
-//   }
-//
-//   // Setup a click listener to trigger automatic scroll animation.
-//   $( '.page-scroll' ).bind( 'click', function( event ) {
-//     var $anchor  = $( this );
-//     // console.debug( distanceFromDisplayTop( $anchor ) );
-//     distanceFromDisplayTop( $anchor ) > 10 ? scrollDownTo( $anchor ) : scrollUpToTop() ;
-//   });
-// })();

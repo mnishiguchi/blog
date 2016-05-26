@@ -1,5 +1,6 @@
 - title:        Linguistics
-  duration:     xxx
+  year_tag:     2000
+  duration:     1996 - 2000
   description:  |
     At [Aichi Shukutoku University](http://www.aasa.ac.jp/) in Japan, I majored in Linguistics, with a specialization in Syntax.
 
@@ -12,7 +13,8 @@
     computer languages.
 
 - title:        Counseling
-  duration:     xxx
+  year_tag:     2005
+  duration:     2003 - 2005
   description:  |
     At [Waikato Institute of Technology](http://www.wintec.ac.nz/) in New Zealand, I obtained a certificate in Counseling.
     As part of my Counseling major, I assisted young people experiencing
@@ -24,7 +26,8 @@
     working with the clients to deliver a quality and meaningful product.
 
 - title:        Sales and engineering
-  duration:     xxx
+  year_tag:     2011
+  duration:     2006 - 2011
   description:  |
     Because of my desire to use my counseling skills to work in sales and
     my burgeoning interest in technology, I sought and landed a job as a
@@ -34,8 +37,17 @@
     but also some insight into mechanical and software engineering through
     working with clients and in-house engineers.
 
-- title:        Self-Directed Coding
-  duration:     xxx
+- title:        Customer service coordinator
+  year_tag:     2013
+  duration:     2011 - 2013
+  description:  |
+    I moved to the United States and started working for the Washington, DC office of
+    Japan's largest export-import company, Nippon Express. I was in charge of
+    coordinating transporting household goods between Washington and Japan.
+
+- title:        Self-directed Coding
+  year_tag:
+  duration:     2013 - 2014
   description:  |
     Shortly after moving to the United States, I met a professional programmer
     at a rock climbing gym. His passion for coding inspired me to research the
@@ -49,16 +61,14 @@
 
     Early on, Harvard's CS50 and Codeacademy helped me absorb basic concepts of programming and computer science. I was able to gain understanding of how computer software works, insight into data structures and basic knowledge of several programming languages (C, HTML, CSS, JavaScript, SQL, PHP, Ruby, Python, etc)
 
-- title:        Certifications
-  duration:     xxx
-  description:  |
     - [Web Application Architectures - University of New Mexico]({{ site.data.pdfs.certificates.web_apps }})
     - [6.00.1x: Introduction to Computer Science and Programming Using Python - MIT]({{ site.data.pdfs.certificates.python }})
     - [COMP102x: Introduction to Computing with Java - HKUST]({{ site.data.pdfs.certificates.java }})
     - [Introduction to Linux - Linux Foundation]({{ site.data.pdfs.certificates.linux }})
 
 - title:        Mobile development (Android)
-  duration:     xxx
+  year_tag:     2014
+  duration:     2014
   description:  |
     When I became comfortable with problem solving in coding, I started to want to
     create something concrete using my programming skills, and I decided to learn
@@ -71,8 +81,15 @@
 
     - [Moving Estimator (Android)](https://play.google.com/store/apps/details?id=com.mnishiguchi.android.movingestimator)
 
+- title:        Web development
+  year_tag:     2015
+  duration:     2015
+  description:  |
+    When I was itching to create a larger scale web application, I came across this web developing tutorial, [Ruby on Rails Tutorial by Michael Hartl](https://www.railstutorial.org/). It taught me how to build web applications as well as Unix command-line and other development tools. Ever since I am passionate about improving web application development skills. By following Rails philosophy and conventions, I was able to absorb key elements of web development rapidly. I managed to built a web service, [Moving Estimator (Web)](https://moving-estimator.herokuapp.com/).
+
 - title:        Associate of Computer Science
-  duration:     xxx
+  year_tag:
+  duration:     2014 - 2016
   description:  |
     Without hesitation, I enrolled in a Computer Science program at [University of the District of Columbia](http://www.udc.edu/) to complement my self-directed learning. I was able to fortify my programming skills with better understanding of operating systems and data structures through intense programming trainings for C++ and Java.
     I also developed basic web design and graphic designing skills using Photoshop, Illustrator and InDesign.
@@ -83,9 +100,16 @@
     - Web Design (Professor: [Rachid Mrad](http://rachidmrad.com/))
     - Digital Applications / Desktop Publishing
 
-- title:        Web development
-  duration:     xxx
+- title:        Freelance
+  year_tag:     2016
+  duration:     2016
   description:  |
-    When I was itching to create a larger scale web application, I came across this web developing tutorial, [Ruby on Rails Tutorial by Michael Hartl](https://www.railstutorial.org/). It taught me how to build web applications as well as Unix command-line and other development tools. Ever since I am passionate about improving web application development skills. By following Rails philosophy and conventions, I was able to absorb key elements of web development rapidly. I managed to built a web service, [Moving Estimator (Web)](https://moving-estimator.herokuapp.com/).
+    I designed a WordPress theme and set it up on the server for a client. I also
+    assisted in the development of American Petroleum Institute's website,
+    particularly proofread and correcting broken user-interface components.
 
-    Now I am ambitious to expand my field of expertise towards modern web applications using Angular and React.
+- title:        Web development immersive
+  year_tag:     Now
+  duration:     current
+  description:  |
+    Now that I have acquired basic web development skills, I am ambitious to expand my field of expertise towards modern web application development using Javascript frameworks such as Angular and React. I am currently putting together all I know and fine-tuning my skill-sets so that I will be ready for contributing to the tech communities.

@@ -15,16 +15,16 @@ main {
 
 // NOTE: .container is used in multiple places.
 .container {
-  max-width: 38rem;
-  padding-left:  1.5rem;
-  padding-right: 1.5rem;
+  max-width: 43rem;
+  padding-left:  1.0rem;
+  padding-right: 1.0rem;
   margin-left:  auto;
   margin-right: auto;
-  // This is specially for contents.
-  &.content-wrapper {
-    margin-bottom: 4em;
-    min-height: 500px;
-  }
+  // // This is specially for contents.
+  // &.content-wrapper {
+  //   margin-bottom: 4em;
+  //   min-height: 500px;
+  // }
 }
 
 // A panel with an introduction text.

@@ -1,16 +1,16 @@
-- title:        American Petroleum Institute (API)
-  position:             Assistant web developer (Temporary)
-  company_name:         American Petroleum Institute (API)
-  company_url:          http://www.api.org/
-  duration:             March 2016 - April 2016
+- title:         American Petroleum Institute (API)
+  position:      Assistant web developer (Temporary)
+  company_name:  American Petroleum Institute (API)
+  company_url:   http://www.api.org/
+  duration:      March 2016 - April 2016
   description:  |
     I assisted the dev team in debugging HTML and CSS for each page of the organization's new website. I searched for invalid code and broken links that
     potentially existed in the project's code and resolved those issues appropriately.
     Also, I performed redirect mapping between the old site and the new site.
-- title:                Custom WordPress theme
-  position:             Freelance web designer
-  company_name:
-  company_url:          http://claramlovett.com
-  duration:             February 2016 - March 2016
+- title:         Custom WordPress theme
+  position:      Freelance web developer
+  company_name:  Freelance
+  company_url:   http://claramlovett.com
+  duration:      February 2016 - March 2016
   description:  |
     I created a custom WordPress theme for [http://claramlovett.com](http://claramlovett.com). I designed a child theme based on the Twenty-sixteen theme in order to suit my client's needs.

@@ -12,7 +12,8 @@ body {
   position: relative;
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: auto;
+  overflow: visible;
 }
 
 html {
