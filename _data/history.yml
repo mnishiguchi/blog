@@ -61,10 +61,10 @@
 
     Early on, Harvard's CS50 and Codeacademy helped me absorb basic concepts of programming and computer science. I was able to gain understanding of how computer software works, insight into data structures and basic knowledge of several programming languages (C, HTML, CSS, JavaScript, SQL, PHP, Ruby, Python, etc)
 
-    - [Web Application Architectures - University of New Mexico]({{ site.data.pdfs.certificates.web_apps }})
-    - [6.00.1x: Introduction to Computer Science and Programming Using Python - MIT]({{ site.data.pdfs.certificates.python }})
-    - [COMP102x: Introduction to Computing with Java - HKUST]({{ site.data.pdfs.certificates.java }})
-    - [Introduction to Linux - Linux Foundation]({{ site.data.pdfs.certificates.linux }})
+    - [Web Application Architectures - University of New Mexico](https://github.com/mnishiguchi/mnishiguchi.github.io/blob/master/documents/certificate_web_applications.pdf)
+    - [6.00.1x: Introduction to Computer Science and Programming Using Python - MIT](https://github.com/mnishiguchi/mnishiguchi.github.io/blob/master/documents/certificate_python.pdf)
+    - [COMP102x: Introduction to Computing with Java - HKUST](https://github.com/mnishiguchi/mnishiguchi.github.io/blob/master/documents/certificate_java.pdf)
+    - [Introduction to Linux - Linux Foundation](https://github.com/mnishiguchi/mnishiguchi.github.io/blob/master/documents/certificate_linux.pdf)
 
 - title:        Mobile development (Android)
   year_tag:     2014

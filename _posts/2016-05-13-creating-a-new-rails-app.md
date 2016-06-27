@@ -22,19 +22,20 @@ $ git --version # Ensure that git is installed.
 ```bash
 $ cd ~/workspace
 $ rails new <app_name> -d postgresql
-# If the command above returns an error like “Could not find ’railties”’, it
-# means you don’t have the right version of Rails installed.
 $ cd <app_name>
 ```
 
-In case tha we need to specify a specific version of Rails
+NOTE: If the `rails new` command returns an error like “Could not find ’railties”’, it
+means you don’t have the right version of Rails installed.
+
+In case that we need to specify a specific version of Rails
 
 ```
 $ rails _4.2.0_ new <app_name> -d postgresql
 ```
 
 #### 3. In Gemfile, specify the gems needed by the app
-- Include 'pg' gem.
+- Include `pg` gem for PostgreSQL.
 
 #### 4. Install the gems using Bundler
 ```bash
@@ -58,7 +59,7 @@ $ bundle update
 
 #### 10. [Deploy it to Heroku]({{ site.baseurl }}/2016/05/13/deploying-rails-app-to-heroku)
 
---
+---
 
 ## Misc techniques
 
