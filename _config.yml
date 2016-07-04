@@ -30,7 +30,8 @@ navigation_items:
   Home:     '/'         # /index.html
   About:    '/about'    # /about.html
   Blog:     '/blog/'    # /blog/index.html
-  Projects: '/projects' # /project.html
+  Projects: '/projects' # /projects.html
+  Resume:   '/resume'   # /resume.html
   # Archive:  '/archive'
 
 # Pagination

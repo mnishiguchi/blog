@@ -19,12 +19,14 @@ title: Blog
           {% include post_tags.html %}
         </span>
 
-        <p>
+{% comment %}
+        <!-- <p>
           {{ post.excerpt | strip_html | append: "..." }}
           {% if post.excerpt != post.content %}
             <a href="{{ post.url | prepend: site.baseurl }}"> >></a>
           {% endif %}
-        </p>
+        </p> -->
+{% endcomment %}
 
       </article>
       <hr>

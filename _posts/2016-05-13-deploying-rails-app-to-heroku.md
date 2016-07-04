@@ -39,7 +39,7 @@ $ heroku create
 
 ```bash
 # Prepare the assets for production.
-$ bundle exec rake tmp:cache:clear 
+$ bundle exec rake tmp:cache:clear
 $ RAILS_ENV=production bundle exec rake assets:precompile
 
 # Make sure nothing is broken.
@@ -112,6 +112,15 @@ $ heroku create sample_app
 $ git push heroku -u master
 ```
 
+## [Push to a specific app at Heroku](https://devcenter.heroku.com/articles/git)
+```bash
+$ heroku git:remote -a falling-wind-1624
+```
+
+## Remove build pack
+```bash
+$ heroku config:unset BUILDPACK_URL
+```
 
 ## Troubleshooting
 - [Heroku Troubleshooting]({{ site.baseurl }}/2016/05/13/heroku-troubleshooting/)

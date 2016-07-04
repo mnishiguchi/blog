@@ -20,11 +20,24 @@ Add `remote: true` option to `form_for` method then Rails automagically uses Aja
 
 `app/views/household_items/index.html.slim`
 
+using `form_tag`
+
 ```slim
 ...
-= form_tag(moving_household_items_path, method: :get, remote: true) do
-  = hidden_field_tag :filter, tag.name
-  = submit_tag tag.name.capitalize, name: nil
+- moving.tags.each do |tag|
+  = form_tag(moving_household_items_path, method: :get, remote: true) do
+    = hidden_field_tag :filter, tag.name
+    = submit_tag tag.name.capitalize, name: nil
+...
+```
+
+or using `link_to`
+
+```slim
+...
+- moving.tags.each do |tag|
+  = link_to tag.name, moving_household_items_path(filter: tag.name), 
+    method: :get, remote: true, class: "btn btn-xs btn-info" 
 ...
 ```
 

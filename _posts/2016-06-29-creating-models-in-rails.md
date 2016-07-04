@@ -4,8 +4,9 @@ title: Creating models in Rails
 comments: true
 tags:
 - rails
-- postgreSQL
+- postgresql
 - active_record
+- database
 
 ---
 

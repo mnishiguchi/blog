@@ -4,7 +4,8 @@ title: Search form using pg_search gem
 comments: true
 tags:
 - rails
-- postgreSQL
+- postgresql
+- database
 
 ---
 

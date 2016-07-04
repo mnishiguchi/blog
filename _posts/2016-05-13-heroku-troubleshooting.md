@@ -7,22 +7,66 @@ tags:
 - rails
 ---
 
-This is my memo on *{{ page.title }}*.
+Everytime I get an error from Heroku, it is typically time-consuming to troubleshoot without any resources at hand.
+So I decide to write up my past Heroku troubleshooting experiences for my future self.
 
 <!--more-->
 
-## Troubleshooting
+## Before starting
+- Relax, do not panic
+- Read error messages thoroughly
+- What changes did you make since there was no error.
 
-### Diagnose problems at Heroku
+## Diagnosing errors at Heroku
 - `$ heroku logs`
 - `$ heroku run rails console`
 - `$ heroku run console --sandbox`
 
-### Heroku deployment error H10 (App crashed)
+## Some possible causes
+- Some code got broken when refactoring.
+- ActiveRecord associations are not properly handled.
+- The database schema is not updated.
+- Ruby version changed
+- `vendor/cache`
+- Gem that heroku requires (pg)
+- Heroku configuration (buildpacks, etc)
+
+## Troubleshooting I did in the past
+
+### Error: Some gems seem to be missing from your vendor/cache directory
+
+```bash
+$ git rm -rf vendor/cache
+$ git add ...
+$ git commit ...
+$ git push heroku master
+```
+
+### Error: failed to push some refs to 'https://git.heroku.com/my-app.git'
+
+Read the error message throughly. Often there is a clue in messages.
+
+Missing files
+
+- Check if you accidentally delete directories in such as `config`, `public`.
+- Check `.gitignore` for untracked files.
+
+Missing gems
+
+```bash
+$ git rm Gemfile.lock
+$ bundle install
+$ git add ...
+$ git commit ...
+$ git push heroku master
+```
+
+### Error: Heroku deployment error H10 (App crashed)
 - Didn’t you modify db or something?
 - Most likely something is broken in your code (association etc).
 
 ### Check if the production database is up-to-date
+
 ```bash
 $ git push heroku master     # Push up to Heroku repo
 $ heroku pg:reset DATABASE   # reset the production database
@@ -40,13 +84,6 @@ $ git remote rm heroku
 $ git remote add heroku git@heroku.com:APP_NAME.git
 ```
 
-### Heroku push rejected, failed to compile Ruby/rails app
-- Remove the `Gemfile.lock` file
-- Run `bundle install`
-- Run `git add`, `git commit` and `git push`
-
-![]({{ site.baseurl }}/images/20160513_heroku_error_fails_to_push_some_refs.png)
-
 ### js files not loading in production but working well locally
 - Require all the necessary script files in `app/assets/javascripts/application.js`
 - Precompile the assets for production
@@ -55,12 +92,6 @@ $ git remote add heroku git@heroku.com:APP_NAME.git
 # Precompile the assets for production
 $ RAILS_ENV=production bundle exec rake assets:precompile
 # Note: If Devise.secret_key is not set, add one to your Devise initializer
-```
-
-### [Claer the asset pipeline cache](https://github.com/browserify-rails/browserify-rails#clear-the-asset-pipeline-cache)
-
-```bash
-$ rake tmp:cache:clear
 ```
 
 ### [Check Heroku-supported Ruby/Rails versions](https://devcenter.heroku.com/articles/ruby-support#ruby-versions)
@@ -87,24 +118,23 @@ $ heroku config:set S3_SECRET_KEY=<secret key>
 $ heroku config:set S3_BUCKET=<bucket name>
 ```
 
-### [Push to a specific app at Heroku](https://devcenter.heroku.com/articles/git)
+### Destroy the Heroku app and re-create it
+
 ```bash
-$ heroku git:remote -a falling-wind-1624
+$ heroku apps:destroy --app my-app
+$ heroku create my-app
+$ git push heroku -u master
 ```
 
-### Remove build pack
+### [Claer the asset pipeline cache](https://github.com/browserify-rails/browserify-rails#clear-the-asset-pipeline-cache)
+
 ```bash
-$ heroku config:unset BUILDPACK_URL
+$ rake tmp:cache:clear
 ```
 
-### [Heroku deploy fails ‘Some gems seem to be missing from your vendor/cache directory’]()
-```bash
-$ rm -rf vendor/cache
-```
-
-### Heroku push error: “NameError: uninitialized constant Uglifier::VERSION” on rake assets:precompile
-- Update `uglifier` gem’s version
+---
 
 ## Reference
 - [RUBY ON RAILS TUTORIAL (3ND ED.)](https://www.railstutorial.org/book/beginning#sec-deploying)
 - [Deploying with Git](https://devcenter.heroku.com/articles/git)
+- [Heroku - メモ](http://qiita.com/mnishiguchi/items/6045add62ff7fd8928bc)

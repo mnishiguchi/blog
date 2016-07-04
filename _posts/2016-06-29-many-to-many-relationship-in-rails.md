@@ -4,8 +4,9 @@ title: Many-to-many relationship in Rails
 comments: true
 tags:
 - rails
-- postgreSQL
+- postgresql
 - active_record
+- database
 
 ---
 
