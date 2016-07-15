@@ -1,32 +1,74 @@
-- title:        American Petroleum Institute (API)
-  url:          http://www.api.org/
+- title:        Estimate Moving (Ruby on Rails)
+  url:          https://estimate-moving.herokuapp.com/
+  date:         2016
+  description:  |
+    A web application that calculates total volume of your household items.
+
+    [[Demo](https://estimate-moving.herokuapp.com/)]
+    [[Github](https://github.com/mnishiguchi/estimate_moving)]
+
+- title:        React vs Rails experiment (Ruby on Rails, React)
+  url:          http://react-vs-rails.herokuapp.com/
+  date:         2016
+  description:  |
+    A sandbox where I learned how to implement React & Rails integration using
+    `react_on_rails gem`.
+
+    [[Demo](http://react-vs-rails.herokuapp.com)]
+    [[Github](https://github.com/mnishiguchi/react_vs_rails)]
+
+- title:        Memory Game (React, ES6)
+  url:          http://mnishiguchi.com/react_concentration/
   date:
   description:  |
-    I assisted the dev team in debugging HTML and CSS for each page of the organization's new website. I searched for invalid code and broken links that
-    potentially existed in the project's code and resolved those issues appropriately.
-    Also, I performed redirect mapping between the old site and the new site.
+    A memory game that is implemented with React.js.
+
+    [[Demo](http://mnishiguchi.com/react_concentration/)]
+    [[Github](https://github.com/mnishiguchi/react_concentration)]
+
+- title:        Spotify search (Angular1.5)
+  url:          http://ng6_spotify_search.surge.sh/
+  date:
+  description:  |
+    A Spotify search app built with Angular.js.
+
+    [[Demo](http://ng6_spotify_search.surge.sh/)]
+    [[Github](https://github.com/mnishiguchi/ng6_spotify_search)]
+
+- title:        Portfolio theme (Angular1.5)
+  url:          http://mnishiguchi.com/mnishiguchi_2015/
+  date:
+  description:  |
+    A custom portfolio theme build with Angular.js.
+
+    [[Demo](http://mnishiguchi.com/mnishiguchi_2015/)]
+    [[Github](https://github.com/mnishiguchi/mnishiguchi_2015)]
 
 - title:        Moving estimator (Android)
   url:          https://play.google.com/store/apps/details?id=com.mnishiguchi.android.movingestimator
-  date:
+  date:         2014
   description:  |
     Once upon a time I was working for an international transportation company.
     I created this application for movers to estimate the total volume
     of their clients.
 
-- title:        Moving estimator (Web)
-  url:          https://moving-estimator.herokuapp.com/
-  date:
-  description:  |
-    This is a public web service with which you can create a house move
-    project and estimate the volumes for each category or room.
-    It will help you discuss your moving with your movers.
+    [[Google Play](https://play.google.com/store/apps/details?id=com.mnishiguchi.android.movingestimator)]
+    [[Github](https://github.com/mnishiguchi/MovingEstimator)]
 
-- title:        Custom WordPress theme
-  url:          http://claramlovett.com
-  date:
+- title:        Jekyll blog theme
+  url:          https://github.com/mnishiguchi/blog
+  date:         2016
   description:  |
-    I had this wonderful opportunity to create a custom WordPress theme for  [http://claramlovett.com](http://claramlovett.com). I designed a child theme based on the Twenty-sixteen theme in order to suit my client's needs.
+    This very website you are viewing right now is actually one of the most important project I have ever done before. Here I tinkered with new CSS/JS techniques to enhance user experience. I got a lot of inspiration from [Mr. Rachid Mrad](http://rachidmrad.com), my web design mentor.
+
+    [[Demo](http://www.mnishiguchi.com)]
+    [[Github](https://github.com/mnishiguchi/blog)]
+
+- title:        WordPress blog theme
+  url:          http://claramlovett.com
+  date:         2016
+  description:  |
+    I had a wonderful opportunity to create a custom WordPress theme for  [http://claramlovett.com](http://claramlovett.com). I designed a child theme based on the Twenty-sixteen theme in order to suit my client's needs.
 
 - title:        My first open-source contribution
   url:          https://github.com/facebook/fixed-data-table/commits?author=mnishiguchi
@@ -38,16 +80,4 @@
     Awesome, they accepted it! This is my first contribution to
     a famous project.
 
-- title:        DCLearnJS
-  url:          https://github.com/jdax/dclearnjs
-  date:
-  description:  |
-    I belong to a few Meetup groups for networking with developers.
-    One is DCLearnJS where we learn JavaScript together.
-    I gave one presentation on ReactJS and contributed to improve its Github page.
-
-- title:        Custom blog theme for Jekyll
-  url:          https://github.com/mnishiguchi/blog
-  date:
-  description:  |
-    This very website you are viewing right now is actually one of the most important project I have ever done before. Here I tinkered with new CSS/JS techniques to enhance user experience. I got a lot of inspiration from [Mr. Rachid Mrad](http://rachidmrad.com), my web design mentor.
+    [[Github](https://github.com/facebook/fixed-data-table/commits?author=mnishiguchi)]

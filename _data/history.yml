@@ -61,10 +61,10 @@
 
     Early on, Harvard's CS50 and Codeacademy helped me absorb basic concepts of programming and computer science. I was able to gain understanding of how computer software works, insight into data structures and basic knowledge of several programming languages (C, HTML, CSS, JavaScript, SQL, PHP, Ruby, Python, etc)
 
-    - [Web Application Architectures - University of New Mexico](https://github.com/mnishiguchi/mnishiguchi.github.io/blob/master/documents/certificate_web_applications.pdf)
-    - [6.00.1x: Introduction to Computer Science and Programming Using Python - MIT](https://github.com/mnishiguchi/mnishiguchi.github.io/blob/master/documents/certificate_python.pdf)
-    - [COMP102x: Introduction to Computing with Java - HKUST](https://github.com/mnishiguchi/mnishiguchi.github.io/blob/master/documents/certificate_java.pdf)
-    - [Introduction to Linux - Linux Foundation](https://github.com/mnishiguchi/mnishiguchi.github.io/blob/master/documents/certificate_linux.pdf)
+    - [Web Application Architectures - University of New Mexico](http://mnishiguchi.com/documents/certificate_web_applications.pdf)
+    - [6.00.1x: Introduction to Computer Science and Programming Using Python - MIT](http://mnishiguchi.com/documents/certificate_python.pdf)
+    - [COMP102x: Introduction to Computing with Java - HKUST](http://mnishiguchi.com/documents/certificate_java.pdf)
+    - [Introduction to Linux - Linux Foundation](http://mnishiguchi.com/documents/certificate_linux.pdf)
 
 - title:        Mobile development (Android)
   year_tag:     2014
@@ -101,7 +101,7 @@
     - Digital Applications / Desktop Publishing
 
 - title:        Freelance
-  year_tag:     2016
+  year_tag:
   duration:     2016
   description:  |
     I designed a WordPress theme and set it up on the server for a client. I also
@@ -109,7 +109,11 @@
     particularly proofread and correcting broken user-interface components.
 
 - title:        Web development immersive
-  year_tag:     Now
-  duration:     current
+  year_tag:     2016
+  duration:     2016
   description:  |
-    Now that I have acquired basic web development skills, I am ambitious to expand my field of expertise towards modern web application development using Javascript frameworks such as Angular and React. I am currently putting together all I know and fine-tuning my skill-sets so that I will be ready for contributing to the tech communities.
+    I joined a bootcamp to expand my field of expertise towards modern web application development.
+    I fine-tuned all my skill-sets so that I will be ready for contributing to the tech communities.
+
+    I was trained in MVC frameworks, data modeling, test driven development, and agile methodologies.
+    Aso, I acquired industry common best practices in object oriented design and programming.
