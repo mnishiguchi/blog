@@ -5,34 +5,49 @@ title: Blog
 ---
 
 <div class="page-blog">
-  <div class="posts">
-    {% for post in paginator.posts %}
-      <article class="post">
-        <h2 class="post-title h3">
-          <a href="{{ post.url | prepend: site.baseurl }}">
-            {{ post.title }}
-          </a>
-        </h2>
+  <div class="posts" id="posts">
+    <input class="search" placeholder="Search" />
 
-        <span class="post-meta">
-          {% include post_date.html %}
-          {% include post_tags.html %}
-        </span>
+    <div class="list">
+      {% for post in site.posts %}
+        <article class="post">
+          <h2 class="post-title h3">
+            <a href="{{ post.url | prepend: site.baseurl }}">
+              {{ post.title }}
+            </a>
+          </h2>
+
+          <span class="post-meta">
+            {% include post_date.html %}
+            {% include post_tags.html %}
+          </span>
 
 {% comment %}
-        <!-- <p>
-          {{ post.excerpt | strip_html | append: "..." }}
-          {% if post.excerpt != post.content %}
-            <a href="{{ post.url | prepend: site.baseurl }}"> >></a>
-          {% endif %}
-        </p> -->
+          <!-- <p>
+            {{ post.excerpt | strip_html | append: "..." }}
+            {% if post.excerpt != post.content %}
+              <a href="{{ post.url | prepend: site.baseurl }}"> >></a>
+            {% endif %}
+          </p> -->
 {% endcomment %}
 
-      </article>
-      <hr>
-    {% endfor %}
+        </article>
+        <hr>
+      {% endfor %}
+    </div>
+
   </div>
 </div>
 
-{% include pagination.html %}
 {% include tag_cloud.html %}
+
+<script>
+// Initialize List.js when DOM is loaded.
+document.addEventListener("DOMContentLoaded", function() {
+  var options = {
+    valueNames: [ 'post-title', 'post-meta' ]
+  };
+
+  var userList = new List('posts', options);
+})
+</script>

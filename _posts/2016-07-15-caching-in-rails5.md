@@ -1,6 +1,6 @@
 ---
 layout: post
-title: caching in rails 5
+title: Caching in rails 5
 comments: true
 tags:
 - rails
@@ -8,9 +8,6 @@ tags:
 ---
 
 <!--more-->
-
-
-
 
 #### Enabling/disabling caching in development environment
 

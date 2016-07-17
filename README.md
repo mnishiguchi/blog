@@ -2,6 +2,8 @@
 
 Masatoshi Nishiguchi's blog built on [Poole](https://github.com/poole/poole).
 
+- No jQuery.
+
 ---
 
 ## Special thanks to the following
@@ -11,6 +13,10 @@ Masatoshi Nishiguchi's blog built on [Poole](https://github.com/poole/poole).
 - [SVG Drawing Animation](http://tympanus.net/codrops/?p=18012) [[License](http://tympanus.net/codrops/licensing/)]
 - [Animated Background Headers]( http://tympanus.net/Development/AnimatedHeaderBackgrounds/index.html) [[License](http://tympanus.net/codrops/licensing/)]
 - [Sticky div](https://jsfiddle.net/livibetter/HV9HM/)
+- [List.js](http://www.listjs.com/)
+- [smooth-scroll](https://github.com/cferdinandi/smooth-scroll)
+- [classie](https://github.com/desandro/classie)
+- [modernizr](https://modernizr.com/)
 - [Rachid Mrad](http://rachidmrad.com/) for teaching me web design
 
 ---
