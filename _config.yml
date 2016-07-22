@@ -31,6 +31,7 @@ navigation_items:
   About:    '/about'    # /about.html
   Blog:     '/blog/'    # /blog/index.html
   Projects: '/projects' # /projects.html
+  Talks:    '/talks'    # /talks.html
   # Resume:   '/resume'   # /resume.html
   # Archive:  '/archive'
 

@@ -9,7 +9,7 @@ permalink: /projects
   {% for project in site.data.projects %}
     <article class="post">
       <h2 class="post-title">
-        <a href="{{ post.url | prepend: project.url }}">
+        <a href="{{ project.url | prepend: site.baseurl }}">
           {{ project.title }}
         </a>
       </h2>

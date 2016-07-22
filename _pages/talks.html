@@ -1,0 +1,32 @@
+---
+layout: page
+title: Talks
+permalink: /talks
+# Specify the permalink because this file is not in the root.
+---
+
+<div class="posts">
+  {% for talk in site.data.talks %}
+    <article class="post">
+      <h2 class="post-title">
+        <a href="{{ talk.url | site.baseurl }}">
+          {{ talk.title }}
+        </a>
+      </h2>
+
+      <time
+        datetime="{{ {{ talk.date }} | date_to_xmlschema }}"
+        class="post-date">
+        {{ talk.date | date_to_string }}
+      </time>
+
+      <img
+        src="{{ talk.image_url | prepend: site.baseurl }}"
+        alt="20160722_brief_introductin_to_turbolinks_5"
+      />
+
+      {{ talk.description | markdownify }}
+    </article>
+    <hr>
+  {% endfor %}
+</div>
