@@ -152,6 +152,17 @@ DELETE 1
 
 ## Troubleshooting
 
+#### psql: FATAL: database “db_name” is not currently accepting connections
+- [SO](http://stackoverflow.com/a/31147811/3837223)
+
+```
+dropdb 'db_name'
+```
+
+```
+db:setup
+```
+
 #### psql: FATAL: database ... does not exist
 - Check this: [stackoverflow](http://stackoverflow.com/a/17936043/3837223)
 
