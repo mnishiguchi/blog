@@ -8,32 +8,30 @@ keywords:    >
 
 version:     1.0.0
 github:
-  repo:      https://github.com/mnishiguchi/mnishiguchi.github.io
+  repo:      https://github.com/mnishiguchi/mnishiguchi_2016
 
 # About/contact
 author:
   name:              Masatoshi Nishiguchi
-  url:               http://mnishiguchi.com
   email:             nishiguchi.masa@gmail.com
+  url:               https://mnishiguchi.com
   github_url:        https://github.com/mnishiguchi
   linkedin_url:      https://linkedin.com/in/mnishiguchi
   twitter_url:       https://twitter.com/mnishiguchiDC
-  stackoverflow_url: http://stackoverflow.com/users/3837223/mnishiguchi
+  stackoverflow_url: https://stackoverflow.com/users/3837223/mnishiguchi
 
 # Url and Permalinks
 permalink:  pretty
-url:        "http://mnishiguchi.com"  # Hostname & protocol for your site
-baseurl:    ""
+url:        "https://mnishiguchi.github.io"  # Hostname & protocol for your site
+baseurl:    "/mnishiguchi_2016"
 
 # Navigation links in the header of the website
 navigation_items:
-  Home:     '/'         # /index.html
-  About:    '/about'    # /about.html
-  Blog:     '/blog/'    # /blog/index.html
-  Projects: '/projects' # /projects.html
-  Talks:    '/talks'    # /talks.html
-  # Resume:   '/resume'   # /resume.html
-  # Archive:  '/archive'
+  Home:     "/"         # /index.html
+  About:    "/about"    # /about.html
+  Blog:     "/blog/"    # /blog/index.html
+  Projects: "/projects" # /projects.html
+  Talks:    "/talks"    # /talks.html
 
 # # Pagination
 # paginate:      10
@@ -45,10 +43,10 @@ sass:
   style:    :compressed
 
 # Include custom directories
-include: ['_pages']
+include: ["_pages"]
 
 # Exclude from _site
-exclude: ['node_modules']
+exclude: ["node_modules"]
 
 # Post excerpts
 excerpt_separator: <!--more-->
@@ -57,7 +55,7 @@ excerpt_separator: <!--more-->
 feed: false
 
 # Gems
-gems:
+plugins:
   # - jekyll-paginate
   # - jekyll-gist
   # - jekyll-redirect-from
